@@ -1,443 +1,852 @@
 {
-	"version": 4,
-	"games": ["splatoon 2", "splatoon2", "rocket league", "mario kart 8 deluxe", "mk8d", "super mario odyssey", "odyssey", "mario + rabbids", "mario rabbids", "mario+rabbids", "botw", "zelda botw", "breath of the wild", "zelda breath of the wild", "the legend of zelda: breath of the wild", "the legend of zelda breath of the wild", "xenoblade", "xenoblade 2", "xenoblade chronicles 2", "arms", "kirby star allies", "sonic mania", "minecraft", "mario tennis", "mario tennis aces", "fortnite", "pokemon: let's go pikachu!", "pokemon lets go pikachu", "pokemon: let's go eevee!", "pokemon lets go eevee", "overcooked 2", "overcooked", "super smash bros. ultimate", "super smash bros ultimate", "ssbu", "smash ultimate", "super mario maker 2", "mario maker 2", "smm2", "acnh", "ac:nh", "animal crossing", "animal crossing: new horizons", "animal crossing new horizons", "monster prom xxl", "monster prom", "monsterprom", "monster camp xxl", "monster camp", "monstercamp", "totk", "zelda totk", "tears of the kingdom", "zelda tears of the kingdom", "the legend of zelda: tears of the kingdom", "the legend of zelda tears of the kingdom"],
-	"gameData": [{"name": "Splatoon 2", "pic": "splatoon_2"},
-		     {"name": "The Legend of Zelda: Tears of the Kingdom", "pic": "totk"},
-		     {"name": "Monster Prom XXL", "pic": "monster_prom"},
-	             {"name": "Monster Camp XXL", "pic": "monster_camp"},
-		     {"name": "Splatoon 3", "pic": "splatoon_3"},
-         {"name": "Splatoon 3: Splatfest World Premiere", "pic": "splatoon_wp"},
-		     {"name": "Rocket League", "pic": "rocket_league"},
-		     {"name": "Mario Kart 8 Deluxe", "pic": "mk8d"},
-		     {"name": "Super Mario Odyssey", "pic": "odyssey"},
-		     {"name": "Mario + Rabbids Kingdom Battle", "pic": "mariorabbids"},
-		     {"name": "Breath of the Wild", "pic": "botw"},
-		     {"name": "Xenoblade Chronicles: Definitive Edition", "pic": "xeno"},
-		     {"name": "Xenoblade Chronicles 2", "pic": "xeno2"},
-		     {"name": "Xenoblade Chronicles 3", "pic": "xeno3"},
-		     {"name": "ARMS", "pic": "arms"},
-		     {"name": "Kirby Star Allies", "pic": "kirbystar"},
-		     {"name": "Kirby and the Forgotten Land", "pic": "kirbyforgor"},
-		     {"name": "Sonic Mania", "pic": "sonic_mania"},
-		     {"name": "Sonic Colours: Ultimate", "pic": "soniccolor"},
-		     {"name": "Minecraft", "pic": "minecraft"},
-		     {"name": "Mario Tennis Aces", "pic": "mario_tennis_aces"},
-		     {"name": "Fortnite", "pic": "fortnite"},
-		     {"name": "Apex Legends", "pic": "apexlegends"},
-		     {"name": "Pokemon: Let's Go, Pikachu!", "pic": "plg_p"},
-		     {"name": "Pokemon: Let's Go, Eevee!", "pic": "plg_e"},
-		     {"name": "Pokemon Sword", "pic": "pokemon_sword"},
-		     {"name": "Pokemon Shield", "pic": "pokemon_shield"},
-		     {"name": "Pokemon Brilliant Diamond", "pic": "pokemon_diamond"},
-		     {"name": "Pokemon Shining Pearl", "pic": "pokemon_pearl"},
-		     {"name": "Overcooked 2", "pic": "overcooked_2"},
-		     {"name": "Super Smash Bros. Ultimate", "pic": "ssbu"},
-		     {"name": "Super Mario Maker 2", "pic": "smm2"},
-		     {"name": "Animal Crossing: New Horizons", "pic": "acnh"},
-		     {"name": "Hollow Knight", "pic": "hollowknight"},
-		     {"name": "Hollow Knight: Silksong", "pic": "silksong"},
-		     {"name": "Hades", "pic": "hades"},
-		     {"name": "Metroid Dread", "pic": "metroiddread"},
-		     {"name": "Ring Fit Adventure", "pic": "ring_fit"},
-		     {"name": "Bayonetta", "pic": "bayonetta"},
-		     {"name": "Bayonetta 2", "pic": "bayonetta_2"},
-		     {"name": "The Legend of Zelda: Link's Awakening", "pic": "zeldaawake"},
-		     {"name": "The Legend of Zelda: Skyward Sword", "pic": "skyward"},
-		     {"name": "Cuphead", "pic": "cuphead"},
-		     {"name": "Yoshi's Crafted World", "pic": "yoshicrafted"},
-		     {"name": "Hyrule Warriors Definitive Edition", "pic": "hyrule_warriors"},
-		     {"name": "Hyrule Warriors: Age of Calamity", "pic": "hyrule_aoc"},
-		     {"name": "Donkey Kong Country: Tropical Freeze", "pic": "dkctf"},
-		     {"name": "Stardew Valley", "pic": "stardew"},
-		     {"name": "Celeste", "pic": "celeste"},
-		     {"name": "Mario Golf: Super Rush", "pic": "super_rush"},
-		     {"name": "Mario Party Superstars", "pic": "partysuperstars"},
-		     {"name": "Mario Strikers: Battle League Football", "pic": "battleleaguefootball"},
-		     {"name": "New Super Mario Bros. U Deluxe", "pic": "nsmbu"},
-		     {"name": "Paper Mario: The Origami King", "pic": "origamiking"},
-		     {"name": "Super Mario 3D All-Stars", "pic": "3dallstars"},
-		     {"name": "Super Mario 3D World + Bowser's Fury", "pic": "3dworld"},
-		     {"name": "Super Mario Party", "pic": "supermarioparty"},
-		     {"name": "TSUKIHIME -blue glass moon-", "pic": "tsukihime"},
-		     {"name": "New Pokemon Snap", "pic": "pkmnsnap"},
-		     {"name": "Pokemon Legends: Arceus", "pic": "legendsarceus"},
-		     {"name": "Pokemon UNITE", "pic": "pokemon_unite"},
-		     {"name": "Among Us", "pic": "sussy"},
-		     {"name": "Ninjala", "pic": "ninjala"},
-		     {"name": "Fall Guys", "pic": "falgus"},
-		     {"name": "NES - NSO", "pic": "nes"},
-		     {"name": "SNES - NSO", "pic": "snes"},
-		     {"name": "N64 - NSO", "pic": "n64"},
-		     {"name": "Famicom - NSO", "pic": "famicom"},
-		     {"name": "Super Famicom - NSO", "pic": "superfamicon"},
-		     {"name": "SMD - NSO", "pic": "smd"},
-		     {"name": "YouTube", "pic": "youtube"},
-		     {"name": "Hulu", "pic": "hulu"},
-		     {"name": "Twitch", "pic": "twitch"}],
-	"enabled": true,
-	"gameLibrary": [
-      {
-        "name": "Splatoon 2",
-        "pic": "splatoon_2",
-        "aliases": ["splatoon 2", "splatoon2"]
-      },
-      {
-        "name": "Splatoon 3",
-        "pic": "splatoon_3",
-        "aliases": ["splatoon 3", "splatoon3", "splatoon"]
-      },
-      {
-        "name": "Mario Kart 8 Deluxe",
-        "pic": "mk8d",
-        "aliases": ["mario kart 8 deluxe", "mario kart", "mario kart 8", "mk8", "mk8d"]
-      },
-      {
-        "name": "Super Mario Odyssey",
-        "pic": "odyssey",
-        "aliases": ["super mario odyssey", "odyssey", "mario odyssey"]
-      },
-      {
-        "name": "Mario + Rabbids Kingdom Battle",
-        "pic": "mariorabbids",
-        "aliases": ["mario + rabbids", "mario rabbids", "mario + rabbids kingdom battle"]
-      },
-      {
-        "name": "Mario Tennis Aces",
-        "pic": "mario_tennis_aces",
-        "aliases": ["mario tennis", "mario tennis aces"]
-      },
-      {
-        "name": "Super Mario Maker 2",
-        "pic": "smm2",
-        "aliases": ["super mario maker 2", "mario maker 2", "mario maker", "smm", "smm2"]
-      },
-      {
-        "name": "Mario Golf: Super Rush",
-        "pic": "super_rush",
-        "aliases": ["mario golf: super rush", "mario golf super rush"]
-      },
-      {
-        "name": "Mario Party Superstars",
-        "pic": "partysuperstars",
-        "aliases": ["mario party superstars"]
-      },
-      {
-        "name": "Mario Strikers: Battle League Football",
-        "pic": "battleleaguefootball",
-        "aliases": ["mario strikers: battle league football", "mario strikers battle league football", "battle league football"]
-      },
-      {
-        "name": "New Super Mario Bros. U Deluxe",
-        "pic": "nsmbu",
-        "aliases": ["new super mario bros. u deluxe", "new super mario bros u deluxe", "new super mario bros u", "nsmbu"]
-      },
-      {
-        "name": "Paper Mario: The Origami King",
-        "pic": "origamiking",
-        "aliases": ["paper mario: the origami king", "paper mario the origami king", "paper mario: origami king", "paper mario origami king", "the origami king", "origami king"]
-      },
-      {
-        "name": "Super Mario Party",
-        "pic": "supermarioparty",
-        "aliases": ["super mario party"]
-      },
-      {
-        "name": "Super Mario 3D All-Stars",
-        "pic": "3dallstars",
-        "aliases": ["super mario 3d all-stars", "super mario 3d allstars", "super mario 3d all stars", "3d all-stars", "3d allstars", "3d all stars"]
-      },
-      {
-        "name": "Super Mario 3D World + Bowser's Fury",
-        "pic": "3dworld",
-        "aliases": ["super mario 3d world + bowser's fury", "super mario 3d world + bowsers fury", "super mario 3d world bowser's fury", "super mario 3d world bowsers fury", "super mario 3d world", "3d world"]
-      },
-      {
-        "name": "The Legend of Zelda: Breath of the Wild",
-        "pic": "botw",
-        "aliases": ["breath of the wild", "zelda botw", "botw", "the legend of zelda: breath of the wild", "the legend of zelda breath of the wild"]
-      },
-      {
-        "name": "The Legend of Zelda: Link's Awakening",
-        "pic": "zeldaawake",
-        "aliases": ["the legend of zelda: link's awakening", "the legend of zelda: links awakening", "the legend of zelda link's awakening", "the legend of zelda links awakening", "link's awakening", "links awakening"]
-      },
-      {
-        "name": "The Legend of Zelda: Skyward Sword",
-        "pic": "skyward",
-        "aliases": ["the legend of zelda: skyward sword", "the legend of zelda skyward sword", "skyward sword"]
-      },
-      {
-        "name": "Hyrule Warriors Definitive Edition",
-        "pic": "hyrule_warriors",
-        "aliases": ["hyrule warriors definitive edition", "hyrule warriors"]
-      },
-      {
-        "name": "Hyrule Warriors: Age of Calamity",
-        "pic": "hyrule_aoc",
-        "aliases": ["hyrule warriors: age of calamity", "hyrule warriors age of calamity", "hyrule warriors aoc", "age of calamity", "aoc"]
-      },
-      {
-        "name": "Xenoblade Chronicles: Definitive Edition",
-        "pic": "xeno",
-        "aliases": ["xenoblade chronicles: definitive edition", "xenoblade chronicles definitive edition", "xenoblade chronicles", "xenoblade"]
-      },
-      {
-        "name": "Xenoblade Chronicles 2",
-        "pic": "xeno2",
-        "aliases": ["xenoblade chronicles 2", "xenoblade 2"]
-      },
-      {
-        "name": "Xenoblade Chronicles 3",
-        "pic": "xeno3",
-        "aliases": ["xenoblade chronicles 3", "xenoblade 3"]
-      },
-      {
-        "name": "ARMS",
-        "pic": "arms",
-        "aliases": ["arms"]
-      },
-      {
-        "name": "Kirby Star Allies",
-        "pic": "kirbystar",
-        "aliases": ["kirby star allies", "star allies"]
-      },
-      {
-        "name": "Kirby and the Forgotten Land",
-        "pic": "kirbyforgor",
-        "aliases": ["kirby and the forgotten land", "kirby forgotten land", "forgotten land"]
-      },
-      {
-        "name": "Sonic Mania",
-        "pic": "sonic_mania",
-        "aliases": ["sonic mania", "mania"]
-      },
-      {
-        "name": "Sonic Colours: Ultimate",
-        "pic": "soniccolor",
-        "aliases": ["sonic colours: ultimate", "sonic colors: ultimate", "sonic colours ultimate", "sonic colors ultimate", "sonic colours", "sonic colors"]
-      },
-      {
-        "name": "Minecraft: Bedrock Edition",
-        "pic": "minecraft",
-        "aliases": ["minecraft: bedrock edition", "minecraft bedrock", "minecraft bedrock edition", "minecraft"]
-      },
-      {
-        "name": "Fortnite",
-        "pic": "fortnite",
-        "aliases": ["fortnite"]
-      },
-      {
-        "name": "Ninjala",
-        "pic": "ninjala",
-        "aliases": ["ninjala"]
-      },
-      {
-        "name": "Rocket League",
-        "pic": "rocket_league",
-        "aliases": ["rocket league"]
-      },
-      {
-        "name": "Fall Guys",
-        "pic": "falgus",
-        "aliases": ["fall guys"]
-      },
-      {
-        "name": "Pokemon: Let's Go, Pikachu!",
-        "pic": "plg_p",
-        "aliases": ["pokemon: let's go, pikachu!", "pokemon lets go pikachu"]
-      },
-      {
-        "name": "Pokemon: Let's Go, Eevee!",
-        "pic": "plg_e",
-        "aliases": ["pokemon: let's go, eevee!", "pokemon lets go eevee"]
-      },
-      {
-        "name": "Pokemon Sword",
-        "pic": "pokemon_sword",
-        "aliases": ["pokemon sword", "sword"]
-      },
-      {
-        "name": "Pokemon Shield",
-        "pic": "pokemon_shield",
-        "aliases": ["pokemon shield", "shield"]
-      },
-      {
-        "name": "Pokemon Brilliant Diamond",
-        "pic": "pokemon_diamond",
-        "aliases": ["pokemon brilliant diamond", "brilliant diamond", "pokemon diamond"]
-      },
-      {
-        "name": "Pokemon Shining Pearl",
-        "pic": "pokemon_pearl",
-        "aliases": ["pokemon shining pearl", "shining pearl", "pokemon pearl"]
-      },
-      {
-        "name": "Overcooked 2",
-        "pic": "overcooked_2",
-        "aliases": ["overcooked 2", "overcooked"]
-      },
-      {
-        "name": "Super Smash Bros. Ultimate",
-        "pic": "ssbu",
-        "aliases": ["super smash bros. ultimate", "super smash bros ultimate", "smash", "smash ultimate", "ultimate", "ssbu"]
-      },
-      {
-        "name": "Animal Crossing: New Horizons",
-        "pic": "acnh",
-        "aliases": ["animal crossing: new horizons", "animal crossing new horizons", "new horizons", "animal crossing"]
-      },
-      {
-        "name": "Fire Emblem: Three Houses",
-        "pic": "fe_3h",
-        "aliases": ["fire emblem", "three houses", "fire emblem three houses", "fire emblem: three houses"]
-      },
-      {
-        "name": "Hollow Knight",
-        "pic": "hollowknight",
-        "aliases": ["hollow knight"]
-      },
-      {
-        "name": "Hollow Knight: Silksong",
-        "pic": "silksong",
-        "aliases": ["hollow knight: silksong", "hollow knight silksong", "silksong"]
-      },
-      {
-        "name": "Hades",
-        "pic": "hades",
-        "aliases": ["hades"]
-      },
-      {
-        "name": "Celeste",
-        "pic": "celeste",
-        "aliases": ["celeste"]
-      },
-      {
-        "name": "Cuphead",
-        "pic": "cuphead",
-        "aliases": ["cuphead"]
-      },
-      {
-        "name": "Stardew Valley",
-        "pic": "stardew",
-        "aliases": ["stardew valley", "stardew"]
-      },
-      {
-        "name": "Among Us",
-        "pic": "sussy",
-        "aliases": ["amogus", "among", "sus", "among us"]
-      },
-      {
-        "name": "Metroid Dread",
-        "pic": "metroiddread",
-        "aliases": ["metroid dread", "dread"]
-      },
-      {
-        "name": "Ring Fit Adventure",
-        "pic": "ring_fit",
-        "aliases": ["ring fit adventure", "ring fit"]
-      },
-      {
-        "name": "Bayonetta",
-        "pic": "bayonetta",
-        "aliases": ["bayonetta"]
-      },
-      {
-        "name": "Bayonetta 2",
-        "pic": "bayonetta_2",
-        "aliases": ["bayonetta 2"]
-      },
-      {
-        "name": "Donkey Kong Country: Tropical Freeze",
-        "pic": "dkctf",
-        "aliases": ["donkey kong country tropical freeze", "donkey kong country: tropical freeze", "tropical freeze"]
-      },
-      {
-        "name": "New Pokemon Snap",
-        "pic": "pkmnsnap",
-        "aliases": ["new pokemon snap", "pokemon snap"]
-      },
-      {
-        "name": "Pokemon Legends: Arceus",
-        "pic": "legendsarceus",
-        "aliases": ["pokemon legends: arceus", "pokemon legends arceus", "legends arceus"]
-      },
-      {
-        "name": "Pokemon Legends: Z-A",
-        "pic": "legendsza",
-        "aliases": ["pokemon legends: z-a", "pokemon legends: za", "pokemon legends za", "pokemon legends za-", "legends z-a", "legends za"]
-      },
-      {
-        "name": "Pokemon UNITE",
-        "pic": "pokemon_unite",
-        "aliases": ["pokemon unite", "unite"]
-      },
-      {
-        "name": "NES - NSO",
-        "pic": "nes",
-        "aliases": ["nes - nso", "nes nso", "nintendo entertainment system - nintendo switch online", "nintendo entertainment system nintendo switch online", "nes"]
-      },
-      {
-        "name": "SNES - NSO",
-        "pic": "snes",
-        "aliases": ["snes - nso", "snes nso", "super nintendo entertainment system - nintendo switch online", "super nintendo entertainment system nintendo switch online", "snes"]
-      },
-      {
-        "name": "N64 - NSO",
-        "pic": "n64",
-        "aliases": ["n64 - nso", "n64 nso", "nintendo 64 - nintendo switch online", "nintendo 64 nintendo switch online", "n64"]
-      },
-      {
-        "name": "Famicom - NSO",
-        "pic": "famicom",
-        "aliases": ["famicom - nso", "famicom nso", "famicom - nintendo switch online", "famicom nintendo switch online", "famicom"]
-      },
-      {
-        "name": "Super Famicom - NSO",
-        "pic": "superfamicom",
-        "aliases": ["super famicom - nso", "super famicom nso", "super famicom - nintendo switch online", "super famicom nintendo switch online", "super famicom"]
-      },
-      {
-        "name": "SMD - NSO",
-        "pic": "smd",
-        "aliases": ["smd - nso", "smd nso", "sega mega drive - nintendo switch online", "sega mega drive nintendo switch online", "smd"]
-      },
-      {
-        "name": "YouTube",
-        "pic": "youtube",
-        "aliases": ["youtube"]
-      },
-      {
-        "name": "Hulu",
-        "pic": "hulu",
-        "aliases": ["hulu"]
-      },
-      {
-        "name": "Twitch",
-        "pic": "twitch",
-        "aliases": ["twitch"]
-      },
-      {
-	"name": "The Legend of Zelda: Tears of the Kingdom",
-        "pic": "totk",
-        "aliases": ["totk", "zelda totk", "tears of the kingdom", "zelda tears of the kingdom", "the legend of zelda: tears of the kingdom", "the legend of zelda tears of the kingdom"]
-      },
-	
-      {
-	"name": "Monster Prom XXL",
-	"pic": "monster_prom",
-	"aliases": ["monster prom xxl", "monster prom", "monsterprom"]
-      },
-      {
-	"name": "Monster Camp XXL",
-	"pic": "monster_camp",
-	"aliases": ["monster camp xxl", "monster camp", "monstercamp"]
-      },
-      {
-	"name": "TSUKIHIME -blue glass moon-",
-	"pic": "tsukihime",
-	"aliases": ["TSUKIHIME -blue glass moon-", "tsukihime"]
-      }
-    ],
-	"info": false,
-	"infoMessage": "testing"
+  "version": 4,
+  "enabled": true,
+  "gameLibrary": [
+    {"name":"Splatoon 2","category":"switch","aliases":["splatoon 2","splatoon2"]},
+    {"name":"Splatoon 3","category":"switch","aliases":["splatoon 3","splatoon3","splatoon"]},
+    {"name":"Mario Kart 8 Deluxe","category":"switch","aliases":["mario kart 8 deluxe","mario kart","mario kart 8","mk8","mk8d"]},
+    {"name":"Super Mario Odyssey","category":"switch","aliases":["super mario odyssey","odyssey","mario odyssey"]},
+    {"name":"Mario + Rabbids Kingdom Battle","category":"switch","aliases":["mario + rabbids","mario rabbids","mario + rabbids kingdom battle"]},
+    {"name":"Mario Tennis Aces","category":"switch","aliases":["mario tennis","mario tennis aces"]},
+    {"name":"Super Mario Maker 2","category":"switch","aliases":["super mario maker 2","mario maker 2","mario maker","smm","smm2"]},
+    {"name":"Mario Golf: Super Rush","category":"switch","aliases":["mario golf: super rush","mario golf super rush"]},
+    {"name":"Mario Party Superstars","category":"switch","aliases":["mario party superstars"]},
+    {"name":"Mario Strikers: Battle League Football","category":"switch","aliases":["mario strikers: battle league football","mario strikers battle league football","battle league football"]},
+    {"name":"New Super Mario Bros. U Deluxe","category":"switch","aliases":["new super mario bros. u deluxe","new super mario bros u deluxe","new super mario bros u","nsmbu"]},
+    {"name":"Paper Mario: The Origami King","category":"switch","aliases":["paper mario: the origami king","paper mario the origami king","paper mario: origami king","paper mario origami king","the origami king","origami king"]},
+    {"name":"Super Mario Party","category":"switch","aliases":["super mario party"]},
+    {"name":"Super Mario 3D All-Stars","category":"switch","aliases":["super mario 3d all-stars","super mario 3d allstars","super mario 3d all stars","3d all-stars","3d allstars","3d all stars"]},
+    {"name":"Super Mario 3D World + Bowser's Fury","category":"switch","aliases":["super mario 3d world + bowser's fury","super mario 3d world + bowsers fury","super mario 3d world bowser's fury","super mario 3d world bowsers fury","super mario 3d world","3d world"]},
+    {"name":"The Legend of Zelda: Breath of the Wild","category":"switch","aliases":["breath of the wild","zelda botw","botw","the legend of zelda: breath of the wild","the legend of zelda breath of the wild"]},
+    {"name":"The Legend of Zelda: Link's Awakening","category":"switch","aliases":["the legend of zelda: link's awakening","the legend of zelda: links awakening","the legend of zelda link's awakening","the legend of zelda links awakening","link's awakening","links awakening"]},
+    {"name":"The Legend of Zelda: Skyward Sword","category":"switch","aliases":["the legend of zelda: skyward sword","the legend of zelda skyward sword","skyward sword"]},
+    {"name":"The Legend of Zelda: Tears of the Kingdom","category":"switch","aliases":["totk","zelda totk","tears of the kingdom","zelda tears of the kingdom","the legend of zelda: tears of the kingdom","the legend of zelda tears of the kingdom"]},
+    {"name":"Hyrule Warriors Definitive Edition","category":"switch","aliases":["hyrule warriors definitive edition","hyrule warriors"]},
+    {"name":"Hyrule Warriors: Age of Calamity","category":"switch","aliases":["hyrule warriors: age of calamity","hyrule warriors age of calamity","hyrule warriors aoc","age of calamity","aoc"]},
+    {"name":"Xenoblade Chronicles: Definitive Edition","category":"switch","aliases":["xenoblade chronicles: definitive edition","xenoblade chronicles definitive edition","xenoblade chronicles","xenoblade"]},
+    {"name":"Xenoblade Chronicles 2","category":"switch","aliases":["xenoblade chronicles 2","xenoblade 2"]},
+    {"name":"Xenoblade Chronicles 3","category":"switch","aliases":["xenoblade chronicles 3","xenoblade 3"]},
+    {"name":"ARMS","category":"switch","aliases":["arms"]},
+    {"name":"Kirby Star Allies","category":"switch","aliases":["kirby star allies","star allies"]},
+    {"name":"Kirby and the Forgotten Land","category":"switch","aliases":["kirby and the forgotten land","kirby forgotten land","forgotten land"]},
+    {"name":"Sonic Mania","category":"switch","aliases":["sonic mania","mania"]},
+    {"name":"Sonic Colours: Ultimate","category":"switch","aliases":["sonic colours: ultimate","sonic colors: ultimate","sonic colours ultimate","sonic colors ultimate","sonic colours","sonic colors"]},
+    {"name":"Minecraft: Bedrock Edition","category":"switch","aliases":["minecraft: bedrock edition","minecraft bedrock","minecraft bedrock edition","minecraft"]},
+    {"name":"Fortnite","category":"switch","aliases":["fortnite"]},
+    {"name":"Ninjala","category":"switch","aliases":["ninjala"]},
+    {"name":"Rocket League","category":"switch","aliases":["rocket league"]},
+    {"name":"Fall Guys","category":"switch","aliases":["fall guys"]},
+    {"name":"Pokemon: Let's Go, Pikachu!","category":"switch","aliases":["pokemon: let's go, pikachu!","pokemon lets go pikachu"]},
+    {"name":"Pokemon: Let's Go, Eevee!","category":"switch","aliases":["pokemon: let's go, eevee!","pokemon lets go eevee"]},
+    {"name":"Pokemon Sword","category":"switch","aliases":["pokemon sword","sword"]},
+    {"name":"Pokemon Shield","category":"switch","aliases":["pokemon shield","shield"]},
+    {"name":"Pokemon Brilliant Diamond","category":"switch","aliases":["pokemon brilliant diamond","brilliant diamond","pokemon diamond"]},
+    {"name":"Pokemon Shining Pearl","category":"switch","aliases":["pokemon shining pearl","shining pearl","pokemon pearl"]},
+    {"name":"Overcooked 2","category":"switch","aliases":["overcooked 2","overcooked"]},
+    {"name":"Super Smash Bros. Ultimate","category":"switch","aliases":["super smash bros. ultimate","super smash bros ultimate","smash","smash ultimate","ultimate","ssbu"]},
+    {"name":"Animal Crossing: New Horizons","category":"switch","aliases":["animal crossing: new horizons","animal crossing new horizons","new horizons","animal crossing"]},
+    {"name":"Fire Emblem: Three Houses","category":"switch","aliases":["fire emblem","three houses","fire emblem three houses","fire emblem: three houses"]},
+    {"name":"Hollow Knight","category":"switch","aliases":["hollow knight"]},
+    {"name":"Hollow Knight: Silksong","category":"switch","aliases":["hollow knight: silksong","hollow knight silksong","silksong"]},
+    {"name":"Hades","category":"switch","aliases":["hades"]},
+    {"name":"Celeste","category":"switch","aliases":["celeste"]},
+    {"name":"Cuphead","category":"switch","aliases":["cuphead"]},
+    {"name":"Stardew Valley","category":"switch","aliases":["stardew valley","stardew"]},
+    {"name":"Among Us","category":"switch","aliases":["amogus","among","sus","among us"]},
+    {"name":"Metroid Dread","category":"switch","aliases":["metroid dread","dread"]},
+    {"name":"Ring Fit Adventure","category":"switch","aliases":["ring fit adventure","ring fit"]},
+    {"name":"Bayonetta","category":"switch","aliases":["bayonetta"]},
+    {"name":"Bayonetta 2","category":"switch","aliases":["bayonetta 2"]},
+    {"name":"Donkey Kong Country: Tropical Freeze","category":"switch","aliases":["donkey kong country tropical freeze","donkey kong country: tropical freeze","tropical freeze"]},
+    {"name":"New Pokemon Snap","category":"switch","aliases":["new pokemon snap","pokemon snap"]},
+    {"name":"Pokemon Legends: Arceus","category":"switch","aliases":["pokemon legends: arceus","pokemon legends arceus","legends arceus"]},
+    {"name":"Pokemon Legends: Z-A","category":"switch","aliases":["pokemon legends: z-a","pokemon legends: za","pokemon legends za","pokemon legends za-","legends z-a","legends za"]},
+    {"name":"Pokemon UNITE","category":"switch","aliases":["pokemon unite","unite"]},
+    {"name":"NES - NSO","category":"nso","aliases":["nes - nso","nes nso","nintendo entertainment system","nes"]},
+    {"name":"Super Mario Bros. - NES NSO","category":"nso","aliases":["super mario bros nes","super mario bros. nes"]},
+    {"name":"Super Mario Bros. 2 - NES NSO","category":"nso","aliases":["super mario bros 2 nes","super mario bros. 2 nes"]},
+    {"name":"Super Mario Bros. 3 - NES NSO","category":"nso","aliases":["super mario bros 3 nes","super mario bros. 3 nes"]},
+    {"name":"The Legend of Zelda - NES NSO","category":"nso","aliases":["the legend of zelda nes","zelda nes"]},
+    {"name":"Metroid - NES NSO","category":"nso","aliases":["metroid nes"]},
+    {"name":"Donkey Kong - NES NSO","category":"nso","aliases":["donkey kong nes"]},
+    {"name":"SNES - NSO","category":"nso","aliases":["snes - nso","snes nso","super nintendo entertainment system","snes"]},
+    {"name":"Super Mario World - SNES NSO","category":"nso","aliases":["super mario world snes"]},
+    {"name":"The Legend of Zelda: A Link to the Past - SNES NSO","category":"nso","aliases":["a link to the past snes","zelda a link to the past snes"]},
+    {"name":"Super Metroid - SNES NSO","category":"nso","aliases":["super metroid snes"]},
+    {"name":"Donkey Kong Country - SNES NSO","category":"nso","aliases":["donkey kong country snes"]},
+    {"name":"Game Boy - NSO","category":"nso","aliases":["game boy - nso","game boy nso","game boy nintendo classics","game boy"]},
+    {"name":"Tetris - Game Boy NSO","category":"nso","aliases":["tetris game boy","game boy tetris"]},
+    {"name":"The Legend of Zelda: Link's Awakening - Game Boy NSO","category":"nso","aliases":["links awakening game boy","link's awakening game boy"]},
+    {"name":"Game Boy Advance - NSO","category":"nso","aliases":["game boy advance - nso","game boy advance nso","gba nso","game boy advance"]},
+    {"name":"The Legend of Zelda: The Minish Cap - GBA NSO","category":"nso","aliases":["the minish cap gba","minish cap"]},
+    {"name":"Mario Kart: Super Circuit - GBA NSO","category":"nso","aliases":["mario kart super circuit","super circuit gba"]},
+    {"name":"N64 - NSO","category":"nso","aliases":["n64 - nso","n64 nso","nintendo 64 - nintendo switch online","nintendo 64 nintendo switch online","n64"]},
+    {"name":"Super Mario 64 - N64 NSO","category":"nso","aliases":["super mario 64 n64","mario 64 n64"]},
+    {"name":"Mario Kart 64 - N64 NSO","category":"nso","aliases":["mario kart 64","mario kart 64 n64"]},
+    {"name":"The Legend of Zelda: Ocarina of Time - N64 NSO","category":"nso","aliases":["ocarina of time n64","zelda ocarina of time n64"]},
+    {"name":"Nintendo 64 Mature - NSO","category":"nso","aliases":["nintendo 64 mature - nso","n64 mature nso","nintendo 64 mature","n64 mature"]},
+    {"name":"Famicom - NSO","category":"nso","aliases":["famicom - nso","famicom nso","famicom - nintendo switch online","famicom nintendo switch online","famicom"]},
+    {"name":"Super Famicom - NSO","category":"nso","aliases":["super famicom - nso","super famicom nso","super famicom - nintendo switch online","super famicom nintendo switch online","super famicom"]},
+    {"name":"SMD - NSO","category":"nso","aliases":["smd - nso","smd nso","sega mega drive - nintendo switch online","sega mega drive nintendo switch online","smd"]},
+    {"name":"Sonic the Hedgehog 2 - Mega Drive NSO","category":"nso","aliases":["sonic 2 mega drive","sonic the hedgehog 2 mega drive"]},
+    {"name":"Streets of Rage 2 - Mega Drive NSO","category":"nso","aliases":["streets of rage 2 mega drive"]},
+    {"name":"Gunstar Heroes - Mega Drive NSO","category":"nso","aliases":["gunstar heroes mega drive"]},
+    {"name":"Nintendo GameCube - NSO","category":"nso","aliases":["nintendo gamecube - nso","gamecube nso","gamecube nintendo classics","gamecube"]},
+    {"name":"F-Zero GX - GameCube NSO","category":"nso","aliases":["f zero gx","f-zero gx gamecube"]},
+    {"name":"Luigi's Mansion - GameCube NSO","category":"nso","aliases":["luigis mansion gamecube","luigi's mansion gamecube"]},
+    {"name":"Virtual Boy - NSO","category":"nso","aliases":["virtual boy - nso","virtual boy nso","virtual boy"]},
+    {"name":"Mario Clash - Virtual Boy NSO","category":"nso","aliases":["mario clash virtual boy"]},
+    {"name":"Wario Land - Virtual Boy NSO","category":"nso","aliases":["wario land virtual boy"]},
+    {"name":"Teleroboxer - Virtual Boy NSO","category":"nso","aliases":["teleroboxer virtual boy"]},
+    {"name":"TETRIS 99","category":"nso","aliases":["tetris 99","tetris99","tetris battle royale"]},
+    {"name":"F-ZERO 99","category":"nso","aliases":["f-zero 99","f zero 99","fzero 99","fzero99"]},
+    {"name":"Nintendo Switch 2 Welcome Tour","category":"switch2","aliases":["switch 2 welcome tour","nintendo switch 2 welcome tour"]},
+    {"name":"Mario Kart World","category":"switch2","aliases":["mario kart world","mkw"]},
+    {"name":"Donkey Kong Bananza","category":"switch2","aliases":["donkey kong bananza","dk bananza","bananza"]},
+    {"name":"Drag x Drive","category":"switch2","aliases":["drag x drive","drag and drive"]},
+    {"name":"Hyrule Warriors: Age of Imprisonment","category":"switch2","aliases":["hyrule warriors age of imprisonment","age of imprisonment"]},
+    {"name":"Mario Tennis Fever","category":"switch2","aliases":["mario tennis fever"]},
+    {"name":"Pokemon Pokopia","category":"switch2","aliases":["pokemon pokopia","pokopia"]},
+    {"name":"The Legend of Zelda: Breath of the Wild - Nintendo Switch 2 Edition","category":"switch2","aliases":["breath of the wild switch 2 edition","botw switch 2 edition"]},
+    {"name":"The Legend of Zelda: Tears of the Kingdom - Nintendo Switch 2 Edition","category":"switch2","aliases":["tears of the kingdom switch 2 edition","totk switch 2 edition"]},
+    {"name":"Super Mario Party Jamboree - Nintendo Switch 2 Edition","category":"switch2","aliases":["super mario party jamboree switch 2 edition","jamboree switch 2 edition"]},
+    {"name":"Kirby and the Forgotten Land - Nintendo Switch 2 Edition","category":"switch2","aliases":["kirby forgotten land switch 2 edition","star crossed world"]},
+    {"name":"Xenoblade Chronicles X: Definitive Edition - Nintendo Switch 2 Edition","category":"switch2","aliases":["xenoblade chronicles x switch 2 edition","xenoblade x switch 2"]},
+    {"name":"Super Mario Bros. Wonder - Nintendo Switch 2 Edition","category":"switch2","aliases":["super mario bros wonder switch 2 edition","mario wonder switch 2"]},
+    {"name":"Pokemon Legends: Z-A - Nintendo Switch 2 Edition","category":"switch2","aliases":["pokemon legends za switch 2 edition","pokemon legends z-a switch 2"]},
+    {"name":"Metroid Prime 4: Beyond - Nintendo Switch 2 Edition","category":"switch2","aliases":["metroid prime 4 switch 2 edition","metroid prime 4 beyond switch 2"]},
+    {"name":"Animal Crossing: New Horizons - Nintendo Switch 2 Edition","category":"switch2","aliases":["animal crossing new horizons switch 2 edition","acnh switch 2 edition"]},
+    {"name":"Xenoblade Chronicles 2 - Nintendo Switch 2 Edition","category":"switch2","aliases":["xenoblade chronicles 2 switch 2 edition","xenoblade 2 switch 2"]},
+    {"name":"Nintendo Switch Sports Resort","category":"switch2","aliases":["nintendo switch sports resort","switch sports resort"]},
+    {"name":"The Legend of Zelda: Ocarina of Time","category":"switch2","aliases":["ocarina of time","ocarina of time remake","ocarina of time switch 2","zelda ocarina of time","zelda ocarina of time remake"]},
+    {"name":"Pikmin 4 - Nintendo Switch 2 Edition","category":"switch2","aliases":["pikmin 4 switch 2 edition","pikmin 4 dandori academy"]},
+    {"name":"YouTube","category":"switch","aliases":["youtube"]},
+    {"name":"Hulu","category":"switch","aliases":["hulu"]},
+    {"name":"Twitch","category":"switch","aliases":["twitch"]},
+    {"name":"Monster Prom XXL","category":"switch","aliases":["monster prom xxl","monster prom","monsterprom"]},
+    {"name":"Monster Camp XXL","category":"switch","aliases":["monster camp xxl","monster camp","monstercamp"]},
+    {"name":"TSUKIHIME -blue glass moon-","category":"switch","aliases":["tsukihime -blue glass moon-","tsukihime"]},
+    {"name":"Pokemon Scarlet","category":"switch","aliases":["pokemon scarlet","scarlet","pokemon scarlet version"]},
+    {"name":"Pokemon Violet","category":"switch","aliases":["pokemon violet","violet","pokemon violet version"]},
+    {"name":"Super Mario Bros. Wonder","category":"switch","aliases":["super mario bros wonder","mario wonder","mario bros wonder"]},
+    {"name":"Nintendo Switch Sports","category":"switch","aliases":["switch sports","nintendo sports"]},
+    {"name":"Mario + Rabbids Sparks of Hope","category":"switch","aliases":["sparks of hope","mario rabbids sparks","mario + rabbids sparks of hope"]},
+    {"name":"Bayonetta 3","category":"switch","aliases":["bayonetta 3","bayo 3"]},
+    {"name":"Pikmin 4","category":"switch","aliases":["pikmin 4"]},
+    {"name":"Pikmin 3 Deluxe","category":"switch","aliases":["pikmin 3","pikmin 3 deluxe"]},
+    {"name":"Hogwarts Legacy","category":"switch","aliases":["hogwarts","hogwarts legacy"]},
+    {"name":"Persona 5 Royal","category":"switch","aliases":["persona 5","persona 5 royal","p5r"]},
+    {"name":"Grand Theft Auto: The Trilogy","category":"switch","aliases":["gta trilogy","grand theft auto trilogy","gta"]},
+    {"name":"Red Dead Redemption","category":"switch","aliases":["red dead","red dead redemption","rdr"]},
+    {"name":"Crash Team Racing Nitro-Fueled","category":"switch","aliases":["crash team racing","ctr","ctr nitro fueled"]},
+    {"name":"LEGO Star Wars: The Skywalker Saga","category":"switch","aliases":["lego star wars","skywalker saga"]},
+    {"name":"Teenage Mutant Ninja Turtles: The Cowabunga Collection","category":"switch","aliases":["tmnt","cowabunga collection","tmnt cowabunga"]},
+    {"name":"Civilization VI","category":"switch","aliases":["civilization 6","civ 6","civ vi"]},
+    {"name":"Diablo III: Eternal Collection","category":"switch","aliases":["diablo 3","diablo iii","diablo eternal collection"]},
+    {"name":"Gang Beasts","category":"switch","aliases":["gang beasts"]},
+    {"name":"Shovel Knight: Treasure Trove","category":"switch","aliases":["shovel knight","treasure trove"]},
+    {"name":"Kirby Air Riders","category":"switch2","aliases":["kirby air riders","air riders"]},
+    {"name":"The Legend of Zelda: Echoes of Wisdom","category":"switch","aliases":["echoes of wisdom","zelda echoes","zelda echoes of wisdom"]},
+    {"name":"1080° Snowboarding - N64 NSO","category":"nso","aliases":["1080° snowboarding","1080 snowboarding","1080 snowboarding n64","1080 snowboarding nso"]},
+    {"name":"3-D Tetris - Virtual Boy NSO","category":"nso","aliases":["3-d tetris","3d tetris","3-d tetris virtual boy","3d tetris virtual boy"]},
+    {"name":"Adventures of Lolo - NES NSO","category":"nso","aliases":["adventures of lolo","adventures of lolo nes"]},
+    {"name":"Alien Soldier - Mega Drive NSO","category":"nso","aliases":["alien soldier","alien soldier mega drive","alien soldier genesis"]},
+    {"name":"Alien Storm - Mega Drive NSO","category":"nso","aliases":["alien storm","alien storm mega drive","alien storm genesis"]},
+    {"name":"Alisia Dragoon - Mega Drive NSO","category":"nso","aliases":["alisia dragoon","alisia dragoon mega drive","alisia dragoon genesis"]},
+    {"name":"Alleyway - Game Boy NSO","category":"nso","aliases":["alleyway","alleyway game boy","game boy alleyway"]},
+    {"name":"Alone in the Dark: The New Nightmare - Game Boy NSO","category":"nso","aliases":["alone in the dark the new nightmare","alone in the dark new nightmare","alone in the dark game boy"]},
+    {"name":"Altered Beast - Mega Drive NSO","category":"nso","aliases":["altered beast","altered beast mega drive","altered beast genesis"]},
+    {"name":"Amazing Hebereke - SNES NSO","category":"nso","aliases":["amazing hebereke","amazing hebereke snes"]},
+    {"name":"Avenging Spirit - Game Boy NSO","category":"nso","aliases":["avenging spirit","avenging spirit game boy"]},
+    {"name":"Balloon Fight - NES NSO","category":"nso","aliases":["balloon fight","balloon fight nes"]},
+    {"name":"Balloon Kid - Game Boy NSO","category":"nso","aliases":["balloon kid","balloon kid game boy"]},
+    {"name":"Banjo-Kazooie - N64 NSO","category":"nso","aliases":["banjo-kazooie","banjo kazooie","banjo kazooie n64"]},
+    {"name":"Banjo-Tooie - N64 NSO","category":"nso","aliases":["banjo-tooie","banjo tooie","banjo tooie n64"]},
+    {"name":"Baseball - Game Boy NSO","category":"nso","aliases":["baseball game boy","game boy baseball"]},
+    {"name":"Baseball - NES NSO","category":"nso","aliases":["baseball nes","nes baseball"]},
+    {"name":"Battletoads - NES NSO","category":"nso","aliases":["battletoads","battletoads nes"]},
+    {"name":"Battletoads in Battlemaniacs - SNES NSO","category":"nso","aliases":["battletoads in battlemaniacs","battletoads battlemaniacs","battlemaniacs snes"]},
+    {"name":"Battletoads/Double Dragon - SNES NSO","category":"nso","aliases":["battletoads double dragon","battletoads/double dragon","battletoads double dragon snes"]},
+    {"name":"Beyond Oasis - Mega Drive NSO","category":"nso","aliases":["beyond oasis","beyond oasis mega drive","beyond oasis genesis"]},
+    {"name":"Big Run - SNES NSO","category":"nso","aliases":["big run","big run snes"]},
+    {"name":"Bionic Commando - Game Boy NSO","category":"nso","aliases":["bionic commando","bionic commando game boy"]},
+    {"name":"Blast Corps - N64 NSO","category":"nso","aliases":["blast corps","blast corps n64"]},
+    {"name":"Blaster Master - NES NSO","category":"nso","aliases":["blaster master","blaster master nes"]},
+    {"name":"Blaster Master: Enemy Below - Game Boy NSO","category":"nso","aliases":["blaster master enemy below","enemy below","blaster master game boy"]},
+    {"name":"Bombuzal - SNES NSO","category":"nso","aliases":["bombuzal","bombuzal snes"]},
+    {"name":"Brawl Brothers - SNES NSO","category":"nso","aliases":["brawl brothers","brawl brothers snes"]},
+    {"name":"Breath of Fire - SNES NSO","category":"nso","aliases":["breath of fire","breath of fire snes"]},
+    {"name":"Breath of Fire II - SNES NSO","category":"nso","aliases":["breath of fire 2","breath of fire ii","breath of fire 2 snes"]},
+    {"name":"Bubsy in: Claws Encounters of the Furred Kind - SNES NSO","category":"nso","aliases":["bubsy in claws encounters of the furred kind","bubsy claws encounters","bubsy snes"]},
+    {"name":"BurgerTime Deluxe - Game Boy NSO","category":"nso","aliases":["burgertime deluxe","burger time deluxe","burgertime game boy"]},
+    {"name":"Castlevania Legends - Game Boy NSO","category":"nso","aliases":["castlevania legends","castlevania legends game boy"]},
+    {"name":"Castlevania: Bloodlines - Mega Drive NSO","category":"nso","aliases":["castlevania bloodlines","castlevania bloodlines mega drive","castlevania bloodlines genesis"]},
+    {"name":"Chibi-Robo! Plug Into Adventure! - GameCube NSO","category":"nso","aliases":["chibi-robo plug into adventure","chibi robo plug into adventure","chibi-robo gamecube"]},
+    {"name":"City Connection - NES NSO","category":"nso","aliases":["city connection","city connection nes"]},
+    {"name":"Claymates - SNES NSO","category":"nso","aliases":["claymates","claymates snes"]},
+    {"name":"Clu Clu Land - NES NSO","category":"nso","aliases":["clu clu land","clu clu land nes"]},
+    {"name":"Cobra Triangle - NES NSO","category":"nso","aliases":["cobra triangle","cobra triangle nes"]},
+    {"name":"Columns - Mega Drive NSO","category":"nso","aliases":["columns","columns mega drive","columns genesis"]},
+    {"name":"Comix Zone - Mega Drive NSO","category":"nso","aliases":["comix zone","comix zone mega drive","comix zone genesis"]},
+    {"name":"Congo's Caper - SNES NSO","category":"nso","aliases":["congo's caper","congos caper","congos caper snes"]},
+    {"name":"Contra: Hard Corps - Mega Drive NSO","category":"nso","aliases":["contra hard corps","contra: hard corps","hard corps mega drive","contra hard corps genesis"]},
+    {"name":"Cosmo Gang the Puzzle - SNES NSO","category":"nso","aliases":["cosmo gang the puzzle","cosmo gang puzzle","cosmo gang snes"]},
+    {"name":"Crusaders of Centy - Mega Drive NSO","category":"nso","aliases":["crusaders of centy","crusaders of centy mega drive","crusaders of centy genesis"]},
+    {"name":"Crystalis - NES NSO","category":"nso","aliases":["crystalis","crystalis nes"]},
+    {"name":"Daiva Story 6: Imperial of Nirsartia - NES NSO","category":"nso","aliases":["daiva story 6","daiva story 6 imperial of nirsartia","imperial of nirsartia"]},
+    {"name":"Demon's Crest - SNES NSO","category":"nso","aliases":["demon's crest","demons crest","demons crest snes"]},
+    {"name":"Densetsu no Starfy - GBA NSO","category":"nso","aliases":["densetsu no starfy","legendary starfy","starfy gba"]},
+    {"name":"Densetsu no Starfy 2 - GBA NSO","category":"nso","aliases":["densetsu no starfy 2","starfy 2 gba"]},
+    {"name":"Densetsu no Starfy 3 - GBA NSO","category":"nso","aliases":["densetsu no starfy 3","starfy 3 gba"]},
+    {"name":"Devil World - NES NSO","category":"nso","aliases":["devil world","devil world nes"]},
+    {"name":"D-Hopper - Virtual Boy NSO","category":"nso","aliases":["d-hopper","d hopper","d-hopper virtual boy"]},
+    {"name":"Dig Dug II - NES NSO","category":"nso","aliases":["dig dug 2","dig dug ii","dig dug ii nes"]},
+    {"name":"Donkey Kong - Game Boy NSO","category":"nso","aliases":["donkey kong game boy","game boy donkey kong","donkey kong 94"]},
+    {"name":"Donkey Kong 3 - NES NSO","category":"nso","aliases":["donkey kong 3","donkey kong iii","donkey kong 3 nes"]},
+    {"name":"Donkey Kong Country 2: Diddy's Kong Quest - SNES NSO","category":"nso","aliases":["donkey kong country 2","diddy's kong quest","diddys kong quest","dkc 2","dkc2"]},
+    {"name":"Donkey Kong Country 3: Dixie's Double Trouble! - SNES NSO","category":"nso","aliases":["donkey kong country 3","dixie's double trouble","dixies double trouble","dkc 3","dkc3"]},
+    {"name":"Donkey Kong Jr. - NES NSO","category":"nso","aliases":["donkey kong jr","donkey kong junior","donkey kong jr nes"]},
+    {"name":"Donkey Kong Jr. Math - NES NSO","category":"nso","aliases":["donkey kong jr math","donkey kong junior math","donkey kong jr. math"]},
+    {"name":"Donkey Kong Land - Game Boy NSO","category":"nso","aliases":["donkey kong land","donkey kong land game boy","dkl"]},
+    {"name":"Donkey Kong Land 2 - Game Boy NSO","category":"nso","aliases":["donkey kong land 2","dkl 2"]},
+    {"name":"Donkey Kong Land 3 - Game Boy NSO","category":"nso","aliases":["donkey kong land 3","dkl 3"]},
+    {"name":"Doomsday Warrior - SNES NSO","category":"nso","aliases":["doomsday warrior","doomsday warrior snes"]},
+    {"name":"Double Dragon - NES NSO","category":"nso","aliases":["double dragon","double dragon nes"]},
+    {"name":"Double Dragon II: The Revenge - NES NSO","category":"nso","aliases":["double dragon 2","double dragon ii","the revenge nes"]},
+    {"name":"Downtown Nekketsu March: Super-Awesome Field Day! - NES NSO","category":"nso","aliases":["downtown nekketsu march","super-awesome field day","super awesome field day","river city field day"]},
+    {"name":"Dr. Mario - Game Boy NSO","category":"nso","aliases":["dr mario game boy","doctor mario game boy"]},
+    {"name":"Dr. Mario - NES NSO","category":"nso","aliases":["dr mario nes","doctor mario nes"]},
+    {"name":"Dr. Mario & Puzzle League - GBA NSO","category":"nso","aliases":["dr mario and puzzle league","dr mario puzzle league","puzzle league gba"]},
+    {"name":"Dr. Mario 64 - N64 NSO","category":"nso","aliases":["dr mario 64","doctor mario 64","dr mario n64"]},
+    {"name":"Dr. Robotnik's Mean Bean Machine - Mega Drive NSO","category":"nso","aliases":["dr robotnik's mean bean machine","dr robotniks mean bean machine","mean bean machine","mean bean machine mega drive"]},
+    {"name":"Dynamite Headdy - Mega Drive NSO","category":"nso","aliases":["dynamite headdy","dynamite headdy mega drive","dynamite headdy genesis"]},
+    {"name":"EarthBound - SNES NSO","category":"nso","aliases":["earthbound","earthbound snes"]},
+    {"name":"EarthBound Beginnings - NES NSO","category":"nso","aliases":["earthbound beginnings","mother","mother 1","earthbound beginnings nes"]},
+    {"name":"Earthworm Jim - Mega Drive NSO","category":"nso","aliases":["earthworm jim","earthworm jim mega drive","earthworm jim genesis"]},
+    {"name":"Earthworm Jim 2 - SNES NSO","category":"nso","aliases":["earthworm jim 2","earthworm jim snes 2"]},
+    {"name":"Ecco the Dolphin - Mega Drive NSO","category":"nso","aliases":["ecco the dolphin","ecco mega drive","ecco genesis"]},
+    {"name":"Eliminator Boat Duel - NES NSO","category":"nso","aliases":["eliminator boat duel","eliminator boat duel nes"]},
+    {"name":"ESWAT: City Under Siege - Mega Drive NSO","category":"nso","aliases":["eswat","eswat city under siege","eswat mega drive"]},
+    {"name":"Excitebike - NES NSO","category":"nso","aliases":["excitebike","excitebike nes"]},
+    {"name":"Excitebike 64 - N64 NSO","category":"nso","aliases":["excitebike 64","excitebike n64"]},
+    {"name":"Extreme-G - N64 NSO","category":"nso","aliases":["extreme-g","extreme g","extreme g n64"]},
+    {"name":"Fatal Fury 2 - SNES NSO","category":"nso","aliases":["fatal fury 2","fatal fury ii","fatal fury 2 snes"]},
+    {"name":"Fatal Fury Special - SNES NSO","category":"nso","aliases":["fatal fury special","fatal fury special snes"]},
+    {"name":"Fighter's History - SNES NSO","category":"nso","aliases":["fighter's history","fighters history","fighters history snes"]},
+    {"name":"Fire 'n Ice - NES NSO","category":"nso","aliases":["fire 'n ice","fire n ice","fire and ice nes"]},
+    {"name":"Fire Emblem - GBA NSO","category":"nso","aliases":["fire emblem gba","fire emblem blazing blade","blazing blade"]},
+    {"name":"Fire Emblem: Path of Radiance - GameCube NSO","category":"nso","aliases":["fire emblem path of radiance","path of radiance","fe path of radiance"]},
+    {"name":"Fire Emblem: The Sacred Stones - GBA NSO","category":"nso","aliases":["fire emblem the sacred stones","fire emblem sacred stones","the sacred stones","sacred stones"]},
+    {"name":"Flicky - Mega Drive NSO","category":"nso","aliases":["flicky","flicky mega drive","flicky genesis"]},
+    {"name":"Forsaken 64 - N64 NSO","category":"nso","aliases":["forsaken 64","forsaken n64"]},
+    {"name":"Fortified Zone - Game Boy NSO","category":"nso","aliases":["fortified zone","fortified zone game boy"]},
+    {"name":"F-Zero - SNES NSO","category":"nso","aliases":["f-zero snes","f zero snes","fzero snes"]},
+    {"name":"F-Zero Climax - GBA NSO","category":"nso","aliases":["f-zero climax","f zero climax","fzero climax"]},
+    {"name":"F-Zero X - N64 NSO","category":"nso","aliases":["f-zero x","f zero x","fzero x","f-zero x n64"]},
+    {"name":"F-Zero: GP Legend - GBA NSO","category":"nso","aliases":["f-zero gp legend","f zero gp legend","fzero gp legend"]},
+    {"name":"F-Zero: Maximum Velocity - GBA NSO","category":"nso","aliases":["f-zero maximum velocity","f zero maximum velocity","maximum velocity gba"]},
+    {"name":"Galactic Pinball - Virtual Boy NSO","category":"nso","aliases":["galactic pinball","galactic pinball virtual boy"]},
+    {"name":"Game & Watch Gallery 3 - Game Boy NSO","category":"nso","aliases":["game & watch gallery 3","game and watch gallery 3","game watch gallery 3"]},
+    {"name":"Gargoyle's Quest - Game Boy NSO","category":"nso","aliases":["gargoyle's quest","gargoyles quest","gargoyles quest game boy"]},
+    {"name":"Ghosts 'n Goblins - NES NSO","category":"nso","aliases":["ghosts 'n goblins","ghosts n goblins","ghosts and goblins","ghosts n goblins nes"]},
+    {"name":"Ghouls 'n Ghosts - Mega Drive NSO","category":"nso","aliases":["ghouls 'n ghosts","ghouls n ghosts","ghouls and ghosts","ghouls n ghosts mega drive"]},
+    {"name":"Golden Axe - Mega Drive NSO","category":"nso","aliases":["golden axe","golden axe mega drive","golden axe genesis"]},
+    {"name":"Golden Axe II - Mega Drive NSO","category":"nso","aliases":["golden axe 2","golden axe ii","golden axe 2 mega drive"]},
+    {"name":"Golden Sun - GBA NSO","category":"nso","aliases":["golden sun","golden sun gba"]},
+    {"name":"Golden Sun: The Lost Age - GBA NSO","category":"nso","aliases":["golden sun the lost age","golden sun lost age","the lost age"]},
+    {"name":"GoldenEye 007 - N64 NSO","category":"nso","aliases":["goldeneye 007","goldeneye","goldeneye n64"]},
+    {"name":"Golf - NES NSO","category":"nso","aliases":["golf nes","nes golf"]},
+    {"name":"Golf - Virtual Boy NSO","category":"nso","aliases":["golf virtual boy","virtual boy golf"]},
+    {"name":"Gradius - NES NSO","category":"nso","aliases":["gradius","gradius nes"]},
+    {"name":"Gradius: The Interstellar Assault - Game Boy NSO","category":"nso","aliases":["gradius the interstellar assault","gradius interstellar assault","interstellar assault"]},
+    {"name":"Harvest Moon - SNES NSO","category":"nso","aliases":["harvest moon","harvest moon snes"]},
+    {"name":"Harvest Moon 64 - N64 NSO","category":"nso","aliases":["harvest moon 64","harvest moon n64"]},
+    {"name":"Ice Climber - NES NSO","category":"nso","aliases":["ice climber","ice climber nes"]},
+    {"name":"Ice Hockey - NES NSO","category":"nso","aliases":["ice hockey nes","nes ice hockey"]},
+    {"name":"Iggy's Reckin' Balls - N64 NSO","category":"nso","aliases":["iggy's reckin' balls","iggys reckin balls","iggy reckin balls"]},
+    {"name":"Ikari Warriors - NES NSO","category":"nso","aliases":["ikari warriors","ikari warriors nes"]},
+    {"name":"Jack Bros. - Virtual Boy NSO","category":"nso","aliases":["jack bros","jack bros.","jack bros virtual boy"]},
+    {"name":"Jelly Boy - SNES NSO","category":"nso","aliases":["jelly boy","jelly boy snes"]},
+    {"name":"Jet Force Gemini - N64 NSO","category":"nso","aliases":["jet force gemini","jet force gemini n64"]},
+    {"name":"Joe & Mac - SNES NSO","category":"nso","aliases":["joe & mac","joe and mac","joe mac snes"]},
+    {"name":"Joe & Mac 2: Lost in the Tropics - SNES NSO","category":"nso","aliases":["joe & mac 2","joe and mac 2","lost in the tropics"]},
+    {"name":"Journey to Silius - NES NSO","category":"nso","aliases":["journey to silius","journey to silius nes"]},
+    {"name":"Joy Mech Fight - NES NSO","category":"nso","aliases":["joy mech fight","joy mech fight nes"]},
+    {"name":"Kid Chameleon - Mega Drive NSO","category":"nso","aliases":["kid chameleon","kid chameleon mega drive","kid chameleon genesis"]},
+    {"name":"Kid Icarus - NES NSO","category":"nso","aliases":["kid icarus","kid icarus nes"]},
+    {"name":"Kid Icarus: Of Myths and Monsters - Game Boy NSO","category":"nso","aliases":["kid icarus of myths and monsters","of myths and monsters","kid icarus game boy"]},
+    {"name":"Killer Instinct - SNES NSO","category":"nso","aliases":["killer instinct","killer instinct snes"]},
+    {"name":"Killer Instinct Gold - N64 NSO","category":"nso","aliases":["killer instinct gold","ki gold","killer instinct n64"]},
+    {"name":"Kirby & The Amazing Mirror - GBA NSO","category":"nso","aliases":["kirby & the amazing mirror","kirby and the amazing mirror","amazing mirror gba"]},
+    {"name":"Kirby 64: The Crystal Shards - N64 NSO","category":"nso","aliases":["kirby 64","kirby the crystal shards","the crystal shards","kirby 64 n64"]},
+    {"name":"Kirby Super Star - SNES NSO","category":"nso","aliases":["kirby super star","kirby super star snes"]},
+    {"name":"Kirby Tilt 'n' Tumble - Game Boy NSO","category":"nso","aliases":["kirby tilt 'n' tumble","kirby tilt n tumble","kirby tilt and tumble"]},
+    {"name":"Kirby's Adventure - NES NSO","category":"nso","aliases":["kirby's adventure","kirbys adventure","kirby adventure nes"]},
+    {"name":"Kirby's Avalanche - SNES NSO","category":"nso","aliases":["kirby's avalanche","kirbys avalanche","kirby avalanche"]},
+    {"name":"Kirby's Dream Course - SNES NSO","category":"nso","aliases":["kirby's dream course","kirbys dream course","kirby dream course"]},
+    {"name":"Kirby's Dream Land - Game Boy NSO","category":"nso","aliases":["kirby's dream land","kirbys dream land","kirby dream land game boy"]},
+    {"name":"Kirby's Dream Land 2 - Game Boy NSO","category":"nso","aliases":["kirby's dream land 2","kirbys dream land 2","kirby dream land 2"]},
+    {"name":"Kirby's Dream Land 3 - SNES NSO","category":"nso","aliases":["kirby's dream land 3","kirbys dream land 3","kirby dream land 3 snes"]},
+    {"name":"Kirby's Star Stacker - Game Boy NSO","category":"nso","aliases":["kirby's star stacker game boy","kirbys star stacker game boy","star stacker game boy"]},
+    {"name":"Kirby's Star Stacker - SNES NSO","category":"nso","aliases":["kirby's star stacker snes","kirbys star stacker snes","star stacker snes"]},
+    {"name":"Klonoa: Empire of Dreams - GBA NSO","category":"nso","aliases":["klonoa empire of dreams","empire of dreams","klonoa gba"]},
+    {"name":"Kung-Fu Heroes - NES NSO","category":"nso","aliases":["kung-fu heroes","kung fu heroes","kung fu heroes nes"]},
+    {"name":"Kunio-kun no Dodgeball da yo Zen'in Shūgō! - SNES NSO","category":"nso","aliases":["kunio-kun no dodgeball da yo zen'in shūgō","kunio kun dodgeball","dodgeball da yo zenin shugo"]},
+    {"name":"Kuru Kuru Kururin - GBA NSO","category":"nso","aliases":["kuru kuru kururin","kururin gba"]},
+    {"name":"Kururin Paradise - GBA NSO","category":"nso","aliases":["kururin paradise","kururin paradise gba"]},
+    {"name":"Landstalker - Mega Drive NSO","category":"nso","aliases":["landstalker","landstalker mega drive","landstalker genesis"]},
+    {"name":"Light Crusader - Mega Drive NSO","category":"nso","aliases":["light crusader","light crusader mega drive","light crusader genesis"]},
+    {"name":"Lylat Wars (Star Fox 64) - N64 NSO","category":"nso","aliases":["lylat wars","star fox 64","starfox 64","lylat wars n64"]},
+    {"name":"M.U.S.H.A. - Mega Drive NSO","category":"nso","aliases":["m.u.s.h.a.","musha","mush a mega drive"]},
+    {"name":"Mach Rider - NES NSO","category":"nso","aliases":["mach rider","mach rider nes"]},
+    {"name":"Magical Drop 2 - SNES NSO","category":"nso","aliases":["magical drop 2","magical drop ii","magical drop snes"]},
+    {"name":"Mappy-Land - NES NSO","category":"nso","aliases":["mappy-land","mappy land","mappy land nes"]},
+    {"name":"Mario & Luigi: Superstar Saga - GBA NSO","category":"nso","aliases":["mario & luigi superstar saga","mario and luigi superstar saga","superstar saga"]},
+    {"name":"Mario & Wario - SNES NSO","category":"nso","aliases":["mario & wario","mario and wario","mario wario snes"]},
+    {"name":"Mario Bros. - NES NSO","category":"nso","aliases":["mario bros","mario bros.","mario brothers nes"]},
+    {"name":"Mario Golf - Game Boy NSO","category":"nso","aliases":["mario golf game boy","game boy mario golf"]},
+    {"name":"Mario Golf - N64 NSO","category":"nso","aliases":["mario golf n64","mario golf 64"]},
+    {"name":"Mario Party - N64 NSO","category":"nso","aliases":["mario party n64","mario party 1","mario party 64"]},
+    {"name":"Mario Party 2 - N64 NSO","category":"nso","aliases":["mario party 2","mario party two n64"]},
+    {"name":"Mario Party 3 - N64 NSO","category":"nso","aliases":["mario party 3","mario party three n64"]},
+    {"name":"Mario Tennis - Game Boy NSO","category":"nso","aliases":["mario tennis game boy","game boy mario tennis"]},
+    {"name":"Mario Tennis - N64 NSO","category":"nso","aliases":["mario tennis n64","mario tennis 64"]},
+    {"name":"Mario vs. Donkey Kong - GBA NSO","category":"nso","aliases":["mario vs donkey kong","mario versus donkey kong","mario vs donkey kong gba"]},
+    {"name":"Mario's Picross - Game Boy NSO","category":"nso","aliases":["mario's picross","marios picross","mario picross game boy"]},
+    {"name":"Mario's Super Picross - SNES NSO","category":"nso","aliases":["mario's super picross","marios super picross","super picross snes"]},
+    {"name":"Mario's Tennis - Virtual Boy NSO","category":"nso","aliases":["mario's tennis","marios tennis","marios tennis virtual boy"]},
+    {"name":"Mega Man II - Game Boy NSO","category":"nso","aliases":["mega man 2 game boy","mega man ii","megaman ii"]},
+    {"name":"Mega Man III - Game Boy NSO","category":"nso","aliases":["mega man 3 game boy","mega man iii","megaman iii"]},
+    {"name":"Mega Man IV - Game Boy NSO","category":"nso","aliases":["mega man 4 game boy","mega man iv","megaman iv"]},
+    {"name":"Mega Man V - Game Boy NSO","category":"nso","aliases":["mega man 5 game boy","mega man v","megaman v"]},
+    {"name":"Mega Man: Dr. Wily's Revenge - Game Boy NSO","category":"nso","aliases":["mega man dr wilys revenge","mega man dr wily's revenge","dr wilys revenge"]},
+    {"name":"Mega Man: The Wily Wars - Mega Drive NSO","category":"nso","aliases":["mega man the wily wars","mega man wily wars","wily wars mega drive"]},
+    {"name":"Mendel Palace - NES NSO","category":"nso","aliases":["mendel palace","mendel palace nes"]},
+    {"name":"Metal Slug Advance - GBA NSO","category":"nso","aliases":["metal slug advance","metal slug gba"]},
+    {"name":"Metroid Fusion - GBA NSO","category":"nso","aliases":["metroid fusion","metroid fusion gba"]},
+    {"name":"Metroid II: Return of Samus - Game Boy NSO","category":"nso","aliases":["metroid 2","metroid ii","return of samus","metroid return of samus"]},
+    {"name":"Metroid: Zero Mission - GBA NSO","category":"nso","aliases":["metroid zero mission","zero mission gba"]},
+    {"name":"Mighty Bomb Jack - NES NSO","category":"nso","aliases":["mighty bomb jack","bomb jack nes"]},
+    {"name":"Mole Mania - Game Boy NSO","category":"nso","aliases":["mole mania","mole mania game boy"]},
+    {"name":"Monster Rancher Advance - GBA NSO","category":"nso","aliases":["monster rancher advance","monster rancher gba"]},
+    {"name":"Mr. Driller 2 - GBA NSO","category":"nso","aliases":["mr driller 2","mr. driller 2","mr driller gba"]},
+    {"name":"Mystery Tower - NES NSO","category":"nso","aliases":["mystery tower","mystery tower nes"]},
+	{"name":"Natsume Championship Wrestling - SNES NSO","category":"nso","aliases":["natsume championship wrestling","natsume championship wrestling snes"]},
+    {"name":"NES Open Tournament Golf - NES NSO","category":"nso","aliases":["nes open tournament golf","nes golf tournament"]},
+    {"name":"Nightshade - NES NSO","category":"nso","aliases":["nightshade","nightshade nes"]},
+    {"name":"Ninja Gaiden - NES NSO","category":"nso","aliases":["ninja gaiden","ninja gaiden nes"]},
+    {"name":"Ninja Gaiden II: The Dark Sword of Chaos - NES NSO","category":"nso","aliases":["ninja gaiden ii","ninja gaiden 2","the dark sword of chaos"]},
+    {"name":"Ninja Gaiden III: The Ancient Ship of Doom - NES NSO","category":"nso","aliases":["ninja gaiden iii","ninja gaiden 3","the ancient ship of doom"]},
+    {"name":"Ninja JaJaMaru-kun - NES NSO","category":"nso","aliases":["ninja jajamaru kun","ninja jajamaru-kun","jajamaru nes"]},
+    {"name":"Nobunaga's Ambition - SNES NSO","category":"nso","aliases":["nobunagas ambition","nobunaga's ambition snes"]},
+    {"name":"Nobunaga's Ambition: Lord of Darkness - SNES NSO","category":"nso","aliases":["nobunagas ambition lord of darkness","lord of darkness"]},
+    {"name":"Operation Logic Bomb - SNES NSO","category":"nso","aliases":["operation logic bomb","operation logic bomb snes"]},
+    {"name":"Operation: WinBack - N64 NSO","category":"nso","aliases":["operation winback","winback","operation winback n64"]},
+    {"name":"Pac-Man - NES NSO","category":"nso","aliases":["pac man","pac-man","pacman nes"]},
+    {"name":"Panel de Pon - SNES NSO","category":"nso","aliases":["panel de pon","panel de pon snes"]},
+    {"name":"Paper Mario - N64 NSO","category":"nso","aliases":["paper mario","paper mario n64"]},
+    {"name":"Perfect Dark - N64 NSO","category":"nso","aliases":["perfect dark","perfect dark n64"]},
+    {"name":"Phantasy Star IV - Mega Drive NSO","category":"nso","aliases":["phantasy star iv","phantasy star 4","phantasy star iv mega drive"]},
+    {"name":"Pilotwings - SNES NSO","category":"nso","aliases":["pilotwings","pilotwings snes"]},
+    {"name":"Pilotwings 64 - N64 NSO","category":"nso","aliases":["pilotwings 64","pilotwings n64"]},
+    {"name":"Pinball - NES NSO","category":"nso","aliases":["pinball","pinball nes"]},
+    {"name":"Pinball: Revenge of the 'Gator - Game Boy NSO","category":"nso","aliases":["pinball revenge of the gator","revenge of the gator","pinball the gator"]},
+    {"name":"Pokémon Mystery Dungeon: Red Rescue Team - GBA NSO","category":"nso","aliases":["pokemon mystery dungeon red rescue team","red rescue team","pokemon red rescue team"]},
+    {"name":"Pokémon Puzzle League - N64 NSO","category":"nso","aliases":["pokemon puzzle league","pokemon puzzle league n64"]},
+    {"name":"Pokémon Snap - N64 NSO","category":"nso","aliases":["pokemon snap","pokemon snap n64"]},
+    {"name":"Pokémon Stadium - N64 NSO","category":"nso","aliases":["pokemon stadium","pokemon stadium n64"]},
+    {"name":"Pokémon Stadium 2 - N64 NSO","category":"nso","aliases":["pokemon stadium 2","pokemon stadium two"]},
+    {"name":"Pokémon Trading Card Game - Game Boy NSO","category":"nso","aliases":["pokemon trading card game","pokemon tcg game boy","pokemon card game"]},
+    {"name":"Pokémon XD: Gale of Darkness - GameCube NSO","category":"nso","aliases":["pokemon xd gale of darkness","pokemon xd","gale of darkness"]},
+    {"name":"Pop'n TwinBee - SNES NSO","category":"nso","aliases":["pop n twinbee","pop'n twinbee","popn twinbee"]},
+    {"name":"Prehistorik Man - SNES NSO","category":"nso","aliases":["prehistorik man","prehistorik man snes"]},
+    {"name":"Pro Wrestling - NES NSO","category":"nso","aliases":["pro wrestling","pro wrestling nes"]},
+    {"name":"Psycho Dream - SNES NSO","category":"nso","aliases":["psycho dream","psycho dream snes"]},
+    {"name":"Pulseman - Mega Drive NSO","category":"nso","aliases":["pulseman","pulseman mega drive"]},
+    {"name":"Punch-Out!! - NES NSO","category":"nso","aliases":["punch out","punch-out","punchout nes"]},
+    {"name":"Quest for Camelot - Game Boy NSO","category":"nso","aliases":["quest for camelot","quest for camelot game boy"]},
+    {"name":"R.C. Pro-Am - NES NSO","category":"nso","aliases":["rc pro am","r.c. pro-am","rc pro-am"]},
+    {"name":"R.C. Pro-Am II - NES NSO","category":"nso","aliases":["rc pro am ii","r.c. pro-am ii","rc pro-am 2"]},
+    {"name":"Rayman 2: The Great Escape - N64 NSO","category":"nso","aliases":["rayman 2","rayman the great escape","rayman 2 n64"]},
+    {"name":"Red Alarm - Virtual Boy NSO","category":"nso","aliases":["red alarm","red alarm virtual boy"]},
+    {"name":"Ridge Racer 64 - N64 NSO","category":"nso","aliases":["ridge racer 64","ridge racer n64"]},
+    {"name":"Ristar - Mega Drive NSO","category":"nso","aliases":["ristar","ristar mega drive"]},
+    {"name":"Rival Turf! - SNES NSO","category":"nso","aliases":["rival turf","rival turf snes"]},
+    {"name":"River City Ransom - NES NSO","category":"nso","aliases":["river city ransom","river city ransom nes"]},
+    {"name":"Romance of the Three Kingdoms IV: Wall of Fire - SNES NSO","category":"nso","aliases":["romance of the three kingdoms iv","romance of the three kingdoms 4","wall of fire"]},
+    {"name":"Rygar - NES NSO","category":"nso","aliases":["rygar","rygar nes"]},
+    {"name":"S.C.A.T.: Special Cybernetic Attack Team - NES NSO","category":"nso","aliases":["scat special cybernetic attack team","s.c.a.t.","special cybernetic attack team"]},
+    {"name":"Shadow Man - N64 NSO","category":"nso","aliases":["shadow man","shadowman","shadow man n64"]},
+    {"name":"Shadow of the Ninja - NES NSO","category":"nso","aliases":["shadow of the ninja","shadow of the ninja nes"]},
+    {"name":"Shining Force - Mega Drive NSO","category":"nso","aliases":["shining force","shining force mega drive"]},
+    {"name":"Shining Force II - Mega Drive NSO","category":"nso","aliases":["shining force ii","shining force 2","shining force 2 mega drive"]},
+    {"name":"Shinobi III: Return of the Ninja Master - Mega Drive NSO","category":"nso","aliases":["shinobi iii","shinobi 3","return of the ninja master"]},
+    {"name":"Side Pocket - SNES NSO","category":"nso","aliases":["side pocket","side pocket snes"]},
+    {"name":"Sin & Punishment - N64 NSO","category":"nso","aliases":["sin and punishment","sin & punishment","sin and punishment n64"]},
+    {"name":"Smash Tennis - SNES NSO","category":"nso","aliases":["smash tennis","smash tennis snes"]},
+    {"name":"Snake Rattle 'n' Roll - NES NSO","category":"nso","aliases":["snake rattle n roll","snake rattle 'n' roll","snake rattle and roll"]},
+    {"name":"Soccer - NES NSO","category":"nso","aliases":["soccer","soccer nes"]},
+    {"name":"Solar Jetman - NES NSO","category":"nso","aliases":["solar jetman","solar jetman nes"]},
+    {"name":"Solomon's Key - NES NSO","category":"nso","aliases":["solomons key","solomon's key","solomons key nes"]},
+    {"name":"Sonic The Hedgehog Spinball - Mega Drive NSO","category":"nso","aliases":["sonic the hedgehog spinball","sonic spinball","sonic spinball mega drive"]},
+    {"name":"Soulcalibur II - GameCube NSO","category":"nso","aliases":["soulcalibur ii","soulcalibur 2","soul calibur 2"]},
+    {"name":"Space Harrier II - Mega Drive NSO","category":"nso","aliases":["space harrier ii","space harrier 2","space harrier 2 mega drive"]},
+    {"name":"Space Invaders Virtual Collection - Virtual Boy NSO","category":"nso","aliases":["space invaders virtual collection","space invaders virtual boy"]},
+    {"name":"Spanky's Quest - SNES NSO","category":"nso","aliases":["spankys quest","spanky's quest","spankys quest snes"]},
+    {"name":"Star Fox - SNES NSO","category":"nso","aliases":["star fox","starfox","star fox snes"]},
+    {"name":"Star Fox 2 - SNES NSO","category":"nso","aliases":["star fox 2","starfox 2","star fox two"]},
+    {"name":"Star Fox Adventures - GameCube NSO","category":"nso","aliases":["star fox adventures","starfox adventures"]},
+    {"name":"Star Soldier - NES NSO","category":"nso","aliases":["star soldier","star soldier nes"]},
+    {"name":"StarTropics - NES NSO","category":"nso","aliases":["startropics","star tropics","startropics nes"]},
+    {"name":"Street Fighter II': Special Champion Edition - Mega Drive NSO","category":"nso","aliases":["street fighter ii special champion edition","street fighter 2 special champion edition","street fighter special champion edition"]},
+    {"name":"Streets of Rage - Mega Drive NSO","category":"nso","aliases":["streets of rage","streets of rage 1","streets of rage mega drive"]},
+    {"name":"Strider - Mega Drive NSO","category":"nso","aliases":["strider","strider mega drive"]},
+    {"name":"Stunt Race FX - SNES NSO","category":"nso","aliases":["stunt race fx","stunt race fx snes"]},
+    {"name":"Super Baseball Simulator 1.000 - SNES NSO","category":"nso","aliases":["super baseball simulator 1000","super baseball simulator 1.000"]},
+    {"name":"Super Dodge Ball - NES NSO","category":"nso","aliases":["super dodge ball","super dodgeball","super dodge ball nes"]},
+    {"name":"Super Earth Defense Force - SNES NSO","category":"nso","aliases":["super earth defense force","super edf"]},
+    {"name":"Super Fantasy Zone - Mega Drive NSO","category":"nso","aliases":["super fantasy zone","fantasy zone mega drive"]},
+    {"name":"Super Ghouls 'n Ghosts - SNES NSO","category":"nso","aliases":["super ghouls n ghosts","super ghouls 'n' ghosts","super ghouls and ghosts"]},
+    {"name":"Super Mario Advance - GBA NSO","category":"nso","aliases":["super mario advance","super mario advance gba"]},
+    {"name":"Super Mario Advance 4: Super Mario Bros. 3 - GBA NSO","category":"nso","aliases":["super mario advance 4","super mario advance 4 super mario bros 3","sma4"]},
+    {"name":"Super Mario All-Stars - SNES NSO","category":"nso","aliases":["super mario all stars","super mario all-stars","mario all stars"]},
+    {"name":"Super Mario Bros.: The Lost Levels - NES NSO","category":"nso","aliases":["super mario bros the lost levels","the lost levels","super mario bros 2 japan"]},
+    {"name":"Super Mario Kart - SNES NSO","category":"nso","aliases":["super mario kart","mario kart snes"]},
+    {"name":"Super Mario Land - Game Boy NSO","category":"nso","aliases":["super mario land","mario land","super mario land game boy"]},
+    {"name":"Super Mario Land 2: 6 Golden Coins - Game Boy NSO","category":"nso","aliases":["super mario land 2","mario land 2","6 golden coins"]},
+    {"name":"Super Mario World 2: Yoshi's Island - SNES NSO","category":"nso","aliases":["super mario world 2 yoshis island","yoshis island","yoshi's island snes"]},
+    {"name":"Super Ninja Boy - SNES NSO","category":"nso","aliases":["super ninja boy","super ninja boy snes"]},
+    {"name":"Super Punch-Out!! - SNES NSO","category":"nso","aliases":["super punch out","super punch-out","super punchout snes"]},
+    {"name":"Super Puyo Puyo 2 - SNES NSO","category":"nso","aliases":["super puyo puyo 2","super puyo puyo ii"]},
+    {"name":"Super R-Type - SNES NSO","category":"nso","aliases":["super r-type","super r type","super rtype"]},
+    {"name":"Super Tennis - SNES NSO","category":"nso","aliases":["super tennis","super tennis snes"]},
+    {"name":"Super Thunder Blade - Mega Drive NSO","category":"nso","aliases":["super thunder blade","thunder blade mega drive"]},
+    {"name":"Super Valis IV - SNES NSO","category":"nso","aliases":["super valis iv","super valis 4"]},
+    {"name":"Survival Kids - Game Boy NSO","category":"nso","aliases":["survival kids","survival kids game boy"]},
+    {"name":"Sutte Hakkun - SNES NSO","category":"nso","aliases":["sutte hakkun","sutte hakkun snes"]},
+    {"name":"Sword of Vermilion - Mega Drive NSO","category":"nso","aliases":["sword of vermilion","sword of vermilion mega drive"]},
+    {"name":"Target Earth - Mega Drive NSO","category":"nso","aliases":["target earth","target earth mega drive","assault suits ley nos"]},
+    {"name":"Tecmo Bowl - NES NSO","category":"nso","aliases":["tecmo bowl","tecmo bowl nes"]},
+    {"name":"Tetris - NES NSO","category":"nso","aliases":["tetris nes","tetris nintendo entertainment system"]},
+    {"name":"Tetris DX - Game Boy NSO","category":"nso","aliases":["tetris dx","tetris deluxe","tetris game boy color"]},
+    {"name":"The Ignition Factor - SNES NSO","category":"nso","aliases":["the ignition factor","ignition factor"]},
+    {"name":"The Immortal - NES NSO","category":"nso","aliases":["the immortal","the immortal nes"]},
+    {"name":"The Legend of Zelda: A Link to the Past and Four Swords - GBA NSO","category":"nso","aliases":["a link to the past and four swords","zelda four swords gba","zelda alttp four swords"]},
+    {"name":"The Legend of Zelda: Link's Awakening DX - Game Boy NSO","category":"nso","aliases":["links awakening dx","link's awakening dx","zelda links awakening dx"]},
+    {"name":"The Legend of Zelda: Majora's Mask - N64 NSO","category":"nso","aliases":["majoras mask","majora's mask","zelda majoras mask"]},
+    {"name":"The Legend of Zelda: Oracle of Ages - Game Boy NSO","category":"nso","aliases":["oracle of ages","zelda oracle of ages"]},
+    {"name":"The Legend of Zelda: Oracle of Seasons - Game Boy NSO","category":"nso","aliases":["oracle of seasons","zelda oracle of seasons"]},
+    {"name":"The Legend of Zelda: The Wind Waker - GameCube NSO","category":"nso","aliases":["the wind waker","wind waker","zelda wind waker"]},
+    {"name":"The Mansion of Innsmouth - Virtual Boy NSO","category":"nso","aliases":["the mansion of innsmouth","mansion of innsmouth"]},
+    {"name":"The Mysterious Murasame Castle - NES NSO","category":"nso","aliases":["the mysterious murasame castle","mysterious murasame castle","murasame castle"]},
+    {"name":"The Mystery of Atlantis - NES NSO","category":"nso","aliases":["the mystery of atlantis","mystery of atlantis"]},
+    {"name":"The Peace Keepers - SNES NSO","category":"nso","aliases":["the peace keepers","peace keepers"]},
+    {"name":"The Revenge of Shinobi - Mega Drive NSO","category":"nso","aliases":["the revenge of shinobi","revenge of shinobi","shinobi mega drive"]},
+    {"name":"The Sword of Hope - Game Boy NSO","category":"nso","aliases":["the sword of hope","sword of hope"]},
+    {"name":"The Sword of Hope II - Game Boy NSO","category":"nso","aliases":["the sword of hope ii","sword of hope 2"]},
+    {"name":"The Tower of Druaga - NES NSO","category":"nso","aliases":["the tower of druaga","tower of druaga"]},
+    {"name":"Thunder Force II - Mega Drive NSO","category":"nso","aliases":["thunder force ii","thunder force 2"]},
+    {"name":"ToeJam & Earl - Mega Drive NSO","category":"nso","aliases":["toejam and earl","toejam & earl","toe jam and earl"]},
+    {"name":"ToeJam & Earl in Panic on Funkotron - Mega Drive NSO","category":"nso","aliases":["toejam and earl in panic on funkotron","panic on funkotron","toejam & earl panic on funkotron"]},
+    {"name":"Tonic Trouble - N64 NSO","category":"nso","aliases":["tonic trouble","tonic trouble n64"]},
+    {"name":"Tuff E Nuff - SNES NSO","category":"nso","aliases":["tuff e nuff","tuff enuff"]},
+    {"name":"Turok 2: Seeds of Evil - N64 NSO","category":"nso","aliases":["turok 2","turok seeds of evil","turok 2 seeds of evil"]},
+    {"name":"Turok: Dinosaur Hunter - N64 NSO","category":"nso","aliases":["turok dinosaur hunter","turok 1","turok n64"]},
+    {"name":"TwinBee - NES NSO","category":"nso","aliases":["twinbee","twin bee"]},
+    {"name":"Uncharted Waters: New Horizons - SNES NSO","category":"nso","aliases":["uncharted waters new horizons","uncharted waters"]},
+    {"name":"Urban Champion - NES NSO","category":"nso","aliases":["urban champion","urban champion nes"]},
+    {"name":"Vectorman - Mega Drive NSO","category":"nso","aliases":["vectorman","vectorman mega drive"]},
+    {"name":"Vertical Force - Virtual Boy NSO","category":"nso","aliases":["vertical force","vertical force virtual boy"]},
+    {"name":"Vice: Project Doom - NES NSO","category":"nso","aliases":["vice project doom","vice: project doom"]},
+    {"name":"Virtua Fighter 2 - Mega Drive NSO","category":"nso","aliases":["virtua fighter 2","virtua fighter ii","vf2 mega drive"]},
+    {"name":"Virtual Bowling - Virtual Boy NSO","category":"nso","aliases":["virtual bowling","virtual bowling virtual boy"]},
+    {"name":"Volleyball - NES NSO","category":"nso","aliases":["volleyball","volleyball nes"]},
+    {"name":"VS. Excitebike - NES NSO","category":"nso","aliases":["vs excitebike","vs. excitebike","versus excitebike"]},
+    {"name":"V-Tetris - Virtual Boy NSO","category":"nso","aliases":["v-tetris","v tetris","vtetris"]},
+    {"name":"Wario Land 3 - Game Boy NSO","category":"nso","aliases":["wario land 3","wario land three"]},
+    {"name":"Wario Land 4 - GBA NSO","category":"nso","aliases":["wario land 4","wario land four"]},
+    {"name":"Wario Land: Super Mario Land 3 - Game Boy NSO","category":"nso","aliases":["wario land super mario land 3","wario land","super mario land 3"]},
+    {"name":"Wario World - GameCube NSO","category":"nso","aliases":["wario world","wario world gamecube"]},
+    {"name":"Wario's Woods - NES NSO","category":"nso","aliases":["warios woods","wario's woods"]},
+    {"name":"WarioWare, Inc.: Minigame Mania - GBA NSO","category":"nso","aliases":["warioware inc minigame mania","warioware","warioware gba"]},
+    {"name":"Wave Race 64 - N64 NSO","category":"nso","aliases":["wave race 64","wave race n64"]},
+    {"name":"Wild Guns - SNES NSO","category":"nso","aliases":["wild guns","wild guns snes"]},
+    {"name":"Wolf of the Battlefield: Mercs - Mega Drive NSO","category":"nso","aliases":["wolf of the battlefield mercs","mercs","mercs mega drive"]},
+    {"name":"Wrecking Crew - NES NSO","category":"nso","aliases":["wrecking crew","wrecking crew nes"]},
+    {"name":"Wrecking Crew '98 - SNES NSO","category":"nso","aliases":["wrecking crew 98","wrecking crew '98"]},
+    {"name":"Xevious - NES NSO","category":"nso","aliases":["xevious","xevious nes"]},
+    {"name":"Yoshi - Game Boy NSO","category":"nso","aliases":["yoshi game boy","yoshi gb"]},
+    {"name":"Yoshi - NES NSO","category":"nso","aliases":["yoshi nes","yoshi nintendo entertainment system"]},
+    {"name":"Yoshi's Island: Super Mario Advance 3 - GBA NSO","category":"nso","aliases":["yoshis island super mario advance 3","yoshi's island gba","super mario advance 3"]},
+    {"name":"Yoshi's Story - N64 NSO","category":"nso","aliases":["yoshis story","yoshi's story","yoshi story n64"]},
+    {"name":"Zelda II: The Adventure of Link - NES NSO","category":"nso","aliases":["zelda ii","zelda 2","the adventure of link"]},
+    {"name":"Zero Racers - Virtual Boy NSO","category":"nso","aliases":["zero racers","zero racers virtual boy"]},
+    {"name":"Zero Wing - Mega Drive NSO","category":"nso","aliases":["zero wing","zero wing mega drive"]},
+	{"name":"Splatoon Raiders","category":"switch2","aliases":["splatoon raiders"]},
+	{"name":"Fire Emblem: Fortune's Weave","category":"switch2","aliases":["fire emblem fortunes weave","fortunes weave"]},
+	{"name":"Star Fox","category":"switch2","aliases":["star fox","starfox"]},
+	{"name":"Final Fantasy VII Remake Intergrade","category":"switch2","aliases":["final fantasy 7 remake intergrade","ff7 remake","ffvii remake intergrade"]},
+	{"name":"Cyberpunk 2077: Ultimate Edition","category":"switch2","aliases":["cyberpunk 2077","cyberpunk ultimate edition"]},
+	{"name":"Dragon Quest VII: Reimagined","category":"switch2","aliases":["dragon quest 7 reimagined","dragon quest vii reimagined","dq7 reimagined"]},
+	{"name":"Indiana Jones and the Great Circle","category":"switch2","aliases":["indiana jones great circle","the great circle"]},
+	{"name":"Luigi's Mansion 3","category":"switch","aliases":["luigis mansion 3","luigi's mansion 3"]},
+	{"name":"Luigi's Mansion 2 HD","category":"switch","aliases":["luigis mansion 2","luigi's mansion 2 hd","dark moon hd"]},
+	{"name":"Super Mario RPG","category":"switch","aliases":["super mario rpg","mario rpg"]},
+	{"name":"Paper Mario: The Thousand-Year Door","category":"switch","aliases":["paper mario thousand year door","thousand year door","paper mario ttyd"]},
+	{"name":"Princess Peach: Showtime!","category":"switch","aliases":["princess peach showtime","peach showtime"]},
+	{"name":"Mario vs. Donkey Kong","category":"switch","aliases":["mario vs donkey kong","mario versus donkey kong"]},
+	{"name":"Metroid Prime Remastered","category":"switch","aliases":["metroid prime remastered","metroid prime"]},
+	{"name":"Mario & Luigi: Brothership","category":"switch","aliases":["mario and luigi brothership","mario luigi brothership","brothership"]},
+	{"name":"WarioWare: Move It!","category":"switch","aliases":["warioware move it","wario ware move it"]},
+	{"name":"Yoshi's Crafted World","category":"switch","aliases":["yoshis crafted world","yoshi's crafted world"]},
+	{"name":"Captain Toad: Treasure Tracker","category":"switch","aliases":["captain toad","captain toad treasure tracker"]},
+	{"name":"Astral Chain","category":"switch","aliases":["astral chain"]},
+	{"name":"The Witcher 3: Wild Hunt - Complete Edition","category":"switch","aliases":["the witcher 3","witcher 3 complete edition","the witcher 3 wild hunt"]}
+	],
+    "info": false,
+    "infoMessage": "testing",
+    "gameDescriptions": 
+	[
+		{
+			"name": "The Legend of Zelda",
+			"keywords": ["the legend of zelda", "zelda", "tears of the kingdom", "breath of the wild", "echoes of wisdom", "ocarina of time", "majora's mask", "majoras mask", "wind waker", "minish cap", "link's awakening", "links awakening", "skyward sword", "a link to the past", "oracle of ages", "oracle of seasons", "four swords", "hyrule warriors", "age of calamity", "age of imprisonment", "adventure of link"],
+			"suggestions": ["Exploring Hyrule", "Searching for ancient secrets", "Saving the kingdom"]
+		},
+		{
+			"name": "Mario Kart",
+			"keywords": ["mario kart", "mk8", "mk8d", "mkw", "super circuit"],
+			"suggestions": ["Racing online", "Time trials", "Chasing first place"]
+		},
+		{
+			"name": "Animal Crossing",
+			"keywords": ["animal crossing", "new horizons", "acnh"],
+			"suggestions": ["Enjoying island life", "Decorating my island", "Visiting friends"]
+		},
+		{
+			"name": "Splatoon",
+			"keywords": ["splatoon"],
+			"suggestions": ["Playing Turf War", "In a ranked match", "Joining the Splatfest"]
+		},
+		{
+			"name": "Super Smash Bros.",
+			"keywords": ["super smash bros", "smash ultimate", "ssbu"],
+			"suggestions": ["Fighting online", "Practising combos", "Playing with friends"]
+		},
+		{
+			"name": "Pokémon",
+			"keywords": ["pokemon", "pokémon"],
+			"suggestions": ["Catching Pokémon", "Completing the Pokédex", "Battling trainers"]
+		},
+		{
+			"name": "Minecraft",
+			"keywords": ["minecraft"],
+			"suggestions": ["Building something new", "Mining for diamonds", "Surviving the night"]
+		},
+		{
+			"name": "Metroid",
+			"keywords": ["metroid"],
+			"suggestions": ["Exploring an alien planet", "Hunting for upgrades", "Fighting Space Pirates"]
+		},
+		{
+			"name": "Kirby",
+			"keywords": ["kirby", "star allies", "forgotten land", "air riders"],
+			"suggestions": ["Copying abilities", "Exploring Dream Land", "Saving Planet Popstar"]
+		},
+		{
+			"name": "Xenoblade Chronicles",
+			"keywords": ["xenoblade"],
+			"suggestions": ["Exploring the world", "Battling powerful enemies", "Uncovering ancient mysteries"]
+		},
+		{
+			"name": "Fire Emblem",
+			"keywords": ["fire emblem", "three houses", "sacred stones", "path of radiance", "blazing blade", "fortunes weave"],
+			"suggestions": ["Planning my next move", "Leading my army", "Building relationships"]
+		},
+		{
+			"name": "Donkey Kong",
+			"keywords": ["donkey kong", "donkey kong country", "donkey kong land", "tropical freeze", "diddy's kong quest", "dixie's double trouble", "dkc", "dk bananza", "bananza"],
+			"suggestions": ["Collecting bananas", "Exploring the jungle", "Swinging through the trees"]
+		},
+		{
+			"name": "Luigi's Mansion",
+			"keywords": ["luigi's mansion", "luigis mansion", "dark moon"],
+			"suggestions": ["Hunting for ghosts", "Using the Poltergust", "Exploring the haunted mansion"]
+		},
+		{
+			"name": "Pikmin",
+			"keywords": ["pikmin"],
+			"suggestions": ["Leading my Pikmin", "Collecting treasure", "Working on my Dandori skills"]
+		},
+		{
+			"name": "Yoshi",
+			"keywords": ["yoshi", "yoshi's island", "yoshis island", "yoshi's story", "yoshis story", "crafted world"],
+			"suggestions": ["On a colourful adventure", "Throwing eggs", "Collecting flowers and coins"]
+		},
+		{
+			"name": "Sonic the Hedgehog",
+			"keywords": ["sonic", "sonic the hedgehog", "dr robotnik", "robotnik's mean bean machine", "robotniks mean bean machine"],
+			"suggestions": ["Gotta go fast", "Collecting golden rings", "Chasing the Chaos Emeralds"]
+		},
+		{
+			"name": "Hades",
+			"keywords": ["hades"],
+			"suggestions": ["Trying to escape the Underworld", "Battling through Tartarus", "Making another escape attempt"]
+		},
+		{
+			"name": "Stardew Valley",
+			"keywords": ["stardew valley", "stardew"],
+			"suggestions": ["Working on the farm", "Growing seasonal crops", "Making friends in town"]
+		},
+		{
+			"name": "Final Fantasy",
+			"keywords": ["final fantasy", "ff7", "ffvii"],
+			"suggestions": ["Embarking on an epic journey", "Battling powerful enemies", "Building my party"]
+		},
+		{
+			"name": "Crash Bandicoot",
+			"keywords": ["crash bandicoot", "crash team racing", "ctr nitro", "ctr"],
+			"suggestions": ["Collecting Wumpa fruit", "Racing for first place", "Searching for hidden gems"]
+		},
+		{
+			"name": "Paper Mario",
+			"keywords": ["paper mario", "thousand year door", "origami king"],
+			"suggestions": ["On a paper adventure", "Battling with the party", "Solving puzzles"]
+		},
+		{
+			"name": "Wario",
+			"keywords": ["wario", "warioware", "wario ware"],
+			"suggestions": ["Making some money", "Playing microgames", "Hunting for treasure"]
+		},
+		{
+			"name": "Star Fox",
+			"keywords": ["star fox", "starfox", "lylat wars"],
+			"suggestions": ["Defending the Lylat System", "Flying the Arwing", "Do a barrel roll"]
+		},
+		{
+			"name": "F-Zero",
+			"keywords": ["f-zero", "f zero", "fzero"],
+			"suggestions": ["Racing at maximum speed", "Chasing the championship", "Mastering the tracks"]
+		},
+		{
+			"name": "Mario + Rabbids",
+			"keywords": ["mario + rabbids", "mario rabbids", "kingdom battle", "sparks of hope"],
+			"suggestions": ["Leading my squad", "Battling alongside the Rabbids", "Collecting Sparks"]
+		},
+		{
+			"name": "Mario & Luigi",
+			"keywords": ["mario & luigi", "mario and luigi", "superstar saga", "brothership"],
+			"suggestions": ["On a brothers' adventure", "Pulling off Bros. Attacks", "Working together"]
+		},
+		{
+			"name": "Mario RPG",
+			"keywords": ["super mario rpg", "mario rpg"],
+			"suggestions": ["On an RPG adventure", "Building my party", "Saving Star Road"]
+		},
+		{
+			"name": "Mario Sports and Party",
+			"keywords": ["mario tennis", "mario golf", "mario party", "mario strikers", "super mario party", "mario's tennis", "marios tennis", "mario's golf"],
+			"suggestions": ["Playing with friends", "Going for the championship", "Enjoying some friendly competition"]
+		},
+		{
+			"name": "Super Mario",
+			"keywords": ["super mario odyssey", "mario odyssey", "super mario maker", "mario maker", "super mario bros", "new super mario", "super mario 3d", "mario wonder", "super mario world", "super mario land", "mario land", "mario bros", "mario advance", "mario 64", "mario clash", "mario vs donkey kong", "mario versus donkey kong", "captain toad"],
+			"suggestions": ["Jumping into a new adventure", "Exploring the Mushroom Kingdom", "Collecting Power Stars"]
+		},
+		{
+			"name": "Bayonetta",
+			"keywords": ["bayonetta", "bayo"],
+			"suggestions": ["Fighting in style", "Mastering combos", "Unleashing Witch Time"]
+		},
+		{
+			"name": "Hollow Knight",
+			"keywords": ["hollow knight", "silksong"],
+			"suggestions": ["Exploring Hallownest", "Searching for hidden charms", "Taking on difficult bosses"]
+		},
+		{
+			"name": "Celeste",
+			"keywords": ["celeste"],
+			"suggestions": ["Climbing the mountain", "Overcoming challenges", "Finding my way to the summit"]
+		},
+		{
+			"name": "Cuphead",
+			"keywords": ["cuphead"],
+			"suggestions": ["Taking on another boss", "Running and gunning", "Mastering the parry"]
+		},
+		{
+			"name": "Persona",
+			"keywords": ["persona 5", "persona 5 royal", "p5r"],
+			"suggestions": ["Living a double life", "Exploring the Metaverse", "Changing hearts"]
+		},
+		{
+			"name": "Dragon Quest",
+			"keywords": ["dragon quest", "dragon warrior", "dq7"],
+			"suggestions": ["On a grand adventure", "Battling monsters", "Building my party"]
+		},
+		{
+			"name": "The Witcher",
+			"keywords": ["witcher 3", "the witcher", "wild hunt"],
+			"suggestions": ["Hunting monsters", "Exploring the Continent", "Taking on contracts"]
+		},
+		{
+			"name": "Cyberpunk",
+			"keywords": ["cyberpunk 2077", "cyberpunk"],
+			"suggestions": ["Exploring Night City", "Taking on a new gig", "Upgrading my cyberware"]
+		},
+		{
+			"name": "Grand Theft Auto",
+			"keywords": ["grand theft auto", "gta"],
+			"suggestions": ["Exploring the city", "Planning the next job", "Causing chaos"]
+		},
+		{
+			"name": "Red Dead Redemption",
+			"keywords": ["red dead redemption", "red dead", "rdr"],
+			"suggestions": ["Riding into the sunset", "Exploring the frontier", "Living the outlaw life"]
+		},
+		{
+			"name": "Hogwarts Legacy",
+			"keywords": ["hogwarts legacy", "hogwarts"],
+			"suggestions": ["Exploring Hogwarts", "Learning new spells", "Searching for ancient magic"]
+		},
+		{
+			"name": "Teenage Mutant Ninja Turtles",
+			"keywords": ["teenage mutant ninja turtles", "tmnt", "cowabunga"],
+			"suggestions": ["Fighting crime in the city", "Taking on the Foot Clan", "Pizza break"]
+		},
+		{
+			"name": "Shovel Knight",
+			"keywords": ["shovel knight", "treasure trove"],
+			"suggestions": ["Digging for treasure", "Battling the Order of No Quarter", "Searching for relics"]
+		},
+		{
+			"name": "Banjo-Kazooie",
+			"keywords": ["banjo-kazooie", "banjo kazooie", "banjo-tooie", "banjo tooie"],
+			"suggestions": ["Collecting Jiggies", "Exploring colourful worlds", "Taking on Gruntilda"]
+		},
+		{
+			"name": "Castlevania",
+			"keywords": ["castlevania"],
+			"suggestions": ["Exploring Dracula's castle", "Hunting vampires", "Battling the undead"]
+		},
+		{
+			"name": "Mega Man",
+			"keywords": ["mega man", "megaman", "wily wars"],
+			"suggestions": ["Taking on Robot Masters", "Fighting Dr. Wily", "Collecting new weapons"]
+		},
+		{
+			"name": "Street Fighter",
+			"keywords": ["street fighter"],
+			"suggestions": ["Fighting online", "Training my combos", "Climbing the rankings"]
+		},
+		{
+			"name": "Rayman",
+			"keywords": ["rayman"],
+			"suggestions": ["Exploring colourful worlds", "Collecting Lums", "On a platforming adventure"]
+		},
+		{
+			"name": "Racing Classics",
+			"keywords": ["wave race", "ridge racer", "stunt race", "excitebike", "1080 snowboarding", "1080° snowboarding"],
+			"suggestions": ["Going for a new record", "Mastering the track", "Racing against the clock"]
+		},
+		{
+			"name": "Tetris",
+			"keywords": ["tetris"],
+			"suggestions": ["Clearing lines", "Chasing a high score", "Stacking blocks"]
+		},
+		{
+			"name": "Dr. Mario",
+			"keywords": ["dr mario", "doctor mario"],
+			"suggestions": ["Clearing viruses", "Sorting out the capsules", "Going for a high score"]
+		},
+		{
+			"name": "Harvest Moon",
+			"keywords": ["harvest moon"],
+			"suggestions": ["Working on the farm", "Growing crops", "Looking after animals"]
+		},
+		{
+			"name": "Golden Sun",
+			"keywords": ["golden sun"],
+			"suggestions": ["On an epic quest", "Mastering Psynergy", "Exploring ancient ruins"]
+		},
+		{
+			"name": "GoldenEye",
+			"keywords": ["goldeneye"],
+			"suggestions": ["On a secret mission", "Infiltrating the facility", "Playing multiplayer"]
+		},
+		{
+			"name": "EarthBound",
+			"keywords": ["earthbound", "mother"],
+			"suggestions": ["On a strange adventure", "Exploring Eagleland", "Battling unusual enemies"]
+		},
+		{
+			"name": "Starfy",
+			"keywords": ["starfy", "densetsu no starfy"],
+			"suggestions": ["Underwater adventures", "Exploring the ocean", "Searching for treasure"]
+		},
+		{
+			"name": "Wario Classics",
+			"keywords": ["wario land", "wario world", "mario's picross", "marios picross"],
+			"suggestions": ["Chasing a high score", "Searching for treasure", "Taking a nostalgic trip"]
+		},
+		{
+			"name": "Fortnite",
+			"keywords": ["fortnite"],
+			"suggestions": ["Dropping into the island", "Playing with friends", "Going for a Victory Royale"]
+		},
+		{
+			"name": "Rocket League",
+			"keywords": ["rocket league"],
+			"suggestions": ["Scoring aerial goals", "Playing ranked", "Training my mechanics"]
+		},
+		{
+			"name": "Fall Guys",
+			"keywords": ["fall guys"],
+			"suggestions": ["Racing to the finish", "Surviving the obstacle course", "Chasing the crown"]
+		},
+		{
+			"name": "Among Us",
+			"keywords": ["among us", "amogus"],
+			"suggestions": ["Doing my tasks", "Looking for the impostor", "Definitely not the impostor"]
+		},
+		{
+			"name": "Overcooked",
+			"keywords": ["overcooked"],
+			"suggestions": ["Cooking under pressure", "Serving hungry customers", "Coordinating with the team"]
+		},
+		{
+			"name": "Monster Prom",
+			"keywords": ["monster prom", "monster camp"],
+			"suggestions": ["Trying to find a date", "Making questionable decisions", "Hanging out with monsters"]
+		},
+		{
+			"name": "Diablo",
+			"keywords": ["diablo"],
+			"suggestions": ["Slaying demons", "Hunting for legendary loot", "Defending Sanctuary"]
+		},
+		{
+			"name": "Civilization",
+			"keywords": ["civilization 6", "civilization vi", "civ 6", "civ vi"],
+			"suggestions": ["Building an empire", "Expanding my civilization", "Going for world domination"]
+		},
+		{
+			"name": "Nintendo Switch Sports",
+			"keywords": ["nintendo switch sports", "switch sports", "sports resort"],
+			"suggestions": ["Playing with friends", "Competing in a tournament", "Practising my swing"]
+		},
+		{
+			"name": "Ninjala",
+			"keywords": ["ninjala"],
+			"suggestions": ["Fighting in the arena", "Mastering my ninja skills", "Competing online"]
+		},
+		{
+			"name": "ARMS",
+			"keywords": ["arms"],
+			"suggestions": ["Fighting in the arena", "Training my fighter", "Going for the championship"]
+		},
+		{
+			"name": "Ring Fit Adventure",
+			"keywords": ["ring fit"],
+			"suggestions": ["Getting a workout in", "Training my muscles", "Working towards my goals"]
+		}
+	]
+
 }
