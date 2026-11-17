@@ -1,228 +1,2893 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-	<title>SwitchRPC</title>
-    <style>
-		/*Header*/
-		.header-container {
-			position: fixed;
-            background-color: #23272A;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100%;
-            height: 30px;
-            -webkit-app-region: drag;
-        }
-        .right-window {
-            -webkit-app-region: no-drag;
-            display: flex;
-            flex-direction: row;
-            margin-top:5px;
-        }
-
-        .left-window {
-            -webkit-app-region: no-drag;
-            display: flex;
-            flex-direction: row;
-            margin-top:5px;
-        }
-
-        #min, #max, #x, #icon {
-            background-color: #23272A;
-            transition: background-color 0.2s;
-            height: 20px;
-            width: 20px;
-        }
-
-        #min img, #max img, #x img, #icon img {
-            height: 20px;
-        }
-        #min:hover, #max:hover {
-           	background-color: #3F3F3F;
-            cursor: pointer;
-        }
-
-        #x:hover {
-            background-color: red;
-            cursor: pointer;
-        }
-
-
-		/*Body*/
-
-        input[type=text], select {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-			background-color:#40444b;
-			color: white;
-        }
-
-        input[type=submit] {
-            width: 100%;
-            background-color: #34363c;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            font-size: 1.25em;
-			transition: background-color 0.2s;
-        }
-
-        input[type=submit]:hover {
-            background-color: #393c42;
-        }
-		
-        body {
-            font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-			justify-content: center;
-			display: flex;
-			flex-direction: column;
-			margin: 0;
-			padding: 0;
-			background-color: #2f3136;
-			color: white;
-			height: 100%;
-			width: 100%;
-        }
-
-		.main {
-			margin: 20px 0;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			width: 100%;
-			height: calc(100vh - 40px);
-		}
-
-		.left-side {
-			width: 50%;
-			display: flex;
-			align-items: center;
-		}
-
-		.right-side {
-			width: 30%;
-			height: 100%;
-			margin-bottom: 20px;
-		}
-
-		#title-container {
-			background-color: #393c42;
-			overflow-x: hidden;
-			overflow-y: scroll;
-			padding: 0 10px;
-			height: 80%;
-		}
-	</style>
-</head>
-	
-<body>
-	<div class="header">
-		<div class="header-container">
-            <div class="left-window">
-                 <span style="margin: 0 3px"></span>
-                 <div class="window-item" id="icon">
-                    <img src="assets/icons/icon.png">
-                </div>
-            </div>
-            <div class="right-window">
-                <div class="window-item" id="min">
-                    <img src="assets/min.png">
-                </div>
-                <span style="margin: 0 5px"></span>
-                <div class="window-item" id="max">
-                    <img src="assets/max.png">
-                </div>
-                <span style="margin: 0 5px"></span>
-                <div class="window-item" id="x">
-                    <img src="assets/x.png">
-                </div>
-                <span style="margin: 0 2px"></span></div>
-            </div>
-        </div>
-	</div>
-<div class="main">
-	<div class="left-side">
-		<div class="left-container">
-            <label><b>Click on an item in the scroll box to fill in that title's name or type a title into the text field manually.</b></label>
-            <br></br>
-			<form>
-				<label>Game</label>
-				<input type="text" id="game" name="game" placeholder="What game are you playing?">
-				<br />
-				<label>Description</label>
-				<label style="color:gray;">(Default: 'Online', Min. Length: 2)</label>
-				<input type="text" id="desc" name="desc" placeholder="What mode? (Single Player, Online, etc.)">
-				<br />
-				<input type="submit">
-			</form>
-		</div>
-	</div>
-	<div class="right-side">
-		<h2>Supported Titles</h2>
-		<br>
-		<div id="title-container">
-		</div>
-	</div>
-</div>
-
-<script>
-    const electron = require('electron');
-	const {ipcRenderer, ipcMain} = electron;
-
-    const x = document.getElementById('x');
-    const max = document.getElementById('max');
-    const min = document.getElementById('min');
-
-    x.addEventListener('click', function (e) {
-        ipcRenderer.send('x');
-    });
-    max.addEventListener('click', function (e) {
-        ipcRenderer.send('max');
-    });
-    min.addEventListener('click', function (e) {
-        ipcRenderer.send('min');
-    });
-	
-    const form = document.querySelector('form');
-    form.addEventListener('submit', submitForm);
-
-    function submitForm(e) {
-        e.preventDefault();
-        const game = document.querySelector('#game').value;
-        const desc = document.querySelector('#desc').value;
-        ipcRenderer.send('game:value', game);
-        ipcRenderer.send('desc:value', desc);
-	}
-	
-	var noSpecialCharacters = function (str) {
-        return str.replace(/[^a-zA-Z0-9 ]/g, '');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwitchRPCEnhanced</title>
+  <style>
+    :root {
+      --bg: #111318;
+      --panel: #191c24;
+      --panel2: #222631;
+      --border: #303542;
+      --text: #f2f3f5;
+      --muted: #969eae;
+      --accent: #e63950;
+      --accent-hover: #ff5268;
+      --success: #8ed6a5;
+      --warning: #f3c969;
     }
-	
-	document.addEventListener('DOMContentLoaded', function() {
-		ipcRenderer.send('getGameData');
 
-		ipcRenderer.on('sendingGameData', function(e, data) {
-            data.forEach(function(game) {
-                let clean_game = noSpecialCharacters(game);
-                document.getElementById('title-container').innerHTML += `<h4 id='${clean_game}'>${game}</h4>`;
-            })
-            
-            data.forEach(function(game) {
-                let clean_game = noSpecialCharacters(game);
-                document.getElementById(clean_game).addEventListener('click', event => {document.querySelector('#game').value = document.getElementById(clean_game).textContent;});
-            })
-		})
-	})
+    * {
+      box-sizing: border-box;
+    }
 
-</script>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px "Segoe UI", Arial, sans-serif;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .titlebar {
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 16px;
+      background: #171920;
+      border-bottom: 1px solid var(--border);
+      -webkit-app-region: drag;
+      user-select: none;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+
+    .brand-icon {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
+
+    .brand-name span {
+      color: var(--accent);
+    }
+
+    .window-controls {
+      display: flex;
+      height: 100%;
+      -webkit-app-region: no-drag;
+    }
+
+    .window-controls button {
+      width: 46px;
+      border: 0;
+      background: transparent;
+      font-size: 17px;
+    }
+
+    .window-controls button:hover {
+      background: var(--panel2);
+    }
+
+    .window-controls .close:hover {
+      background: #c42b40;
+    }
+
+    .app {
+      height: calc(100vh - 42px);
+      display: grid;
+      grid-template-columns: 225px minmax(0, 1fr);
+      min-height: 0;
+    }
+
+    aside {
+      background: var(--panel);
+      border-right: 1px solid var(--border);
+      padding: 18px 12px;
+      overflow-y: auto;
+    }
+
+    .side-heading {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 12px 10px 7px;
+    }
+
+    .nav-button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      border: 0;
+      border-radius: 7px;
+      background: transparent;
+      color: #c4c9d3;
+      padding: 10px;
+      text-align: left;
+      margin: 2px 0;
+    }
+
+    .nav-button:hover {
+      background: var(--panel2);
+    }
+
+    .nav-button.active {
+      background: rgba(230, 57, 80, .16);
+      color: white;
+    }
+
+    .nav-icon {
+      width: 19px;
+      flex-shrink: 0;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    main {
+      min-width: 0;
+      min-height: 0;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      padding: 25px 28px 18px;
+      gap: 18px;
+      overflow: hidden;
+    }
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    h1 {
+      font-size: 23px;
+      margin: 0 0 5px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+    }
+
+    .icon-button {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .icon-button:hover {
+      background: var(--panel2);
+    }
+
+    .library {
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      overflow: hidden;
+    }
+
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 0 13px;
+    }
+
+    .search-wrap span {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      height: 43px;
+      border: 0;
+      outline: 0;
+      color: var(--text);
+      background: transparent;
+      cursor: text;
+    }
+
+    .library-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .library-heading-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .library-heading h2 {
+      font-size: 15px;
+      margin: 0;
+    }
+
+    .count {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .add-game-button {
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--panel2);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .add-game-button:hover {
+      border-color: var(--accent);
+    }
+
+    /* NSO library console filter */
+    .nso-library-filter {
+      display: none;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      padding: 11px 13px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    .nso-library-filter.visible {
+      display: flex;
+    }
+
+    .nso-library-filter label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nso-library-filter select {
+      flex: 1;
+      min-width: 0;
+      height: 35px;
+      padding: 0 10px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      outline: none;
+      background: var(--panel2);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .nso-library-filter select:focus {
+      border-color: var(--accent);
+    }
+
+    .game-list {
+      min-height: 0;
+      height: 100%;
+      flex: 1;
+      overflow-y: auto;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      padding: 2px 8px 12px 0;
+    }
+
+    .game-group {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-auto-rows: auto;
+      align-content: start;
+      align-items: stretch;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .game-group-heading {
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      display: flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 2px 2px 0;
+    }
+
+    .game-group-heading.custom-heading {
+      color: #d5a0a8;
+    }
+
+    .game-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 104px;
+      min-height: 104px;
+      padding: 12px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      min-width: 0;
+      overflow: hidden;
+      transition: border-color .12s, background .12s;
+    }
+
+    .game-card:hover {
+      border-color: #555d6d;
+      background: #20232c;
+    }
+
+    .game-card.selected {
+      border-color: var(--accent);
+      background: #20232c;
+    }
+
+    .game-select {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      flex: 1;
+      min-width: 0;
+      height: 100%;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      text-align: left;
+      outline: none;
+    }
+
+    .game-icon {
+      width: 72px;
+      height: 72px;
+      flex: 0 0 72px;
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .game-artwork {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .game-icon-fallback {
+      display: none;
+      position: absolute;
+      inset: 0;
+      place-items: center;
+      font-size: 20px;
+      color: var(--muted);
+    }
+
+    .game-meta {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      min-width: 0;
+      gap: 3px;
+      overflow: hidden;
+    }
+
+    .game-name {
+      min-width: 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      overflow-wrap: anywhere;
+      line-height: 1.25;
+      max-height: 2.5em;
+      font-weight: 600;
+    }
+
+    .game-platform {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .favourite,
+    .edit-custom,
+    .delete-custom,
+    .remove-recent {
+      font-size: 16px;
+      border: 0;
+      background: transparent;
+      padding: 3px;
+      flex-shrink: 0;
+    }
+
+    .favourite {
+      color: #f3c969;
+    }
+
+    .edit-custom,
+    .delete-custom,
+    .remove-recent {
+      color: var(--muted);
+      border-radius: 5px;
+    }
+
+    .edit-custom:hover {
+      color: var(--success);
+      background: rgba(142, 214, 165, .12);
+    }
+
+    .delete-custom:hover,
+    .remove-recent:hover {
+      color: #ff7b8b;
+      background: rgba(230, 57, 80, .12);
+    }
+
+    button:focus,
+    button:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .empty {
+      color: var(--muted);
+      text-align: center;
+      padding: 35px 10px;
+      width: 100%;
+    }
+
+    .bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 13px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+      gap: 10px 12px;
+      align-items: start;
+    }
+
+    .field {
+      min-width: 0;
+      width: 100%;
+      align-self: start;
+    }
+
+    .field label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 6px 2px;
+      line-height: 16px;
+    }
+
+    .field input,
+    .modal-field input,
+    .modal-field select {
+      display: block;
+      width: 100%;
+      height: 38px;
+      min-width: 0;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 0 10px;
+      outline: none;
+      background: var(--panel);
+      color: var(--text);
+      cursor: text;
+    }
+
+    .field input:focus,
+    .search-wrap:focus-within,
+    .modal-field input:focus,
+    .modal-field select:focus {
+      border-color: var(--accent);
+    }
+
+    .field input.locked-input {
+      border-color: var(--accent);
+      background: #20232c;
+      cursor: default;
+      color: white;
+    }
+
+    .field input.locked-input:focus {
+      border-color: var(--accent);
+    }
+
+    .title-lock-indicator {
+      font-size: 10px;
+      color: var(--success);
+      margin: 5px 0 0 2px;
+      min-height: 12px;
+    }
+
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+      min-height: 23px;
+    }
+
+    .suggestion {
+      border: 1px solid var(--border);
+      background: var(--panel2);
+      color: #cbd0da;
+      border-radius: 5px;
+      padding: 4px 7px;
+      font-size: 10px;
+      line-height: 1.2;
+    }
+
+    .suggestion:hover {
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .submit-stack {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+      min-width: 230px;
+      align-self: start;
+      margin-top: 22px;
+    }
+
+    .submit-button,
+    .clear-button {
+      min-height: 38px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 7px;
+      font-weight: 700;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    .submit-button {
+      background: var(--accent);
+      color: white;
+    }
+
+    .submit-button:hover {
+      background: var(--accent-hover);
+    }
+
+    .clear-button {
+      background: var(--panel2);
+      border: 1px solid var(--border);
+    }
+
+    .clear-button:hover {
+      border-color: var(--accent);
+    }
+
+    .status {
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 11px;
+      min-height: 13px;
+    }
+
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 42px 0 0;
+      z-index: 5;
+      background: rgba(0, 0, 0, .65);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal {
+      width: 100%;
+      max-width: 430px;
+      max-height: 90%;
+      overflow-y: auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    #add-game-modal .modal {
+      max-width: 560px;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .close-modal {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 22px;
+    }
+
+    .modal-field {
+      margin: 14px 0;
+    }
+
+    .modal-field label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 6px 2px;
+    }
+
+    .modal-field select {
+      cursor: pointer;
+    }
+
+    .modal-help,
+    .note {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .modal-help {
+      margin-top: 6px;
+    }
+
+    .note {
+      margin-top: 17px;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .secondary-button {
+      min-height: 38px;
+      padding: 0 14px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--panel2);
+    }
+
+    .nso-console-selector {
+      display: none;
+      margin: 16px 0;
+    }
+
+    .nso-console-selector.visible {
+      display: block;
+    }
+
+    .nso-console-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .nso-console-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      min-width: 0;
+      height: 180px;
+      padding: 14px 10px;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--panel2);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      cursor: pointer;
+    }
+
+    .nso-console-option:hover {
+      border-color: var(--accent);
+    }
+
+    .nso-console-option.selected {
+      border-color: var(--accent);
+      background: rgba(230, 57, 80, .16);
+    }
+
+    .nso-console-option img {
+      width: 84px;
+      height: 84px;
+      object-fit: contain;
+      flex: 0 0 84px;
+    }
+
+    .nso-console-option span {
+      width: 100%;
+      line-height: 1.3;
+      min-height: 2.6em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 520px) {
+      #add-game-modal .modal {
+        max-width: 100%;
+      }
+
+      .nso-console-grid {
+        gap: 8px;
+      }
+
+      .nso-console-option {
+        height: 150px;
+        padding: 10px 6px;
+        font-size: 12px;
+      }
+
+      .nso-console-option img {
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
+      }
+
+      .nso-library-filter {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 7px;
+      }
+    }
+
+    .modal-message {
+      min-height: 17px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .modal-message.error {
+      color: #ff7b8b;
+    }
+
+    .modal-message.success {
+      color: var(--success);
+    }
+
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .setting-row small {
+      display: block;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .setting-row input {
+      accent-color: var(--accent);
+    }
+
+    .boxart-modal {
+      max-width: 650px;
+    }
+
+    .boxart-intro {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+      margin: 0 0 15px;
+    }
+
+    .boxart-toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .boxart-toolbar button {
+      min-height: 36px;
+      padding: 0 12px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      background: var(--panel2);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .boxart-toolbar button:hover {
+      border-color: var(--accent);
+    }
+
+    .boxart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 9px;
+      max-height: 390px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .boxart-search {
+      margin-bottom: 12px;
+    }
+
+    .boxart-search input {
+      height: 38px;
+    }
+
+    #boxart-game-status {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      max-height: 360px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .boxart-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px;
+      border: 1px solid var(--border);
+      background: var(--panel2);
+      border-radius: 8px;
+      min-width: 0;
+    }
+
+    .boxart-preview {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+
+    .boxart-info {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .boxart-name {
+      font-weight: 600;
+      font-size: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .boxart-status {
+      font-size: 10px;
+      margin-top: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    .boxart-status.present {
+      color: var(--success);
+    }
+
+    .boxart-status.missing {
+      color: #ff7b8b;
+    }
+
+    .boxart-status.warning {
+      color: var(--warning);
+    }
+
+    .boxart-footer {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 13px;
+      line-height: 1.5;
+    }
+
+    .boxart-empty {
+      grid-column: 1 / -1;
+      padding: 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    @media (max-width: 760px) {
+      .app {
+        grid-template-columns: 165px minmax(0, 1fr);
+      }
+
+      main {
+        padding: 18px 15px 12px;
+      }
+
+      .bottom {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      }
+
+      .submit-stack {
+        grid-column: 1 / -1;
+        min-width: 0;
+        margin-top: 0;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .app {
+        grid-template-columns: 125px minmax(0, 1fr);
+      }
+
+      aside {
+        padding: 12px 7px;
+      }
+
+      main {
+        padding: 14px 10px 10px;
+        gap: 12px;
+      }
+
+      .nav-button {
+        font-size: 11px;
+        padding: 8px 5px;
+        gap: 5px;
+      }
+
+      .bottom {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .submit-stack {
+        grid-column: 1;
+        min-width: 0;
+      }
+
+      .status {
+        grid-column: 1;
+      }
+
+      .library-heading-info {
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="titlebar">
+    <div class="brand">
+      <img src="assets/icons/icon.png" alt="SwitchRPC icon" class="brand-icon">
+      <span class="brand-name">SwitchRPC<span>Enhanced</span></span>
+    </div>
+
+    <div class="window-controls">
+      <button id="minimize" title="Minimise">−</button>
+      <button id="maximize" title="Maximise">□</button>
+      <button id="close" class="close" title="Close">×</button>
+    </div>
+  </header>
+
+  <div class="app">
+    <aside>
+      <div class="side-heading">Game library</div>
+
+      <nav id="navigation">
+        <button class="nav-button active" data-section="all">
+          <span class="nav-icon">▦</span> Show all
+        </button>
+
+        <button class="nav-button" data-section="switch">
+          <span class="nav-icon">🎮</span> Nintendo Switch
+        </button>
+
+        <button class="nav-button" data-section="switch2">
+          <span class="nav-icon">🎮</span> Nintendo Switch 2
+        </button>
+
+        <button class="nav-button" data-section="nso">
+          <span class="nav-icon">🕹️</span> Nintendo Switch Online
+        </button>
+
+        <button class="nav-button" data-section="custom">
+          <span class="nav-icon">✚</span> Custom Games
+        </button>
+
+        <div class="side-heading">Personal</div>
+
+        <button class="nav-button" data-section="favourites">
+          <span class="nav-icon">☆</span> Favourites
+        </button>
+
+        <button class="nav-button" data-section="recent">
+          <span class="nav-icon">◷</span> Recently played
+        </button>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="top">
+        <div>
+          <h1 id="page-title">Show all games</h1>
+          <div class="subtitle">Choose a game to use for your Discord Rich Presence.</div>
+        </div>
+
+        <button class="icon-button" id="settings-button" title="Settings">⚙</button>
+      </div>
+
+      <section class="library">
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Search games..." autocomplete="off">
+        </div>
+
+        <!-- NSO console filter -->
+        <div class="nso-library-filter" id="nso-library-filter">
+          <label for="nso-console-filter">Filter by console</label>
+
+          <select id="nso-console-filter">
+            <option value="all">All Consoles</option>
+			<option value="nso_exclusive">NSO Exclusive</option>
+            <option value="nes">Nintendo Entertainment System</option>
+            <option value="snes">Super Nintendo</option>
+            <option value="gameboy">Game Boy</option>
+            <option value="gba">Game Boy Advance</option>
+            <option value="n64">Nintendo 64</option>
+            <option value="n64_mature">Nintendo 64 Mature</option>
+            <option value="megadrive">SEGA Mega Drive</option>
+            <option value="gamecube">Nintendo GameCube</option>
+            <option value="virtualboy">Virtual Boy</option>
+          </select>
+        </div>
+
+        <div class="library-heading">
+          <div class="library-heading-info">
+            <h2 id="list-heading">All games</h2>
+            <span class="count" id="game-count">Loading...</span>
+          </div>
+
+		<button class="add-game-button" id="refresh-library">↻ Refresh Library</button>
+		<button class="add-game-button" id="open-boxart-manager">▧ Box Art</button>
+		<button class="add-game-button" id="open-add-game">＋ Add Game</button>
+        </div>
+
+        <div class="game-list" id="game-list">
+          <div class="empty">Loading your game library...</div>
+        </div>
+      </section>
+
+      <section class="bottom">
+        <div class="field">
+          <label for="game">Game title</label>
+          <input id="game" type="text" placeholder="Select or enter a game">
+          <div class="title-lock-indicator" id="title-lock-indicator"></div>
+        </div>
+
+        <div class="field">
+          <label for="desc">Activity description</label>
+          <input id="desc" type="text" placeholder="Online" maxlength="200">
+          <div class="suggestions" id="activity-suggestions"></div>
+        </div>
+
+        <div class="submit-stack">
+          <button class="submit-button" id="submit">Update Discord</button>
+          <button class="clear-button" id="clear-activity">Clear Activity</button>
+        </div>
+
+        <div class="status" id="status">Ready</div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="settings-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Library settings</h2>
+        <button class="close-modal" id="close-settings">×</button>
+      </div>
+
+      <p>Choose which library sections appear in the navigation.</p>
+      <div id="settings-options"></div>
+
+      <div class="note">
+        These settings are saved on this computer. Hiding a section does not delete its games or affect your Discord connection.
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="add-game-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="custom-game-modal-title">Add a custom game</h2>
+        <button class="close-modal" id="close-add-game">×</button>
+      </div>
+
+      <p class="modal-help">
+        This adds a title to your separate Custom Games section. It will use generic Switch artwork rather than matching artwork automatically.
+      </p>
+
+      <div class="modal-field">
+        <label for="custom-game-name">Game title</label>
+        <input id="custom-game-name" type="text" maxlength="120" placeholder="Enter the game title">
+      </div>
+
+      <div class="modal-field">
+        <label for="custom-game-platform">Platform</label>
+        <select id="custom-game-platform">
+          <option value="switch">Nintendo Switch</option>
+          <option value="switch2">Nintendo Switch 2</option>
+          <option value="nso">Nintendo Switch Online</option>
+        </select>
+      </div>
+
+      <div class="nso-console-selector" id="nso-console-selector">
+        <label>Select Nintendo Switch Online console</label>
+
+        <div class="modal-help">
+          Choose the console this custom game belongs to. Its artwork will be used
+          as the console image when no individual game artwork is available.
+        </div>
+
+        <div class="nso-console-grid">
+          <button type="button" class="nso-console-option" data-console="nes">
+            <img src="assets/Discord%20Assests/nes.png" alt="NES">
+            <span>NES</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="snes">
+            <img src="assets/Discord%20Assests/snes.png" alt="SNES">
+            <span>SNES</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="gameboy">
+            <img src="assets/Discord%20Assests/gameboy.png" alt="Game Boy">
+            <span>Game Boy</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="gba">
+            <img src="assets/Discord%20Assests/gba.png" alt="Game Boy Advance">
+            <span>Game Boy Advance</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="n64">
+            <img src="assets/Discord%20Assests/n64.png" alt="Nintendo 64">
+            <span>Nintendo 64</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="n64_mature">
+            <img src="assets/Discord%20Assests/n64_mature.png" alt="Nintendo 64 Mature">
+            <span>N64 Mature</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="megadrive">
+            <img src="assets/Discord%20Assests/megadrive.png" alt="SEGA Mega Drive">
+            <span>SEGA Mega Drive</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="gamecube">
+            <img src="assets/Discord%20Assests/gamecube.png" alt="Nintendo GameCube">
+            <span>GameCube</span>
+          </button>
+
+          <button type="button" class="nso-console-option" data-console="virtualboy">
+            <img src="assets/Discord%20Assests/virtualboy.png" alt="Virtual Boy">
+            <span>Virtual Boy</span>
+          </button>
+        </div>
+
+        <div class="modal-help">
+          Leaving this unselected retains the standard Nintendo Switch Online artwork.
+        </div>
+      </div>
+
+      <div class="modal-field">
+        <label for="custom-game-aliases">Aliases (optional)</label>
+        <input id="custom-game-aliases" type="text" maxlength="500" placeholder="Alternative title, short name">
+
+        <div class="modal-help">
+          Separate multiple aliases with commas. You can use an alias when entering a title for Discord.
+        </div>
+      </div>
+
+      <div class="modal-message" id="add-game-message"></div>
+
+      <div class="modal-actions">
+        <button class="secondary-button" id="cancel-add-game">Cancel</button>
+        <button class="submit-button" id="save-custom-game">Save Game</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="boxart-modal">
+    <div class="modal boxart-modal">
+      <div class="modal-header">
+        <h2>Game Box Art Manager</h2>
+        <button class="close-modal" id="close-boxart-manager">×</button>
+      </div>
+
+      <p class="boxart-intro">
+        Manage individual game covers used in the game library.
+        Images are stored in <strong>assets/Game Box Arts</strong>.
+        Use PNG files named to match the game's expected artwork filename.
+        Console artwork remains in <strong>assets/Discord Assests</strong>.
+      </p>
+
+      <div class="boxart-intro">
+        <strong>Discord Developer Portal image requirements</strong>
+
+        <p>
+          If you intend to upload a game cover to Discord Developer Portal
+          for use with Rich Presence, your image must be at least
+          <strong>512 × 512 pixels</strong>.
+        </p>
+
+        <p>
+          We recommend using PNG images that are 512 × 512 pixels or larger.
+          Smaller images may not be accepted by Discord but will be fine locally.
+        </p>
+      </div>
+
+      <div class="boxart-toolbar">
+        <button id="import-boxart">＋ Add Game Cover</button>
+        <button id="refresh-boxart">↻ Refresh List</button>
+      </div>
+
+      <div class="boxart-grid" id="boxart-grid">
+        <div class="boxart-empty">Loading game covers...</div>
+      </div>
+
+      <h3 class="boxart-status-heading">Game Artwork Status</h3>
+
+      <div class="search-wrap boxart-search">
+        <span>⌕</span>
+        <input
+          id="artwork-status-search"
+          type="search"
+          placeholder="Search games by name or filename..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div id="boxart-game-status">
+        <div class="boxart-empty">Loading game artwork status...</div>
+      </div>
+
+      <div class="boxart-footer" id="boxart-summary"></div>
+      <div class="modal-message" id="boxart-message"></div>
+
+      <div class="modal-actions">
+        <button class="secondary-button" id="close-boxart-manager-bottom">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+
+    const sections = [
+      {
+        id: 'switch',
+        name: 'Nintendo Switch',
+        description: 'Built-in Nintendo Switch games'
+      },
+      {
+        id: 'switch2',
+        name: 'Nintendo Switch 2',
+        description: 'Built-in native Nintendo Switch 2 games'
+      },
+      {
+        id: 'nso',
+        name: 'Nintendo Switch Online',
+        description: 'Built-in retro and subscription games'
+      },
+      {
+        id: 'custom',
+        name: 'Custom Games',
+        description: 'Games you add yourself'
+      },
+      {
+        id: 'recent',
+        name: 'Recently Played',
+        description: 'Games you have recently played'
+      }
+    ];
+
+    const platformNames = {
+      switch: 'Nintendo Switch',
+      switch2: 'Nintendo Switch 2',
+      nso: 'Nintendo Switch Online'
+    };
+
+    const nsoConsoleNames = {
+      nes: 'Nintendo Entertainment System',
+      snes: 'Super Nintendo',
+      gameboy: 'Game Boy',
+      gba: 'Game Boy Advance',
+      n64: 'Nintendo 64',
+      n64_mature: 'Nintendo 64 Mature',
+      megadrive: 'SEGA Mega Drive',
+      gamecube: 'Nintendo GameCube',
+      virtualboy: 'Virtual Boy'
+    };
+
+    const validNSOConsoles = Object.keys(nsoConsoleNames);
+
+    const defaultSettings = {
+      switch: true,
+      switch2: true,
+      nso: true,
+      custom: true,
+      recent: true
+    };
+
+    let builtInGames = [];
+    let customGames = [];
+    let activeSection = 'all';
+    let selectedGame = '';
+    let editingCustomGameName = null;
+    let selectedNSOConsole = '';
+    let selectedNSOFilter = 'all';
+    let gameDescriptions = [];
+    let artworkStatusGames = [];
+    let selectedGameLocked = false;
+
+    let settings = {
+      ...defaultSettings,
+      ...loadStorage('switchrpc-section-settings', {})
+    };
+
+    let favourites = loadStorage('switchrpc-favourites', []);
+    let recent = loadStorage('switchrpc-recent', []);
+
+    if (!Array.isArray(favourites)) favourites = [];
+    if (!Array.isArray(recent)) recent = [];
+
+    function loadStorage(key, fallback) {
+      try {
+        const value = localStorage.getItem(key);
+        return value ? JSON.parse(value) : fallback;
+      } catch (_) {
+        return fallback;
+      }
+    }
+
+    function saveStorage() {
+      localStorage.setItem('switchrpc-section-settings', JSON.stringify(settings));
+      localStorage.setItem('switchrpc-favourites', JSON.stringify(favourites));
+      localStorage.setItem('switchrpc-recent', JSON.stringify(recent));
+    }
+
+    function normaliseCategory(value) {
+      const c = String(value || '').toLowerCase();
+
+      if (c === 'nso' || c.includes('online')) return 'nso';
+      if (c === 'switch2' || c.includes('switch 2')) return 'switch2';
+
+      return 'switch';
+    }
+
+    function normaliseGame(item, isCustom) {
+      if (typeof item === 'string') {
+        return {
+          name: item,
+          category: 'switch',
+          pic: 'switch',
+          boxArt: '',
+          fallbackArt: 'switch',
+          aliases: [],
+          isCustom: !!isCustom
+        };
+      }
+
+      const name = item && (item.name || item.title);
+      if (!name) return null;
+
+      const category = normaliseCategory(item.category || item.platform);
+
+      const consoleArt = category === 'switch2'
+        ? 'switch2'
+        : category === 'nso'
+          ? 'nso'
+          : 'switch';
+
+      return {
+        ...item,
+        name: String(name),
+        category: category,
+        pic: isCustom ? consoleArt : (item.pic || consoleArt),
+        boxArt: isCustom ? '' : (item.boxArt || ''),
+        fallbackArt: isCustom ? consoleArt : (item.fallbackArt || consoleArt),
+        aliases: Array.isArray(item.aliases) ? item.aliases : [],
+        isCustom: !!isCustom
+      };
+    }
+
+    function allGames() {
+      return [...builtInGames, ...customGames];
+    }
+
+    function isGameEnabled(game) {
+      return game.isCustom
+        ? settings.custom !== false
+        : settings[game.category] !== false;
+    }
+
+    function matchesSearch(game, q) {
+      if (!q) return true;
+
+      return [game.name, ...(Array.isArray(game.aliases) ? game.aliases : [])]
+        .join(' ')
+        .toLowerCase()
+        .includes(q);
+    }
+
+    /*
+      Returns the NSO console key for a game.
+
+      Built-in games use fallbackArt.
+      Custom games use nsoConsole.
+    */
+	function getNSOConsoleKey(game) {
+	  if (!game || game.category !== 'nso') return '';
+
+	  const possibleKeys = [
+		game.nsoConsole,
+		game.fallbackArt,
+		game.pic
+	  ];
+
+	  for (const value of possibleKeys) {
+		const key = String(value || '').toLowerCase();
+
+		if (validNSOConsoles.includes(key)) {
+		  return key;
+		}
+	  }
+
+	  // NSO games without a recognised console association
+	  return 'nso_exclusive';
+	}
+
+    /*
+      Applies the selected console filter to NSO games only.
+      Games from other platforms are unaffected.
+    */
+    function matchesNSOConsoleFilter(game) {
+      if (selectedNSOFilter === 'all') return true;
+
+      if (game.category !== 'nso') return true;
+
+      return getNSOConsoleKey(game) === selectedNSOFilter;
+    }
+
+    function updateNSOLibraryFilterVisibility() {
+      const filter = document.getElementById('nso-library-filter');
+
+      filter.classList.toggle('visible', activeSection === 'nso');
+    }
+
+    // Generate the local PNG filename from a game's title.
+    // Example: Pokémon Scarlet becomes pokemon_scarlet.png.
+    function generateGameArtworkFilename(game) {
+      const title = String(
+        typeof game === 'string' ? game : (game && game.name) || ''
+      );
+
+      const slug = title.normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_+|_+$/g, '');
+
+      return slug ? slug + '.png' : '';
+    }
+
+    // Each candidate identifies which artwork folder should be checked.
+    function getArtworkCandidates(game) {
+      if (game.isCustom) {
+        const validNSOConsoles = [
+          'nes',
+          'snes',
+          'gameboy',
+          'gba',
+          'n64',
+          'n64_mature',
+          'megadrive',
+          'gamecube',
+          'virtualboy'
+        ];
+
+        const generatedFilename = generateGameArtworkFilename(game);
+        const generatedTitle = generatedFilename.replace(/\.png$/i, '');
+
+        const candidates = [];
+
+        if (game.boxArt) {
+          candidates.push({
+            folder: 'box',
+            name: String(game.boxArt).replace(/\.(png|jpe?g|webp)$/i, '')
+          });
+        }
+
+        if (generatedTitle) {
+          candidates.push({
+            folder: 'box',
+            name: generatedTitle
+          });
+        }
+
+        const consoleArt = game.category === 'switch2'
+          ? 'switch2'
+          : game.category === 'nso'
+            ? (
+                validNSOConsoles.includes(game.nsoConsole)
+                  ? game.nsoConsole
+                  : 'nso'
+              )
+            : 'switch';
+
+        candidates.push({
+          folder: 'console',
+          name: consoleArt
+        });
+
+        const seen = new Set();
+
+        return candidates.filter(candidate => {
+          if (!/^[a-zA-Z0-9_-]+$/.test(candidate.name)) return false;
+
+          const key = candidate.folder + ':' + candidate.name;
+
+          if (seen.has(key)) return false;
+
+          seen.add(key);
+          return true;
+        });
+      }
+
+      const candidates = [];
+
+      if (game.boxArt) {
+        candidates.push({
+          folder: 'box',
+          name: String(game.boxArt).replace(/\.(png|jpe?g|webp)$/i, '')
+        });
+      }
+
+      if (game.fallbackArt) {
+        candidates.push({
+          folder: 'console',
+          name: String(game.fallbackArt).replace(/\.(png|jpe?g|webp)$/i, '')
+        });
+      }
+
+      candidates.push({
+        folder: 'console',
+        name: game.category === 'switch2'
+          ? 'switch2'
+          : game.category === 'nso'
+            ? 'nso'
+            : 'switch'
+      });
+
+      const seen = new Set();
+
+      return candidates.filter(candidate => {
+        if (!/^[a-zA-Z0-9_-]+$/.test(candidate.name)) return false;
+
+        const key = candidate.folder + ':' + candidate.name;
+
+        if (seen.has(key)) return false;
+
+        seen.add(key);
+        return true;
+      });
+    }
+
+    function getArtworkStatus(game) {
+      return [
+        game.localCoverAvailable
+          ? '✓ Local cover found'
+          : '✗ No local cover',
+
+        game.discordAssetRegistered
+          ? '✓ Discord asset registered'
+          : '○ Discord asset not registered',
+
+        'Discord image: ' + (game.effectiveAsset || 'switch')
+      ];
+    }
+
+    function setGameArtwork(container, game) {
+      const img = container.querySelector('.game-artwork');
+      const fallback = container.querySelector('.game-icon-fallback');
+      const candidates = getArtworkCandidates(game);
+      let current = 0;
+
+      // Clear the previous image immediately.
+      img.onload = null;
+      img.onerror = null;
+      img.removeAttribute('src');
+      img.style.display = 'none';
+      fallback.style.display = 'grid';
+
+      function tryNextArtwork() {
+        if (current >= candidates.length) {
+          img.removeAttribute('src');
+          img.style.display = 'none';
+          fallback.style.display = 'grid';
+          return;
+        }
+
+        const candidate = candidates[current++];
+        const filename = encodeURIComponent(candidate.name) + '.png';
+
+        const imagePath = candidate.folder === 'box'
+          ? 'assets/Game%20Box%20Arts/'
+          : 'assets/Discord%20Assests/';
+
+        img.onload = () => {
+          img.style.display = 'block';
+          fallback.style.display = 'none';
+        };
+
+        img.onerror = tryNextArtwork;
+
+        img.src = imagePath + filename + '?refresh=' + Date.now();
+      }
+
+      tryNextArtwork();
+    }
+
+    /* Lock or unlock the game title field. */
+    function setGameTitle(title, locked) {
+      const input = document.getElementById('game');
+      const indicator = document.getElementById('title-lock-indicator');
+
+      selectedGame = title || '';
+      selectedGameLocked = !!locked;
+
+      input.value = selectedGame;
+      input.readOnly = selectedGameLocked;
+      input.classList.toggle('locked-input', selectedGameLocked);
+
+      input.title = selectedGameLocked
+        ? 'This game was selected from the library. Select another game to change it.'
+        : 'You can enter a custom game title here.';
+
+      indicator.textContent = selectedGameLocked
+        ? '🔒 Game selected from library'
+        : '';
+
+      renderSuggestions();
+    }
+
+    /* Select a game from the library and lock its title. */
+    function selectLibraryGame(game) {
+      setGameTitle(game.name, true);
+      renderGames();
+
+      document.getElementById('status').textContent =
+        game.name + ' selected. Choose a description and update Discord.';
+    }
+
+
+	function getVisibleGames() {
+	  const q = document.getElementById('search').value.trim().toLowerCase();
+	  let result = [];
+
+	  if (q) {
+		result = allGames().filter(game =>
+		  isGameEnabled(game) &&
+		  matchesSearch(game, q) &&
+		  (
+			activeSection === 'all' ||
+			(activeSection === 'custom' && customGames.includes(game) && settings.custom !== false) ||
+			(['switch', 'switch2', 'nso'].includes(activeSection) && game.category === activeSection) ||
+			(activeSection === 'favourites' && favourites.includes(game.name)) ||
+			(activeSection === 'recent' && recent.includes(game.name))
+		  )
+		);
+	  } else if (activeSection === 'custom') {
+		result = customGames.filter(game => settings.custom !== false);
+	  } else if (['switch', 'switch2', 'nso'].includes(activeSection)) {
+		result = allGames().filter(game =>
+		  game.category === activeSection && isGameEnabled(game)
+		);
+	  } else if (activeSection === 'favourites') {
+		result = allGames().filter(game =>
+		  favourites.includes(game.name) && isGameEnabled(game)
+		);
+	  } else if (activeSection === 'recent') {
+		result = recent
+		  .map(name => allGames().find(game => game.name === name))
+		  .filter(Boolean)
+		  .filter(isGameEnabled);
+	  } else {
+		result = builtInGames.filter(isGameEnabled);
+	  }
+
+	  // Apply the selected NSO console filter to both normal and search results.
+	  if (activeSection === 'nso') {
+		result = result.filter(matchesNSOConsoleFilter);
+	  }
+
+	  if (activeSection !== 'recent' || q) {
+		result.sort((a, b) => a.name.localeCompare(b.name));
+	  }
+
+	  return result;
+	}
+
+
+    function renderNavigation() {
+      if (
+        sections.some(s => s.id === activeSection) &&
+        settings[activeSection] === false
+      ) {
+        activeSection = 'all';
+      }
+
+      document.querySelectorAll('[data-section]').forEach(button => {
+        const id = button.dataset.section;
+        const visible = !sections.some(s => s.id === id) || settings[id] !== false;
+
+        button.style.display = visible ? 'flex' : 'none';
+        button.classList.toggle('active', activeSection === id);
+      });
+    }
+
+    function createGameCard(game) {
+      const card = document.createElement('div');
+      card.className = 'game-card' + (selectedGame === game.name ? ' selected' : '');
+
+      const select = document.createElement('button');
+      select.className = 'game-select';
+      select.title = 'Select ' + game.name;
+
+      const icon = document.createElement('span');
+      icon.className = 'game-icon';
+
+      const artwork = document.createElement('img');
+      artwork.className = 'game-artwork';
+      artwork.alt = game.name + ' artwork';
+
+      const fallback = document.createElement('span');
+      fallback.className = 'game-icon-fallback';
+      fallback.textContent = game.category === 'nso' ? '🕹️' : '🎮';
+
+      icon.append(artwork, fallback);
+      setGameArtwork(icon, game);
+
+      const meta = document.createElement('span');
+      meta.className = 'game-meta';
+
+      const name = document.createElement('span');
+      name.className = 'game-name';
+      name.textContent = game.name;
+      meta.appendChild(name);
+
+      if (game.isCustom) {
+        const platform = document.createElement('span');
+        platform.className = 'game-platform';
+        platform.textContent = platformNames[game.category] || 'Nintendo Switch';
+        meta.appendChild(platform);
+      }
+
+      select.append(icon, meta);
+
+      select.addEventListener('click', () => {
+        selectLibraryGame(game);
+      });
+
+      const star = document.createElement('button');
+      star.className = 'favourite';
+      star.textContent = favourites.includes(game.name) ? '★' : '☆';
+      star.title = favourites.includes(game.name)
+        ? 'Remove favourite'
+        : 'Add favourite';
+
+      star.addEventListener('click', () => {
+        if (favourites.includes(game.name)) {
+          favourites = favourites.filter(n => n !== game.name);
+        } else {
+          favourites.push(game.name);
+        }
+
+        saveStorage();
+        renderGames();
+      });
+
+      card.append(select, star);
+
+      if (
+        activeSection === 'recent' &&
+        !document.getElementById('search').value.trim()
+      ) {
+        const removeRecent = document.createElement('button');
+        removeRecent.className = 'remove-recent';
+        removeRecent.textContent = '×';
+        removeRecent.title = 'Remove from recently played';
+
+        removeRecent.setAttribute(
+          'aria-label',
+          'Remove ' + game.name + ' from recently played'
+        );
+
+        removeRecent.addEventListener('click', event => {
+          event.stopPropagation();
+          recent = recent.filter(name => name !== game.name);
+          saveStorage();
+          renderGames();
+        });
+
+        card.appendChild(removeRecent);
+      }
+
+      if (game.isCustom) {
+        const edit = document.createElement('button');
+        edit.className = 'edit-custom';
+        edit.textContent = '✎';
+        edit.title = 'Edit this custom game';
+        edit.setAttribute('aria-label', 'Edit ' + game.name);
+
+        edit.addEventListener('click', event => {
+          event.stopPropagation();
+          openEditGameModal(game);
+        });
+
+        const remove = document.createElement('button');
+        remove.className = 'delete-custom';
+        remove.textContent = '×';
+        remove.title = 'Remove this custom game';
+        remove.setAttribute('aria-label', 'Remove ' + game.name);
+
+        remove.addEventListener('click', event => {
+          event.stopPropagation();
+
+          if (window.confirm(`Remove "${game.name}" from your Custom Games section?`)) {
+            ipcRenderer.send('removeCustomGame', game.name);
+          }
+        });
+
+        card.append(edit, remove);
+      }
+
+      return card;
+    }
+
+    function appendGameGroup(list, games, heading, isCustomGroup) {
+      if (!games.length) return;
+
+      const group = document.createElement('div');
+      group.className = 'game-group';
+
+      if (heading) {
+        const title = document.createElement('div');
+        title.className = 'game-group-heading' +
+          (isCustomGroup ? ' custom-heading' : '');
+        title.textContent = heading;
+        group.appendChild(title);
+      }
+
+      games.forEach(game => group.appendChild(createGameCard(game)));
+      list.appendChild(group);
+    }
+
+    function renderGames() {
+      renderNavigation();
+      updateNSOLibraryFilterVisibility();
+
+      const list = document.getElementById('game-list');
+      const visible = getVisibleGames();
+      const searching = document.getElementById('search').value.trim().length > 0;
+
+      const titles = {
+        all: 'All built-in games',
+        switch: 'Nintendo Switch',
+        switch2: 'Nintendo Switch 2',
+        nso: 'Nintendo Switch Online',
+        custom: 'Custom Games',
+        favourites: 'Favourites',
+        recent: 'Recently played'
+      };
+
+      const heading = searching ? 'Search results' : titles[activeSection];
+
+      document.getElementById('page-title').textContent =
+        searching
+          ? 'Search results'
+          : activeSection === 'all'
+            ? 'Show all games'
+            : titles[activeSection];
+
+      document.getElementById('list-heading').textContent = heading;
+
+      document.getElementById('game-count').textContent =
+        visible.length + (visible.length === 1 ? ' game' : ' games');
+
+      list.innerHTML = '';
+
+      if (!visible.length) {
+        const empty = document.createElement('div');
+        empty.className = 'empty';
+
+        if (searching) {
+          empty.textContent = 'No games match your search.';
+        } else if (activeSection === 'custom') {
+          empty.textContent = 'No custom games yet. Use “Add Game” above to add one.';
+        } else if (
+          activeSection === 'nso' &&
+          selectedNSOFilter !== 'all'
+        ) {
+          empty.textContent =
+            'No games found for ' +
+            (nsoConsoleNames[selectedNSOFilter] || selectedNSOFilter) +
+            '. Try selecting All Consoles.';
+        } else {
+          empty.textContent = 'There are no games in this section yet.';
+        }
+
+        list.appendChild(empty);
+        return;
+      }
+
+      if (['switch', 'switch2', 'nso'].includes(activeSection) && !searching) {
+        appendGameGroup(
+          list,
+          visible.filter(game => !game.isCustom),
+          'Built-in games',
+          false
+        );
+
+        appendGameGroup(
+          list,
+          visible.filter(game => game.isCustom),
+          'Custom games',
+          true
+        );
+
+        return;
+      }
+
+      appendGameGroup(list, visible, null, false);
+    }
+
+    function getSuggestions(title) {
+      const t = String(title || '').toLowerCase();
+
+      const group = gameDescriptions.find(group =>
+        Array.isArray(group.keywords) &&
+        group.keywords.some(keyword =>
+          t.includes(String(keyword).toLowerCase())
+        )
+      );
+
+      if (group && Array.isArray(group.suggestions) && group.suggestions.length) {
+        return group.suggestions;
+      }
+
+      return ['Playing', 'Exploring', 'Online'];
+    }
+
+    function renderSuggestions() {
+      const container = document.getElementById('activity-suggestions');
+      const title = document.getElementById('game').value.trim();
+
+      container.innerHTML = '';
+
+      if (!title) return;
+
+      getSuggestions(title).forEach(text => {
+        const button = document.createElement('button');
+        button.className = 'suggestion';
+        button.type = 'button';
+        button.textContent = text;
+
+        button.addEventListener('click', () => {
+          document.getElementById('desc').value = text;
+          document.getElementById('desc').focus();
+        });
+
+        container.appendChild(button);
+      });
+    }
+
+    function renderSettings() {
+      const container = document.getElementById('settings-options');
+      container.innerHTML = '';
+
+      sections.forEach(section => {
+        const row = document.createElement('label');
+        row.className = 'setting-row';
+
+        const description = document.createElement('span');
+
+        const strong = document.createElement('strong');
+        strong.textContent = section.name;
+
+        const small = document.createElement('small');
+        small.textContent = section.description;
+
+        description.append(strong, small);
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = settings[section.id] !== false;
+
+        checkbox.addEventListener('change', () => {
+          settings[section.id] = checkbox.checked;
+          saveStorage();
+          renderGames();
+        });
+
+        row.append(description, checkbox);
+        container.appendChild(row);
+      });
+    }
+
+    function submitPresence() {
+      const game = document.getElementById('game').value.trim();
+      const description = document.getElementById('desc').value.trim();
+
+      if (!game) {
+        document.getElementById('status').textContent =
+          'Please enter or select a game title.';
+        return;
+      }
+
+      if (selectedGameLocked) {
+        const selected = allGames().find(item => item.name === selectedGame);
+
+        if (!selected) {
+          setGameTitle(game, false);
+        }
+      }
+
+      selectedGame = game;
+      recent = [game, ...recent.filter(n => n !== game)].slice(0, 30);
+      saveStorage();
+
+      document.getElementById('status').textContent =
+        'Updating Discord activity...';
+
+      ipcRenderer.send('game:value', game);
+      ipcRenderer.send('desc:value', description);
+
+      renderGames();
+    }
+
+    function clearActivity() {
+      document.getElementById('status').textContent =
+        'Clearing Discord activity...';
+
+      ipcRenderer.send('clearActivity');
+    }
+
+    function setNSOConsoleSelection(consoleKey) {
+      selectedNSOConsole = selectedNSOConsole === consoleKey
+        ? ''
+        : (consoleKey || '');
+
+      document.querySelectorAll('.nso-console-option').forEach(button => {
+        button.classList.toggle(
+          'selected',
+          button.dataset.console === selectedNSOConsole
+        );
+      });
+    }
+
+    function updateNSOConsoleSelector() {
+      const category = document.getElementById('custom-game-platform').value;
+      const selector = document.getElementById('nso-console-selector');
+
+      selector.classList.toggle('visible', category === 'nso');
+
+      if (category !== 'nso') {
+        setNSOConsoleSelection('');
+      }
+    }
+
+    function openAddGameModal() {
+      editingCustomGameName = null;
+
+      document.getElementById('custom-game-modal-title').textContent =
+        'Add a custom game';
+
+      document.getElementById('save-custom-game').textContent = 'Save Game';
+
+      document.getElementById('custom-game-name').value = '';
+      document.getElementById('custom-game-aliases').value = '';
+      document.getElementById('custom-game-platform').value = 'switch';
+
+      setNSOConsoleSelection('');
+      updateNSOConsoleSelector();
+
+      const msg = document.getElementById('add-game-message');
+      msg.textContent = '';
+      msg.className = 'modal-message';
+
+      document.getElementById('add-game-modal').classList.add('open');
+      document.getElementById('custom-game-name').focus();
+    }
+
+    function openEditGameModal(game) {
+      editingCustomGameName = game.name;
+
+      document.getElementById('custom-game-modal-title').textContent =
+        'Edit custom game';
+
+      document.getElementById('save-custom-game').textContent = 'Save Changes';
+
+      document.getElementById('custom-game-name').value = game.name;
+      document.getElementById('custom-game-platform').value = game.category;
+
+      setNSOConsoleSelection(game.nsoConsole || '');
+      updateNSOConsoleSelector();
+
+      document.getElementById('custom-game-aliases').value =
+        Array.isArray(game.aliases) ? game.aliases.join(', ') : '';
+
+      const msg = document.getElementById('add-game-message');
+      msg.textContent = '';
+      msg.className = 'modal-message';
+
+      document.getElementById('add-game-modal').classList.add('open');
+      document.getElementById('custom-game-name').focus();
+    }
+
+    function closeAddGameModal() {
+      document.getElementById('add-game-modal').classList.remove('open');
+      editingCustomGameName = null;
+    }
+
+    function saveCustomGame() {
+      const name = document.getElementById('custom-game-name').value.trim();
+      const category = document.getElementById('custom-game-platform').value;
+
+      const aliases = document.getElementById('custom-game-aliases').value
+        .split(',')
+        .map(alias => alias.trim())
+        .filter(Boolean);
+
+      const msg = document.getElementById('add-game-message');
+
+      if (!name) {
+        msg.textContent = 'Enter a game title first.';
+        msg.className = 'modal-message error';
+        return;
+      }
+
+      msg.textContent = editingCustomGameName
+        ? 'Saving changes...'
+        : 'Saving...';
+
+      msg.className = 'modal-message';
+
+      if (editingCustomGameName) {
+        ipcRenderer.send('editCustomGame', {
+          originalName: editingCustomGameName,
+          name,
+          category,
+          aliases,
+          nsoConsole: category === 'nso' ? selectedNSOConsole : ''
+        });
+      } else {
+        ipcRenderer.send('addGame', {
+          name,
+          category,
+          aliases,
+          nsoConsole: category === 'nso' ? selectedNSOConsole : ''
+        });
+      }
+    }
+
+    function openBoxArtManager() {
+      document.getElementById('boxart-modal').classList.add('open');
+      document.getElementById('boxart-message').textContent = '';
+      refreshBoxArtList();
+    }
+
+    function closeBoxArtManager() {
+      document.getElementById('boxart-modal').classList.remove('open');
+    }
+
+    function refreshBoxArtList() {
+      const grid = document.getElementById('boxart-grid');
+      grid.innerHTML =
+        '<div class="boxart-empty">Checking game cover files...</div>';
+
+      ipcRenderer.send('getBoxArtFiles');
+    }
+
+    function renderBoxArtList(files, inventory) {
+      const grid = document.getElementById('boxart-grid');
+      grid.innerHTML = '';
+
+      const sortedFiles = [...(files || [])].sort((a, b) =>
+        a.localeCompare(b)
+      );
+
+      const registeredAssets = new Set(
+        (inventory && inventory.discordAssets
+          ? inventory.discordAssets
+          : []
+        ).map(asset => String(asset).toLowerCase())
+      );
+
+      if (!sortedFiles.length) {
+        grid.innerHTML =
+          '<div class="boxart-empty">No game covers found yet. Use “Add Game Cover” to import your first PNG.</div>';
+      }
+
+      sortedFiles.forEach(file => {
+        const card = document.createElement('div');
+        card.className = 'boxart-item';
+
+        const img = document.createElement('img');
+        img.className = 'boxart-preview';
+        img.alt = file;
+        img.src = 'assets/Game%20Box%20Arts/' +
+          encodeURIComponent(file) +
+          '?refresh=' + Date.now();
+
+        const info = document.createElement('div');
+        info.className = 'boxart-info';
+
+        const name = document.createElement('div');
+        name.className = 'boxart-name';
+        name.textContent = file;
+
+        const assetName = file
+          .replace(/\.(png|jpe?g|webp)$/i, '')
+          .toLowerCase();
+
+        const status = document.createElement('div');
+        status.className = 'boxart-status';
+
+        info.appendChild(name);
+
+        if (registeredAssets.has(assetName)) {
+          status.classList.add('present');
+          status.textContent = '✓ Discord asset registered';
+          info.appendChild(status);
+
+          const removeButton = document.createElement('button');
+          removeButton.textContent = 'Remove Discord Registration';
+          removeButton.className = 'secondary-button';
+
+          removeButton.addEventListener('click', () => {
+            if (!confirm(
+              'Remove "' + assetName + '" from the registered Discord asset list? The local PNG will not be deleted.'
+            )) {
+              return;
+            }
+
+            ipcRenderer.send('unregisterDiscordAsset', assetName);
+          });
+
+          info.appendChild(removeButton);
+        } else {
+          status.classList.add('missing');
+          status.textContent = '○ Discord asset not registered';
+          info.appendChild(status);
+
+          const registerButton = document.createElement('button');
+          registerButton.textContent = 'Register Discord Asset';
+          registerButton.className = 'secondary-button';
+
+          registerButton.addEventListener('click', () => {
+            ipcRenderer.send('registerDiscordAsset', assetName);
+          });
+
+          info.appendChild(registerButton);
+        }
+
+        card.append(img, info);
+        grid.appendChild(card);
+      });
+
+      document.getElementById('boxart-summary').textContent =
+        sortedFiles.length +
+        ' game cover file(s) found in assets/Game Box Arts.';
+    }
+
+    function importBoxArt() {
+      document.getElementById('boxart-message').textContent =
+        'Choose a PNG image to import...';
+
+      ipcRenderer.send('importBoxArt');
+    }
+
+    /* Navigation and controls */
+    document.getElementById('navigation').addEventListener('click', event => {
+      const button = event.target.closest('[data-section]');
+      if (!button) return;
+
+      activeSection = button.dataset.section;
+      document.getElementById('search').value = '';
+      renderGames();
+    });
+
+    /*
+      NSO console filter control.
+      Changing the selected console immediately refreshes the game list.
+    */
+    document.getElementById('nso-console-filter').addEventListener('change', event => {
+      selectedNSOFilter = event.target.value;
+      renderGames();
+    });
+
+    document.getElementById('custom-game-platform').addEventListener(
+      'change',
+      updateNSOConsoleSelector
+    );
+
+    document.querySelectorAll('.nso-console-option').forEach(button => {
+      button.addEventListener('click', () => {
+        setNSOConsoleSelection(button.dataset.console);
+      });
+    });
+
+    document.getElementById('search').addEventListener('input', renderGames);
+    document.getElementById('submit').addEventListener('click', submitPresence);
+    document.getElementById('clear-activity').addEventListener('click', clearActivity);
+
+    document.getElementById('game').addEventListener('input', event => {
+      if (selectedGameLocked) {
+        event.target.value = selectedGame;
+        return;
+      }
+
+      renderSuggestions();
+    });
+
+    document.getElementById('game').addEventListener('keydown', event => {
+      if (event.key === 'Enter') submitPresence();
+    });
+
+    document.getElementById('desc').addEventListener('keydown', event => {
+      if (event.key === 'Enter') submitPresence();
+    });
+
+    document.getElementById('settings-button').addEventListener('click', () => {
+      renderSettings();
+      document.getElementById('settings-modal').classList.add('open');
+    });
+
+    document.getElementById('close-settings').addEventListener('click', () => {
+      document.getElementById('settings-modal').classList.remove('open');
+    });
+
+    document.getElementById('settings-modal').addEventListener('click', event => {
+      if (event.target.id === 'settings-modal') {
+        event.currentTarget.classList.remove('open');
+      }
+    });
+
+    document.getElementById('open-add-game').addEventListener('click', openAddGameModal);
+    document.getElementById('close-add-game').addEventListener('click', closeAddGameModal);
+    document.getElementById('cancel-add-game').addEventListener('click', closeAddGameModal);
+    document.getElementById('save-custom-game').addEventListener('click', saveCustomGame);
+
+    document.getElementById('add-game-modal').addEventListener('click', event => {
+      if (event.target.id === 'add-game-modal') closeAddGameModal();
+    });
+
+    document.getElementById('custom-game-name').addEventListener('keydown', event => {
+      if (event.key === 'Enter') saveCustomGame();
+    });
+
+    document.getElementById('custom-game-aliases').addEventListener('keydown', event => {
+      if (event.key === 'Enter') saveCustomGame();
+    });
+
+	/* Library refresh and Box Art Manager controls */
+	document.getElementById('refresh-library').addEventListener('click', () => {
+	  document.getElementById('status').textContent =
+		'Refreshing game library and checking local artwork...';
+
+	  ipcRenderer.send('getGameData');
+	});
+
+	document.getElementById('open-boxart-manager').addEventListener('click', openBoxArtManager);
+
+    document.getElementById('artwork-status-search').addEventListener('input', () => {
+      renderArtworkGameStatuses(artworkStatusGames);
+    });
+
+    document.getElementById('close-boxart-manager').addEventListener('click', closeBoxArtManager);
+    document.getElementById('close-boxart-manager-bottom').addEventListener('click', closeBoxArtManager);
+    document.getElementById('refresh-boxart').addEventListener('click', refreshBoxArtList);
+    document.getElementById('import-boxart').addEventListener('click', importBoxArt);
+
+    document.getElementById('boxart-modal').addEventListener('click', event => {
+      if (event.target.id === 'boxart-modal') closeBoxArtManager();
+    });
+
+    document.getElementById('minimize').addEventListener('click', () => ipcRenderer.send('min'));
+    document.getElementById('maximize').addEventListener('click', () => ipcRenderer.send('max'));
+    document.getElementById('close').addEventListener('click', () => ipcRenderer.send('x'));
+
+    /* IPC responses */
+    ipcRenderer.on('sendingGameData', (event, payload) => {
+      if (Array.isArray(payload)) {
+        builtInGames = payload
+          .map(item => normaliseGame(item, false))
+          .filter(Boolean);
+
+        customGames = [];
+      } else {
+        const source = payload || {};
+
+        gameDescriptions = Array.isArray(source.gameDescriptions)
+          ? source.gameDescriptions
+          : [];
+
+        builtInGames = (Array.isArray(source.builtIn) ? source.builtIn : [])
+          .map(item => normaliseGame(item, false))
+          .filter(Boolean);
+
+        customGames = (Array.isArray(source.custom) ? source.custom : [])
+          .map(item => normaliseGame(item, true))
+          .filter(Boolean);
+      }
+
+      builtInGames.sort((a, b) => a.name.localeCompare(b.name));
+      customGames.sort((a, b) => a.name.localeCompare(b.name));
+
+      document.getElementById('status').textContent =
+        builtInGames.length + ' built-in games and ' +
+        customGames.length + ' custom games loaded.';
+
+      renderGames();
+    });
+
+    ipcRenderer.on('activityUpdated', (event, result) => {
+      document.getElementById('status').textContent =
+        result && result.success
+          ? 'Discord activity updated for ' + result.game + '.'
+          : 'Could not update Discord activity. Check that Discord is running.';
+    });
+
+    ipcRenderer.on('activityCleared', (event, result) => {
+      if (result && result.success) {
+        setGameTitle('', false);
+        document.getElementById('desc').value = '';
+        renderGames();
+
+        document.getElementById('status').textContent =
+          'Discord activity cleared.';
+      } else {
+        document.getElementById('status').textContent =
+          result && result.error
+            ? 'Could not clear activity: ' + result.error
+            : 'Could not clear Discord activity. Check that Discord is running.';
+      }
+    });
+
+    ipcRenderer.on('customGameRemoved', (event, result) => {
+      if (result && result.success) {
+        favourites = favourites.filter(n => n !== result.name);
+        recent = recent.filter(n => n !== result.name);
+
+        if (selectedGame === result.name) {
+          setGameTitle('', false);
+        }
+
+        saveStorage();
+
+        document.getElementById('status').textContent =
+          result.message || 'Custom game removed.';
+
+        renderGames();
+      } else {
+        document.getElementById('status').textContent =
+          result && result.message
+            ? result.message
+            : 'Could not remove that custom game.';
+      }
+    });
+
+    ipcRenderer.on('gameAdded', (event, result) => {
+      const message = document.getElementById('add-game-message');
+
+      if (result && result.success) {
+        message.textContent = result.message || 'Game saved.';
+        message.className = 'modal-message success';
+
+        document.getElementById('status').textContent =
+          result.message || 'Custom game saved.';
+
+        activeSection = 'custom';
+        document.getElementById('search').value = '';
+
+        setTimeout(() => {
+          closeAddGameModal();
+          renderGames();
+        }, 350);
+      } else {
+        message.textContent =
+          result && result.message
+            ? result.message
+            : 'The game could not be saved.';
+
+        message.className = 'modal-message error';
+      }
+    });
+
+    ipcRenderer.on('customGameEdited', (event, result) => {
+      const message = document.getElementById('add-game-message');
+
+      if (result && result.success) {
+        const oldName = result.originalName;
+        const newName = result.name;
+
+        // Update favourites without creating duplicates.
+        favourites = [...new Set(
+          favourites.map(name => name === oldName ? newName : name)
+        )];
+
+        // Update recently played entries without creating duplicates.
+        recent = [...new Set(
+          recent.map(name => name === oldName ? newName : name)
+        )].slice(0, 30);
+
+        // Keep the selected game title in sync.
+        if (selectedGame === oldName) {
+          setGameTitle(newName, true);
+        }
+
+        saveStorage();
+
+        message.textContent = result.message || 'Game updated.';
+        message.className = 'modal-message success';
+
+        document.getElementById('status').textContent =
+          result.message || 'Custom game updated.';
+
+        activeSection = 'custom';
+        document.getElementById('search').value = '';
+
+        setTimeout(() => {
+          closeAddGameModal();
+          renderGames();
+        }, 350);
+      } else {
+        message.textContent =
+          result && result.message
+            ? result.message
+            : 'The custom game could not be updated.';
+
+        message.className = 'modal-message error';
+      }
+    });
+
+    ipcRenderer.on('boxArtFiles', (event, result) => {
+      if (!result || !result.success) {
+        document.getElementById('boxart-grid').innerHTML =
+          '<div class="boxart-empty">Could not read the Game Box Arts folder.</div>';
+
+        document.getElementById('boxart-game-status').innerHTML =
+          '<div class="boxart-empty">Could not load game artwork status.</div>';
+
+        document.getElementById('boxart-message').textContent =
+          result && result.error
+            ? result.error
+            : 'Could not read game cover files.';
+
+        return;
+      }
+
+      renderBoxArtList(result.files || [], result.inventory || {});
+
+      const games = result.inventory && result.inventory.games
+        ? result.inventory.games
+        : [];
+
+      document.getElementById('boxart-message').textContent =
+        'Artwork list refreshed. ' + games.length + ' games checked.';
+
+      renderArtworkGameStatuses(games);
+    });
+
+    ipcRenderer.on('artworkActionResult', (event, result) => {
+      const message = document.getElementById('boxart-message');
+
+      if (!result) {
+        message.textContent = 'No response received from artwork manager.';
+        return;
+      }
+
+      message.textContent = result.message || 'Artwork registration completed.';
+
+      if (result.success) {
+        ipcRenderer.send('getBoxArtFiles');
+      }
+    });
+
+    function renderArtworkGameStatuses(games) {
+      const container = document.getElementById('boxart-game-status');
+      const search = document.getElementById('artwork-status-search');
+
+      // Keep the complete list so searches can be cleared.
+      artworkStatusGames = Array.isArray(games) ? games : [];
+
+      const query = search.value.trim().toLowerCase();
+
+      container.innerHTML = '';
+
+      const sortedGames = [...artworkStatusGames]
+        .filter(game => {
+          if (!query) return true;
+
+          const searchableText = [
+            game.name || '',
+            game.expectedFilename || '',
+            game.discordAssetKey || '',
+            game.filenameConflictWith || '',
+            ...(Array.isArray(game.aliases) ? game.aliases : [])
+          ].join(' ').toLowerCase();
+
+          return searchableText.includes(query);
+        })
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+      if (!sortedGames.length) {
+        container.innerHTML =
+          '<div class="boxart-empty">' +
+          (query
+            ? 'No games match your search.'
+            : 'No game artwork information available.') +
+          '</div>';
+
+        return;
+      }
+
+      sortedGames.forEach(game => {
+        const row = document.createElement('div');
+        row.className = 'boxart-item';
+
+        const info = document.createElement('div');
+        info.className = 'boxart-info';
+
+        const name = document.createElement('div');
+        name.className = 'boxart-name';
+        name.textContent = game.name;
+
+        info.appendChild(name);
+
+        // Show the expected local PNG filename.
+        const filenameRow = document.createElement('div');
+        filenameRow.className = 'boxart-status';
+
+        const filenameLabel = document.createElement('span');
+        filenameLabel.textContent =
+          'Expected filename: ' +
+          (game.expectedFilename || 'Not available');
+
+        filenameRow.appendChild(filenameLabel);
+
+        if (game.expectedFilename) {
+          const copyButton = document.createElement('button');
+          copyButton.className = 'secondary-button';
+          copyButton.textContent = 'Copy filename';
+
+          copyButton.addEventListener('click', () => {
+            const textarea = document.createElement('textarea');
+            textarea.value = game.expectedFilename;
+
+            document.body.appendChild(textarea);
+            textarea.select();
+
+            const copied = document.execCommand('copy');
+            textarea.remove();
+
+            document.getElementById('boxart-message').textContent =
+              copied
+                ? 'Copied ' + game.expectedFilename
+                : 'Could not copy filename.';
+          });
+
+          filenameRow.appendChild(copyButton);
+        }
+
+        info.appendChild(filenameRow);
+
+        // Display the Discord asset key separately from the local filename.
+        const assetKeyRow = document.createElement('div');
+        assetKeyRow.className = 'boxart-status';
+        assetKeyRow.textContent =
+          'Discord asset key: ' + (game.discordAssetKey || 'Not available');
+
+        info.appendChild(assetKeyRow);
+
+        // Warn if more than one game resolves to the same local filename.
+        if (game.filenameConflict) {
+          const conflict = document.createElement('div');
+          conflict.className = 'boxart-status warning';
+          conflict.textContent =
+            '⚠ Filename conflict' +
+            (game.filenameConflictWith
+              ? ' with ' + game.filenameConflictWith
+              : '') +
+            '. These games would share the same local cover file.';
+
+          info.appendChild(conflict);
+        }
+
+        // Display the three artwork statuses.
+        const statuses = getArtworkStatus(game);
+
+        statuses.forEach((statusText, index) => {
+          const status = document.createElement('div');
+          status.className = 'boxart-status';
+
+          if (index === 0) {
+            status.classList.add(
+              game.localCoverAvailable ? 'present' : 'missing'
+            );
+          } else if (index === 1) {
+            status.classList.add(
+              game.discordAssetRegistered ? 'present' : 'missing'
+            );
+          } else {
+            status.classList.add('present');
+          }
+
+          status.textContent = statusText;
+          info.appendChild(status);
+        });
+
+        // Registration applies to the Discord asset key, not the local filename.
+        if (game.localCoverAvailable && game.discordAssetKey) {
+          const registrationButton = document.createElement('button');
+
+          registrationButton.className = 'secondary-button';
+
+          if (game.discordAssetRegistered) {
+            registrationButton.textContent =
+              'Remove Discord Registration: ' + game.discordAssetKey;
+
+            registrationButton.addEventListener('click', () => {
+              if (!confirm(
+                'Remove "' + game.discordAssetKey +
+                '" from the registered Discord asset list? The local PNG will not be deleted.'
+              )) {
+                return;
+              }
+
+              document.getElementById('boxart-message').textContent =
+                'Removing registration for ' + game.discordAssetKey + '...';
+
+              ipcRenderer.send(
+                'unregisterDiscordAsset',
+                game.discordAssetKey
+              );
+            });
+          } else {
+            registrationButton.textContent =
+              'Register Discord Asset: ' + game.discordAssetKey;
+
+            registrationButton.addEventListener('click', () => {
+              document.getElementById('boxart-message').textContent =
+                'Registering ' + game.discordAssetKey + '...';
+
+              ipcRenderer.send(
+                'registerDiscordAsset',
+                game.discordAssetKey
+              );
+            });
+          }
+
+          info.appendChild(registrationButton);
+        }
+
+        row.appendChild(info);
+        container.appendChild(row);
+      });
+
+      // Show how many games match the current search.
+      const footer = document.createElement('div');
+      footer.className = 'boxart-footer';
+
+      footer.textContent =
+        sortedGames.length + ' of ' +
+        artworkStatusGames.length + ' game(s) shown.';
+
+      container.appendChild(footer);
+    }
+
+    ipcRenderer.on('boxArtImported', (event, result) => {
+      const message = document.getElementById('boxart-message');
+
+      if (result && result.success) {
+        message.textContent =
+          result.message || 'Game cover imported successfully.';
+
+        message.className = 'modal-message success';
+
+        refreshBoxArtList();
+        renderGames();
+      } else {
+        message.textContent =
+          result && result.message
+            ? result.message
+            : 'Game cover import failed.';
+
+        message.className = 'modal-message error';
+      }
+    });
+
+    renderGames();
+    renderSuggestions();
+    ipcRenderer.send('getGameData');
+  </script>
 </body>
 </html>
