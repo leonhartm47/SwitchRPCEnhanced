@@ -96,9 +96,9 @@ Additionally, ensure that `electron-builder` and `@electron/packager` are instal
 ### Building
 
 1. Clone this repository:   
-`git clone https://github.com/queenbiscuit311/SwitchRPCUpdated.git` 
+`git clone https://github.com/leonhartm47/SwitchRPCEnhanced.git` 
 2. Enter the directory:   
-`cd SwitchRPCUpdated`
+`cd SwitchRPCEnhanced`
 5. Install dependencies (if using Windows, you may need to delete package-lock.json):   
 `npm install`
 6. Build:   
