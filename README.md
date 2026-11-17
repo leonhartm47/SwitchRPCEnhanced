@@ -78,7 +78,7 @@ Before building, ensure that `nodejs` and `npm` are installed on your device. In
    **Windows:**
    
    Option 1:
-   Instructions to install node.js and npm are provided by Microsoft [here](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows_).
+   Instructions to install node.js and npm are provided by Microsoft [here](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
    
    Option 2:
    [Chocolatey](https://chocolatey.org/install) Package Manager: `choco install nodejs`
