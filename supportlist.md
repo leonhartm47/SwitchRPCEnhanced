@@ -6,7 +6,7 @@ it's not a problem if it's not there, it'll fall back to the console image anywa
 
 You can also create your own *[Discord Developer Portal](https://discord.com/developers/home)* Application really easily and update the ID at the top of this file:
 
-https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/index.js\
+https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/index.js \
 **const DISCORD_APP_ID = ' *Your ID* ';**
 
 This will allow you to upload around 300 game boxart images (less the console default images etc.) for using with the Discord Rich Presence...
