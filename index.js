@@ -170,7 +170,7 @@ function getNSOConsoleArtwork(game) {
     if (/game boy/.test(title)) return 'gameboy';
     if (/\bn64\b|nintendo 64/.test(title)) return 'n64';
 
-    return 'switch';
+    return 'nso';
 }
 
 function getConsoleArtwork(game) {
