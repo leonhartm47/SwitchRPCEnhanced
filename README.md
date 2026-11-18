@@ -2,11 +2,15 @@
 
 ### An enhanced Nintendo Switch/Switch 2 Discord integration available for Linux, macOS, and Windows, now with an updated game list.
 
-The library now comes with [500 game titles built-in](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/resources/rpc.json), you can also add your own titles under *Custom Games*, as well as, local box-art for them in the menu via the *Game Box Art Manager*.
+The library now comes with [500 built-in game titles](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/resources/rpc.json). You can also add your own titles under *Custom Games* and import local box art for them using the *Game Box Art Manager*.
 
-All games have a fallback image of the console they are played on, this will also show in the *Rich Presence* on Discord *out-of-the-box* since it's currently linked to mine...
+All games have a console image available as a fallback when game-specific artwork is unavailable. This fallback will also appear in Discord Rich Presence out of the box, as the application is currently configured to use my Discord application.
 
-If you want to add your own custom box-art images for showing on Discord you'd need to update the *"Application ID"* at the top of the [index.js](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/index.js) file, after *creating your own application* on the [Discord Developer Portal](https://discord.com/developers/home) and finally upload them as *Rich Presence Art Assets*.  You'll still have access to just under 300 potential box-art images of your choice after uploading the needed [Discord Assets](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Discord%20Assests) images within the directory, these are required to provide fallback console images to Discord for games currently without any box-art.  The expected filenames of the discord assets can be found by going to the *Game Box Art Manager* and searching for game titles... this is explained more in the screenshots shown later.
+If you want to use your own custom game box-art images in Discord Rich Presence, you'll need to update the *"Application ID"* at the top of the [index.js](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/index.js) file after creating your own application on the [Discord Developer Portal](https://discord.com/developers/home), then upload your chosen images as *Rich Presence Art Assets*.
+
+Discord allows up to 300 Rich Presence Art Assets to be uploaded to each application. The `assets/Game Box Arts` directory provides a place to store individual game covers imported by the user, which can then be chosen when deciding which artwork to upload to Discord. The console fallback images are provided separately in `assets/Discord Assests` and are used for games without individual box art.
+
+The expected filenames and Discord asset keys can be found by opening the *Game Box Art Manager* and searching for individual game titles. This is explained further in the screenshots below.
 
 ## 
 
@@ -16,15 +20,18 @@ The application is currently configured to use my own Discord application and it
 
 Fallback images are provided to display the relevant console artwork whenever a game's box art is unavailable. If you want to display individual game artwork in your own Rich Presence status, you'll need to create your own Discord application and upload the required Rich Presence assets, as explained in the setup instructions at the beginning of this README.
 
+
 ### Explanation:
 
-An enhanced implementation of Discord Rich Presence for the Nintendo Switch/Switch 2. Instead of directly interfacing with Nintendo's servers like [nxapi](https://github.com/samuelthomas2774/nxapi), the app allows you to manually set your Rich Presence by setting a game and a description. While not automatic, this method is reliable and is not going to break when Nintendo updates their APIs, unlike nxapi. This project is mainly intended as a backup in case nxapi stops working, but it can also be used in its own right.
+An enhanced implementation of Discord Rich Presence for the Nintendo Switch/Switch 2. Instead of directly interfacing with Nintendo's servers through services such as [nxapi](https://github.com/samuelthomas2774/nxapi), the application allows you to manually set your Rich Presence by selecting a game and description.
+
+Although this approach isn't automatic, it provides a reliable alternative that doesn't depend on Nintendo's APIs and therefore isn't affected by changes to those APIs. It also offers a more self-contained approach, keeping the process local rather than relying on unofficial third-party API services.
 
 ### Project History
 
 The original [SwitchRPC](https://github.com/realdevon/SwitchRPC) project was created by [realdevon](https://github.com/realdevon) in 2018 and was actively maintained, with [public releases](https://github.com/realdevon/SwitchRPC/releases) continuing until 2020, after which development appears to have ceased.
 
-In 2023, [queenbiscuit311](https://github.com/queenbiscuit311) picked up the project by creating [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated), a continuation of the original. They helped bring the project up to date by maintaining its game artwork through Discord's Developer Portal, updating dependencies, upgrading to a newer version of Electron, improving the original user interface, and expanding platform support. They also continued publishing [public releases](https://github.com/queenbiscuit311/SwitchRPCUpdated/releases), making the application more accessible to users.
+In 2023, [queenbiscuit311](https://github.com/queenbiscuit311) picked up the project by creating [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated), a continuation of the original. They helped bring the project up to date by maintaining its Discord Rich Presence artwork, updating dependencies, upgrading to a newer version of Electron, improving the original user interface, and expanding platform support. They also continued publishing [public releases](https://github.com/queenbiscuit311/SwitchRPCUpdated/releases), making the application more accessible to users.
 
 I initially forked SwitchRPCUpdated to create [SwitchRPCEnhanced](https://github.com/leonhartm47/SwitchRPCEnhanced). While exploring the updated version, I learned how its Discord Rich Presence integration worked and saw the potential to take the project much further. This gave me the idea to develop a substantially enhanced version, with a focus on introducing the functionality, refinements and quality-of-life improvements needed to make the application a more complete and polished experience.
 
@@ -68,9 +75,11 @@ SwitchRPCEnhanced has since evolved in its own direction, building upon the foun
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
 </p>
 
-*Further down you can "search for the game title" you want to check the "current box-art/discord registration status" for, by default it will show the box-art for the console of the game it's played on (this is a fallback for missing artwork) unless there's an box-art image already imported for that specific game in the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)), if it matches the "expected filename" it will show in the local artwork on the app automatically.*
+*Further down, you can search for the game title you want to check the current box-art and Discord asset registration status for.
 
-*For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key", you can click the "Register Discord Asset" key to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
+By default, the application displays the relevant console artwork as a fallback when a game's box art is unavailable. However, if you've imported box art for that specific game into the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)) and the filename matches the expected naming convention, it will automatically be detected and displayed as the game's local artwork.*
+
+*For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key", you can click the "Register Discord Asset" button to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
 <p>
 <img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
 </p>
@@ -174,9 +183,9 @@ Run `SwitchRPCEnhanced.exe` to launch it.
 
 Credits to:
 
-[queenbiscuit](https://github.com/queenbiscuit311) for creating the [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated) version to further the upkeep of the original project by realdevon.
+[queenbiscuit](https://github.com/queenbiscuit311) for continuing development of the original project through [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated).
 
-[realdevon](https://github.com/realdevon) for creating the original [SwitchRPC](https://github.com/realdevon/SwitchRPC) version.
+[realdevon](https://github.com/realdevon) for creating the original [SwitchRPC](https://github.com/realdevon/SwitchRPC).
 
 [simonliii](https://github.com/simonliii) for creating pull request realdevon/SwitchRPC/[#59](https://github.com/realdevon/SwitchRPC/pull/59), which made the games list clickable.
 
