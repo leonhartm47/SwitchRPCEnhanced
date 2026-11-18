@@ -2,7 +2,7 @@
 
 ### An enhanced Nintendo Switch/Switch 2 Discord integration available for Linux, macOS, and Windows, now with an updated game list.
 
-The list now comes with [500 game titles built-in](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/resources/rpc.json), you can also add your own titles under *Custom Games*, as well as, local box-art for them in the menu via the *Game Box Art Manager*.
+The library now comes with [500 game titles built-in](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/resources/rpc.json), you can also add your own titles under *Custom Games*, as well as, local box-art for them in the menu via the *Game Box Art Manager*.
 
 All games have a fallback image of the console they are played on, this will also show in the *Rich Presence* on Discord *out-of-the-box* since it's currently linked to mine...
 
@@ -10,7 +10,7 @@ If you want to add your own custom box-art images for showing on Discord you'd n
 
 ## 
 
-The project this was built from is explained more below... all of this still applies really i.e. it doesn't directly use an Nintendo API and is a completely independant and manual way of doing this, it's just a stand-alone application.
+The project this was built from is explained more below... all of this still applies really i.e. it doesn't directly use a Nintendo API and is a completely independent and manual way of doing this as locally as possible, it's just a stand-alone application.
 
 ### Explanation:
 
@@ -57,7 +57,9 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
 </p>
 
-*Further down you can "search for the game title" you want to check the "current box-art/discord registration status" for, by default it will show the box-art for the console of the game it's played on (this is a fallback for missing artwork) unless there's an box-art image already imported for that specific game in the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)), if it matches the "expected filename" it will show in the local artwork on the app automatically.  For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key" (an example is shown in the image), you can click the "Register Discord Asset" key to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
+*Further down you can "search for the game title" you want to check the "current box-art/discord registration status" for, by default it will show the box-art for the console of the game it's played on (this is a fallback for missing artwork) unless there's an box-art image already imported for that specific game in the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)), if it matches the "expected filename" it will show in the local artwork on the app automatically.*
+
+*For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key", you can click the "Register Discord Asset" key to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
 <p>
 <img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
 </p>
