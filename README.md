@@ -61,7 +61,6 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 <p>
 <img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
 </p>
-*If you've just uploaded the Discord asset image for a box-art to the "[Discord Developer Portal](https://discord.com/developers/home)", you're certain it's got the correct Discord asset key and the image on the Rich Presences hasn't updated from the default fallback console image... it's most likely a caching issue with Discord, just close Discord and reopen it, then reload the app after Discord has finished loading*
 
 *NSO - Selecting specific consoles or exclusive games*
 <p>
