@@ -22,7 +22,7 @@ let customGamesFile = '';
 let discordAssetsFile = '';
 let discordAssets = [];
 
-const DISCORD_ARTWORK_DIR = path.join(__dirname, 'assets', 'Discord Assests');
+const DISCORD_ARTWORK_DIR = path.join(__dirname, 'assets', 'Discord Assets');
 const GAME_BOX_ARTS_DIR = path.join(__dirname, 'assets', 'Game Box Arts');
 
 const DEFAULT_DISCORD_ASSETS = [
