@@ -35,38 +35,49 @@ The earlier project this was built from is explained below... all of this still 
 This fork of the original SwitchRPC was made because it was seemingly abandoned in 2020, leaving only a very small and outdated list of supported titles. The supported title list for the original project was also hosted remotely on the developer's server, making it impossible to update it manually. I would normally be way out of my depth programming something like this from scratch, but fortunately the codebase for SwitchRPC is very small and easy to understand, so I was able to create a fork without much issue. After figuring out how the app worked and how to modify the title list, I decided to make this fork so that the app could be made more useful by adding more titles.
 
 ### Screenshots:
-
+<p>
 <img width="663" height="517" alt="image" src="https://github.com/user-attachments/assets/a5345514-609f-4ef6-9e62-02fe290c7f4d" />
+</p>
 
-
+<p>
 <img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />
+</p>
 
-
+<p>
 <img width="666" height="520" alt="image" src="https://github.com/user-attachments/assets/4cfec1d5-627d-422e-b065-31ad42590226" />
+</p>
 
-
+<p>
 <img width="666" height="522" alt="image" src="https://github.com/user-attachments/assets/2a734d33-ec5e-4500-a45f-70ef7208b189" />
+</p>
 
-
+<p>
 <img width="667" height="520" alt="image" src="https://github.com/user-attachments/assets/eadfbbee-bfb7-4a8b-91d7-1daacd83a020" />
+</p>
 
-
+<p>
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />
+</p>
 
-
+<p>
 <img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
+</p>
 
-
+<p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/084588b0-f186-432b-8d70-53d978eb6c58" />
+</p>
 
-
+<p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />
+</p>
 
-
+<p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />
+</p>
 
-
+<p>
 <img width="224" height="358" alt="image" src="https://github.com/user-attachments/assets/fd82b5f9-7123-4e7f-b2d9-743b69a61d3b" />
+</p>
 
 ~~**WIP:** Switch 2 Support, Make Games list searchable, Update notifier~~\
 All of these have been added, other then an update notifier because the user can add *Custom Games* themselves or update the database locally if they wish to.
