@@ -10,7 +10,11 @@ If you want to add your own custom box-art images for showing on Discord you'd n
 
 ## 
 
-The project this was built from is explained more below... all of this still applies really i.e. it doesn't directly use a Nintendo API and is a completely independent and manual way of doing this as locally as possible, it's just a stand-alone application.
+SwitchRPCEnhanced builds upon the original concept of manually setting Nintendo Switch activity through Discord Rich Presence. It does not directly interact with Nintendo's APIs, instead operating as a standalone application and keeping as much of its functionality and data on the user's own system as possible.
+
+However, due to the way Discord handles Rich Presence artwork, the required image assets must be uploaded and stored through the [Discord Developer Portal](https://discord.com/developers/applications) in order to appear correctly in a user's activity status.
+
+The application is currently configured to use my own Discord application and its uploaded artwork. Fallback images are provided to display the relevant console artwork whenever a game's box-art is unavailable. If you want to display individual game artwork in your own Rich Presence status, you'll need to [create your own application through the Discord Developer Portal](https://discord.com/developers/applications) and upload the required Rich Presence assets, as explained at the beginning of this README.
 
 ### Explanation:
 
