@@ -35,46 +35,68 @@ The earlier project this was built from is explained below... all of this still 
 This fork of the original SwitchRPC was made because it was seemingly abandoned in 2020, leaving only a very small and outdated list of supported titles. The supported title list for the original project was also hosted remotely on the developer's server, making it impossible to update it manually. I would normally be way out of my depth programming something like this from scratch, but fortunately the codebase for SwitchRPC is very small and easy to understand, so I was able to create a fork without much issue. After figuring out how the app worked and how to modify the title list, I decided to make this fork so that the app could be made more useful by adding more titles.
 
 ### Screenshots:
+
+*Main Menu*
 <p>
 <img width="663" height="517" alt="image" src="https://github.com/user-attachments/assets/a5345514-609f-4ef6-9e62-02fe290c7f4d" />
 </p>
 
+*Game Selection with Description Selector*
 <p>
 <img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />
 </p>
 
+*Search - Localised to the selected category, when the "Show all" category is selected it searches the whole library including Custom Games*
 <p>
 <img width="666" height="520" alt="image" src="https://github.com/user-attachments/assets/4cfec1d5-627d-422e-b065-31ad42590226" />
 </p>
 
+*Starred Games are shown in the Favourites section*
 <p>
 <img width="666" height="522" alt="image" src="https://github.com/user-attachments/assets/2a734d33-ec5e-4500-a45f-70ef7208b189" />
 </p>
 
+*Games which have been used before are shown in the Recently Played section*
 <p>
 <img width="667" height="520" alt="image" src="https://github.com/user-attachments/assets/eadfbbee-bfb7-4a8b-91d7-1daacd83a020" />
 </p>
 
+*Unused categories can be hidden for simplicity if needed*
 <p>
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />
 </p>
 
+*You can click the "Add Game Cover" button to imported box-art images to the correct folder (assets/Game Box Arts) these will be shown at the top... the images must match the "expected filename" in order to display in the app library, this is explained more below*
+<p>
+<img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
+</p>
+
+*Further down you can "search for the game title" you want to check the "current box-art/discord registration status" for, by default it will show the box-art for the console of the game it's played on (this is a fallback for missing artwork) unless there's an box-art image already imported/added for that specific game in the correct folder (assets/Game Box Arts), if it matches the "expected filename" it will show in the local artwork on the app automatically.  For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key" (an example is shown in the image), you can click the "Register Discord Asset" key to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
 <p>
 <img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
 </p>
 
+*NSO - Selecting specific consoles or exclusive games*
 <p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/084588b0-f186-432b-8d70-53d978eb6c58" />
 </p>
 
+*Adding your own game which isn't already in the database*
+<p>
+<img width="666" height="519" alt="image" src="https://github.com/user-attachments/assets/e43160c4-ad1f-4e48-a5f1-ddb31e1c36ce" />
+</p>
+
+*The game can be found in the "Custom Games" section*
 <p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />
 </p>
 
+*Your game will also appear in the category it was added to at the very bottom of the list, you can add box-art for these as shown earlier*
 <p>
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />
 </p>
 
+*This is an example of it working on Discord*
 <p>
 <img width="224" height="358" alt="image" src="https://github.com/user-attachments/assets/fd82b5f9-7123-4e7f-b2d9-743b69a61d3b" />
 </p>
