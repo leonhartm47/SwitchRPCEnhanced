@@ -8,7 +8,7 @@ All games have a console image available as a fallback when game-specific artwor
 
 If you want to use your own custom game box art images in Discord Rich Presence, you'll need to update the *"Application ID"* at the top of the [index.js](https://github.com/leonhartm47/SwitchRPCEnhanced/blob/master/index.js) file after creating your own application on the [Discord Developer Portal](https://discord.com/developers/home), then upload your chosen images as *Rich Presence Art Assets*.
 
-Discord allows up to 300 Rich Presence Art Assets to be uploaded to each application. The `assets/Game Box Arts` directory provides a place to store individual game covers imported by the user, which can then be chosen when deciding which artwork to upload to Discord. The console fallback images are provided separately in `assets/Discord Assests` and are used for games without individual box art.
+Discord allows up to 300 Rich Presence Art Assets to be uploaded to each application. The `assets/Game Box Arts` directory provides a place to store individual game covers imported by the user, which can then be chosen when deciding which artwork to upload to Discord. The console fallback images are provided separately in `assets/Discord Assets` and are used for games without individual box art.
 
 The expected filenames and Discord asset keys can be found by opening the *Game Box Art Manager* and searching for individual game titles. This is explained further in the screenshots below.
 
