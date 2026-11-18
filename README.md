@@ -52,9 +52,9 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 
 <img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/084588b0-f186-432b-8d70-53d978eb6c58" />\
 
-<img width="1330" height="1039" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />\
+<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />\
 
-<img width="1327" height="1039" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />\
+<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />\
 
 <img width="224" height="358" alt="image" src="https://github.com/user-attachments/assets/fd82b5f9-7123-4e7f-b2d9-743b69a61d3b" />
 
