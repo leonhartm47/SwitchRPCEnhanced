@@ -66,7 +66,7 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />
 </p>
 
-*You can click the "Add Game Cover" button to imported box-art images to the correct folder (assets/Game Box Arts) these will be shown at the top... the images must match the "expected filename" in order to display in the app library, this is explained more below*
+*You can click the "Add Game Cover" button to imported box-art images to the correct folder (assets/Game Box Arts) these will be shown near the top, the images must match their "expected filename" in order to display in the app library, this is explained more below...*
 <p>
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
 </p>
