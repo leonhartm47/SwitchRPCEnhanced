@@ -72,7 +72,7 @@ SwitchRPCEnhanced has since evolved in its own direction, building upon the foun
 
 *You can click the "Add Game Cover" button to import box art images to the correct folder `assets/Game Box Arts` these will be shown near the top, the images must match their "expected filename" in order to display in the app library, this is explained more below...*
 <p>
-<img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
+<img width="667" height="518" alt="image" src="https://github.com/user-attachments/assets/e9ab16d9-368a-4709-aaa6-78b2438dcd52" />
 </p>
 
 *Further down, you can search for the game title you want to check the current box art and Discord asset registration status for.
