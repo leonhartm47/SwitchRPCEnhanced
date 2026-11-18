@@ -16,9 +16,16 @@ The project this was built from is explained more below... all of this still app
 
 An enhanced implementation of Discord Rich Presence for the Nintendo Switch/Switch 2. Instead of directly interfacing with Nintendo's servers like [nxapi](https://github.com/samuelthomas2774/nxapi), the app allows you to manually set your Rich Presence by setting a game and a description. While not automatic, this method is reliable and is not going to break when Nintendo updates their APIs, unlike nxapi. This project is mainly intended as a backup in case nxapi stops working, but it can also be used in its own right.
 
-### Why a fork?
+### Project History
 
-This fork of the original SwitchRPC was made because it was seemingly abandoned in 2020, leaving only a very small and outdated list of supported titles. The supported title list for the original project was also hosted remotely on the developer's server, making it impossible to update it manually. I would normally be way out of my depth programming something like this from scratch, but fortunately the codebase for SwitchRPC is very small and easy to understand, so I was able to create a fork without much issue. After figuring out how the app worked and how to modify the title list, I decided to make this fork so that the app could be made more useful by adding more titles.
+The original [SwitchRPC](https://github.com/realdevon/SwitchRPC) project was created by [realdevon](https://github.com/realdevon) in 2018 and was actively maintained, with [public releases](https://github.com/realdevon/SwitchRPC/releases) continuing until 2020, after which development appears to have ceased.
+
+In 2023, [queenbiscuit311](https://github.com/queenbiscuit311) picked up the project by creating [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated), a continuation of the original. They helped bring the project up to date by maintaining its game artwork through Discord's Developer Portal, updating dependencies, upgrading to a newer version of Electron, improving the original user interface, and expanding platform support. They also continued publishing [public releases](https://github.com/queenbiscuit311/SwitchRPCUpdated/releases), making the application more accessible to users.
+
+I initially forked SwitchRPCUpdated to create [SwitchRPCEnhanced](https://github.com/leonhartm47/SwitchRPCEnhanced). While exploring the updated version, I learned how its Discord Rich Presence integration worked and saw the potential to take the project much further. This gave me the idea to develop a substantially enhanced version, with a focus on introducing the functionality, refinements and quality-of-life improvements needed to make the application a more complete and polished experience.
+
+SwitchRPCEnhanced has since evolved in its own direction, building upon the foundations of the earlier projects with a broader range of features and quality-of-life improvements. SwitchRPCUpdated remains a simpler, more lightweight alternative for users who prefer the original approach without the additional functionality. Both projects offer their own take on the same underlying concept, catering to different preferences.
+
 
 ### Screenshots:
 
@@ -163,9 +170,9 @@ Run `SwitchRPCEnhanced.exe` to launch it.
 
 Credits to:
 
-[queenbiscuit](https://github.com/queenbiscuit311/SwitchRPCUpdated) for creating the SwitchUpdated version.
+[queenbiscuit](https://github.com/queenbiscuit311) for creating the [SwitchRPCUpdated](https://github.com/queenbiscuit311/SwitchRPCUpdated) version to further the upkeep of the original project by realdevon.
 
-[realdevon](https://github.com/realdevon) for creating the original SwitchRPC.
+[realdevon](https://github.com/realdevon) for creating the original [SwitchRPC](https://github.com/realdevon/SwitchRPC) version.
 
 [simonliii](https://github.com/simonliii) for creating pull request realdevon/SwitchRPC/[#59](https://github.com/realdevon/SwitchRPC/pull/59), which made the games list clickable.
 
