@@ -70,14 +70,14 @@ SwitchRPCEnhanced has since evolved in its own direction, building upon the foun
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />
 </p>
 
-*You can click the "Add Game Cover" button to import box-art images to the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)) these will be shown near the top, the images must match their "expected filename" in order to display in the app library, this is explained more below...*
+*You can click the "Add Game Cover" button to import box-art images to the correct folder `assets/Game Box Arts` these will be shown near the top, the images must match their "expected filename" in order to display in the app library, this is explained more below...*
 <p>
 <img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/f895332e-4418-49be-be97-c2efaa9a23e7" />
 </p>
 
 *Further down, you can search for the game title you want to check the current box-art and Discord asset registration status for.
 
-By default, the application displays the relevant console artwork as a fallback when a game's box art is unavailable. However, if you've imported box art for that specific game into the correct folder ([assets/Game Box Arts](https://github.com/leonhartm47/SwitchRPCEnhanced/tree/master/assets/Game%20Box%20Arts)) and the filename matches the expected naming convention, it will automatically be detected and displayed as the game's local artwork.*
+By default, the application displays the relevant console artwork as a fallback when a game's box art is unavailable. However, if you've imported box art for that specific game into the correct folder `assets/Game Box Arts` and the filename matches the expected naming convention, it will automatically be detected and displayed as the game's local artwork.*
 
 *For Discord you can choose to either keep the standard console image or if the box-art has been uploaded already to the "[Discord Developer Portal](https://discord.com/developers/home)" under the name shown next to the "Discord asset key", you can click the "Register Discord Asset" button to override the default console image and allow it to use the Discord asset image instead.  Where it says "Discord image" it shows what the current image is set to show on Discord when you use the feature... don't worry if you register one which isn't already added to the portal it'll fallback anyway to the console image, just you'll need to upload the correct box-art as an asset for it to show on Discord.*
 <p>
