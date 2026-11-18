@@ -36,25 +36,25 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 
 ### Screenshots:
 
-<img width="663" height="517" alt="image" src="https://github.com/user-attachments/assets/a5345514-609f-4ef6-9e62-02fe290c7f4d" />\
+<img width="663" height="517" alt="image" src="https://github.com/user-attachments/assets/a5345514-609f-4ef6-9e62-02fe290c7f4d" />
 
-<img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />\
+<img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />
 
-<img width="666" height="520" alt="image" src="https://github.com/user-attachments/assets/4cfec1d5-627d-422e-b065-31ad42590226" />\
+<img width="666" height="520" alt="image" src="https://github.com/user-attachments/assets/4cfec1d5-627d-422e-b065-31ad42590226" />
 
-<img width="666" height="522" alt="image" src="https://github.com/user-attachments/assets/2a734d33-ec5e-4500-a45f-70ef7208b189" />\
+<img width="666" height="522" alt="image" src="https://github.com/user-attachments/assets/2a734d33-ec5e-4500-a45f-70ef7208b189" />
 
-<img width="667" height="520" alt="image" src="https://github.com/user-attachments/assets/eadfbbee-bfb7-4a8b-91d7-1daacd83a020" />\
+<img width="667" height="520" alt="image" src="https://github.com/user-attachments/assets/eadfbbee-bfb7-4a8b-91d7-1daacd83a020" />
 
-<img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />\
+<img width="671" height="524" alt="image" src="https://github.com/user-attachments/assets/4f8d5753-5b2e-4ec1-b952-f481e3feb889" />
 
-<img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />\
+<img width="664" height="521" alt="image" src="https://github.com/user-attachments/assets/04f46772-9778-4acd-a581-6a9c98ca36b2" />
 
-<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/084588b0-f186-432b-8d70-53d978eb6c58" />\
+<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/084588b0-f186-432b-8d70-53d978eb6c58" />
 
-<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />\
+<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/3e65a013-c19e-465a-a0bc-07946519dda2" />
 
-<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />\
+<img width="665" height="521" alt="image" src="https://github.com/user-attachments/assets/67c7ad68-0d45-49da-b9f3-03872524e397" />
 
 <img width="224" height="358" alt="image" src="https://github.com/user-attachments/assets/fd82b5f9-7123-4e7f-b2d9-743b69a61d3b" />
 
