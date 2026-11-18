@@ -32,7 +32,7 @@ This fork of the original SwitchRPC was made because it was seemingly abandoned 
 <img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />
 </p>
 
-*Search - Localised to the selected category, when the "Show all" category is selected it searches the whole library including Custom Games*
+*The search is localised to the selected category, when the "Show all" category is selected it searches the whole library including Custom Games*
 <p>
 <img width="666" height="520" alt="image" src="https://github.com/user-attachments/assets/4cfec1d5-627d-422e-b065-31ad42590226" />
 </p>
