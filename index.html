@@ -1478,14 +1478,29 @@
         : settings[game.category] !== false;
     }
 
-    function matchesSearch(game, q) {
-      if (!q) return true;
+function normaliseSearchText(value) {
+  return String(value || '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
 
-      return [game.name, ...(Array.isArray(game.aliases) ? game.aliases : [])]
-        .join(' ')
-        .toLowerCase()
-        .includes(q);
-    }
+function matchesSearch(game, q) {
+  const query = normaliseSearchText(q);
+  if (!query) return true;
+
+  const searchTerms = query.split(' ');
+
+  const searchableText = normaliseSearchText([
+    game.name,
+    ...(Array.isArray(game.aliases) ? game.aliases : [])
+  ].join(' '));
+
+  return searchTerms.every(term => searchableText.includes(term));
+}
 
     /*
       Returns the NSO console key for a game.
@@ -2679,7 +2694,7 @@
       // Keep the complete list so searches can be cleared.
       artworkStatusGames = Array.isArray(games) ? games : [];
 
-      const query = search.value.trim().toLowerCase();
+	  const query = normaliseSearchText(search.value);
 
       container.innerHTML = '';
 
@@ -2687,15 +2702,19 @@
         .filter(game => {
           if (!query) return true;
 
-          const searchableText = [
-            game.name || '',
-            game.expectedFilename || '',
-            game.discordAssetKey || '',
-            game.filenameConflictWith || '',
-            ...(Array.isArray(game.aliases) ? game.aliases : [])
-          ].join(' ').toLowerCase();
+		const searchTerms = query.split(' ');
 
-          return searchableText.includes(query);
+		const searchableText = normaliseSearchText([
+		  game.name || '',
+		  game.expectedFilename || '',
+		  game.discordAssetKey || '',
+		  ...(Array.isArray(game.filenameConflictWith)
+			? game.filenameConflictWith
+			: []),
+		  ...(Array.isArray(game.aliases) ? game.aliases : [])
+		].join(' '));
+
+		return searchTerms.every(term => searchableText.includes(term));
         })
         .sort((a, b) => a.name.localeCompare(b.name));
 
