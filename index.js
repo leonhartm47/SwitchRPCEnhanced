@@ -1,6 +1,6 @@
 
 // SwitchRPCEnhanced
-// Custom games and Discord asset records are stored in Electron's userData folder.
+// Custom games and Discord asset records are stored in Program's AppData folder.
 
 const DISCORD_APP_ID = '1571385607022710894';
 
@@ -670,11 +670,12 @@ function getArtworkInventory() {
             game.name.toLocaleLowerCase()
         );
 
-        return {
-            name: game.name,
-            category: game.category,
+		return {
+			name: game.name,
+			aliases: Array.isArray(game.aliases) ? game.aliases : [],
+			category: game.category,
 
-            requestedAsset: requested || '',
+			requestedAsset: requested || '',
             boxArt: boxArt || '',
             expectedFilename,
 
