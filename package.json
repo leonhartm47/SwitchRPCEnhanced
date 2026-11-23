@@ -1,6 +1,6 @@
 {
   "name": "switchrpcenhanced",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "An enhanced Nintendo Switch/Switch 2 Discord integration with an expanded game library and additional features.",
   "main": "index.js",
   "scripts": {
