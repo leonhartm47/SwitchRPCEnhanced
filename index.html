@@ -1008,14 +1008,21 @@
         min-width: 0;
       }
 
-      .status {
-        grid-column: 1;
-      }
-
-      .library-heading-info {
-        gap: 6px;
-      }
+    .status {
+      grid-column: 1;
     }
+
+    .library-heading-info {
+      gap: 6px;
+    }
+  }
+
+  .boxart-image-section > summary:focus,
+  .boxart-image-section > summary:focus-visible,
+  .boxart-image-section > summary:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
   </style>
 </head>
 
@@ -1298,25 +1305,29 @@
         <button id="refresh-boxart">↻ Refresh List</button>
       </div>
 
-      <div class="boxart-grid" id="boxart-grid">
-        <div class="boxart-empty">Loading game covers...</div>
-      </div>
+	<details class="boxart-image-section">
+	  <summary>Local Game Covers</summary>
 
-      <h3 class="boxart-status-heading">Game Artwork Status</h3>
+	  <div class="boxart-grid" id="boxart-grid">
+		<div class="boxart-empty">Loading game covers...</div>
+	  </div>
+	</details>
 
-      <div class="search-wrap boxart-search">
-        <span>⌕</span>
-        <input
-          id="artwork-status-search"
-          type="search"
-          placeholder="Search games by name or filename..."
-          autocomplete="off"
-        >
-      </div>
+	<h3 class="boxart-status-heading">Game Artwork Status</h3>
 
-      <div id="boxart-game-status">
-        <div class="boxart-empty">Loading game artwork status...</div>
-      </div>
+	<div class="search-wrap boxart-search">
+	  <span>⌕</span>
+	  <input
+		id="artwork-status-search"
+		type="search"
+		placeholder="Search games by name or filename..."
+		autocomplete="off"
+	  >
+	</div>
+
+	<div id="boxart-game-status">
+	  <div class="boxart-empty">Loading game artwork status...</div>
+	</div>
 
       <div class="boxart-footer" id="boxart-summary"></div>
       <div class="modal-message" id="boxart-message"></div>
