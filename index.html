@@ -2274,11 +2274,15 @@ function matchesSearch(game, q) {
       }
     }
 
-    function openBoxArtManager() {
-      document.getElementById('boxart-modal').classList.add('open');
-      document.getElementById('boxart-message').textContent = '';
-      refreshBoxArtList();
-    }
+	function openBoxArtManager() {
+	  document.getElementById('boxart-modal').classList.add('open');
+
+	  // Collapse the Local Game Covers section each time the manager opens.
+	  document.querySelector('.boxart-image-section').open = false;
+
+	  document.getElementById('boxart-message').textContent = '';
+	  refreshBoxArtList();
+	}
 
     function closeBoxArtManager() {
       document.getElementById('boxart-modal').classList.remove('open');
