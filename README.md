@@ -47,7 +47,7 @@ SwitchRPCEnhanced has since evolved in its own direction, building upon the foun
 
 *Game Selection with Description Selector*
 <p>
-<img width="669" height="521" alt="image" src="https://github.com/user-attachments/assets/23cd1c8b-5001-4e8b-8af1-2c9b0ef60551" />
+<img width="667" height="522" alt="image" src="https://github.com/user-attachments/assets/02af1304-970b-4981-8261-38ddc9c5cf9c" />
 </p>
 
 *The search is localised to the selected category, when the "Show all" category is selected it searches the whole library including Custom Games*
@@ -62,7 +62,7 @@ SwitchRPCEnhanced has since evolved in its own direction, building upon the foun
 
 *Games which have been used before are shown in the Recently Played section*
 <p>
-<img width="667" height="520" alt="image" src="https://github.com/user-attachments/assets/eadfbbee-bfb7-4a8b-91d7-1daacd83a020" />
+<img width="667" height="518" alt="image" src="https://github.com/user-attachments/assets/5325b5c5-8be2-4ea1-9744-495cffb2e432" />
 </p>
 
 *Unused categories can be hidden for simplicity if needed*
